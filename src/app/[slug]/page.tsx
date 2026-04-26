@@ -82,7 +82,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
               Claim Offer via Link <ExternalLink size={18} />
             </a>
             <p className={styles.disclaimer}>
-              By using our link/code, we may earn a commission: "{referral.benefit_owner}". This helps keep ReferralBuddy free!
+              By using our link/code, we may earn a commission: &quot;{referral.benefit_owner}&quot;. This helps keep ReferralBuddy free!
             </p>
           </section>
 

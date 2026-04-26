@@ -21,7 +21,7 @@ function parseFaqs(faqString: string): FAQ[] {
   try {
     // If the data is valid JSON in the cell
     return JSON.parse(faqString);
-  } catch (e) {
+  } catch {
     // Fallback: simple text splitting (optional, depends on your input method)
     return [];
   }
@@ -39,7 +39,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
       const response = await fetch(GOOGLE_SHEET_CSV_URL);
       const csvText = await response.text();
       
-      const parsed = Papa.parse<any>(csvText, {
+      const parsed = Papa.parse<Record<string, unknown>>(csvText, {
         header: true,
         skipEmptyLines: true,
       });
