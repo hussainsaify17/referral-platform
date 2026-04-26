@@ -1,7 +1,11 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
-export function Footer() {
+import { getCategories } from "@/lib/cms";
+
+export async function Footer() {
+  const categories = await getCategories();
+  
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
@@ -16,9 +20,11 @@ export function Footer() {
         <div className={styles.links}>
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Categories</h3>
-            <Link href="/category/fintech" className={styles.link}>Fintech</Link>
-            <Link href="/category/food" className={styles.link}>Food</Link>
-            <Link href="/category/shopping" className={styles.link}>Shopping</Link>
+            {categories.slice(0, 4).map(cat => (
+              <Link key={cat} href={`/category/${cat.toLowerCase()}`} className={styles.link}>
+                {cat}
+              </Link>
+            ))}
           </div>
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Legal</h3>
