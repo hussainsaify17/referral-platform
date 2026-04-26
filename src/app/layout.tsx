@@ -16,8 +16,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ReferralBuddy | India's Best Sign Up Bonuses & Referral Codes",
-  description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps (CRED, Swiggy, Groww, and more).",
+  metadataBase: new URL("https://referbenefits.co.in"),
+  title: {
+    default: "ReferralBuddy | India's Best Sign Up Bonuses & Referral Codes",
+    template: "%s | ReferralBuddy",
+  },
+  description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps (CRED, Swiggy, Groww, and more). Updated daily.",
+  openGraph: {
+    title: "ReferralBuddy | India's Best Sign Up Bonuses",
+    description: "Discover verified referral codes and sign-up bonuses to earn extra cash on top apps.",
+    url: "https://referbenefits.co.in",
+    siteName: "ReferralBuddy",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ReferralBuddy | India's Best Sign Up Bonuses",
+    description: "Discover verified referral codes and sign-up bonuses to earn extra cash on top apps.",
+  },
+  alternates: {
+    canonical: "https://referbenefits.co.in",
+  },
 };
 
 export default function RootLayout({

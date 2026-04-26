@@ -19,9 +19,28 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
+  const title = `Best ${capitalized} Referral Codes & Sign Up Bonuses`;
+  const description = `Browse the best working referral codes, invite links, and sign-up bonuses for ${capitalized} apps and services.`;
+  const url = `https://referbenefits.co.in/category/${category}`;
+
   return {
-    title: `Best ${capitalized} Referral Codes & Sign Up Bonuses`,
-    description: `Browse the best working referral codes, invite links, and sign-up bonuses for ${capitalized} apps and services.`,
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      siteName: "ReferralBuddy",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    }
   };
 }
 

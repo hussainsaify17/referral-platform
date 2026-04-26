@@ -20,10 +20,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!referral) return { title: "Not Found" };
 
   const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
+  const title = `${referral.name} Referral Code | Free Bonus (${currentMonth})`;
+  const description = `Use our verified ${referral.name} referral code to get ${referral.benefit_user}. Working as of ${currentMonth}.`;
+  const url = `https://referbenefits.co.in/${slug}`;
 
   return {
-    title: `${referral.name} Referral Code | Free Bonus (${currentMonth})`,
-    description: `Use our verified ${referral.name} referral code to get ${referral.benefit_user}. Working as of ${currentMonth}.`,
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      siteName: "ReferralBuddy",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    }
   };
 }
 
