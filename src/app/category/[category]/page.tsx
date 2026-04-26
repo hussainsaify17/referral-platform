@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: Props) {
         </p>
       </div>
 
-      <div className={styles.grid}>
+      <div className="bentoGrid">
         {referrals.map((ref) => (
           <ReferralCard key={ref.id} referral={ref} />
         ))}

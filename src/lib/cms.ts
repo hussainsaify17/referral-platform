@@ -51,6 +51,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
         slug: row.slug,
         category: row.category,
         referral_link: row.referral_link,
+        referral_code: row.referral_code,
         benefit_user: row.benefit_user,
         benefit_owner: row.benefit_owner,
         // Assuming steps are separated by |

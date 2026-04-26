@@ -7,7 +7,7 @@ export function Footer() {
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.info}>
           <div className={styles.logo}>
-            Referral<span className={styles.accent}>Hub</span>
+            Referral<span className={styles.accent}>Buddy</span>
           </div>
           <p className={styles.description}>
             Find the best referral codes, sign-up bonuses, and invite links. Updated daily for maximum rewards.
@@ -28,7 +28,7 @@ export function Footer() {
         </div>
       </div>
       <div className={styles.bottomBar}>
-        <p className={styles.copyright}>© {new Date().getFullYear()} ReferralHub. All rights reserved.</p>
+        <p className={styles.copyright}>© {new Date().getFullYear()} ReferralBuddy. All rights reserved.</p>
       </div>
     </footer>
   );

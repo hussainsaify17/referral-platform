@@ -1,106 +1,137 @@
-import { getAllReferrals, getReferralBySlug } from "@/lib/cms";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Metadata } from "next";
+import { getAllReferrals, getReferralBySlug } from "@/lib/cms";
 import { RelatedLinks } from "@/components/RelatedLinks";
+import { CopyCodeButton } from "@/components/CopyCodeButton";
+import { CheckCircle2, AlertCircle, Calendar, ExternalLink } from "lucide-react";
 import styles from "./page.module.css";
-import type { Metadata } from "next";
 
-type Props = {
-  params: Promise<{ slug: string }>;
-};
-
-// Next.js static generation
 export async function generateStaticParams() {
   const referrals = await getAllReferrals();
-  return referrals.map((r) => ({
-    slug: r.slug,
+  return referrals.map((ref) => ({
+    slug: ref.slug,
   }));
 }
 
-// Dynamic SEO tags based on freshness signals
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const slug = (await params).slug;
   const referral = await getReferralBySlug(slug);
-  
-  if (!referral) return {};
-  
-  const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+  if (!referral) return { title: "Not Found" };
+
+  const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
 
   return {
-    title: `${referral.name} Referral Code | Free Bonus (${currentDate})`,
-    description: `Use our ${referral.name} referral code to get ${referral.benefit_user}. Verified working as of ${currentDate}.`,
+    title: `${referral.name} Referral Code | Free Bonus (${currentMonth})`,
+    description: `Use our verified ${referral.name} referral code to get ${referral.benefit_user}. Working as of ${currentMonth}.`,
   };
 }
 
-export default async function ReferralPage({ params }: Props) {
-  const { slug } = await params;
+export default async function ReferralPage({ params }: { params: Promise<{ slug: string }> }) {
+  const slug = (await params).slug;
   const referral = await getReferralBySlug(slug);
 
   if (!referral) {
     notFound();
   }
 
-  const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  const isExpired = new Date(referral.expiry) < new Date();
+  const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
 
   return (
-    <div className={`container ${styles.container}`}>
-      {/* Breadcrumbs for SEO */}
-      <nav className={styles.breadcrumbs}>
-        <Link href="/">Home</Link>
-        <span className={styles.separator}>/</span>
-        <Link href={`/category/${referral.category.toLowerCase()}`}>{referral.category}</Link>
-        <span className={styles.separator}>/</span>
-        <span className={styles.current}>{referral.name}</span>
-      </nav>
-
-      <div className={styles.content}>
-        {/* Main Trust Signal & CTA Area */}
-        <section className={styles.heroCard}>
-          <div className={styles.badge}>Working {currentDate}</div>
-          <h1 className={styles.title}>{referral.name} Referral Code & Sign Up Bonus</h1>
-          <p className={styles.benefit}>{referral.benefit_user}</p>
+    <div className={`container ${styles.pageContainer}`}>
+      <div className={styles.contentWrapper}>
+        <div className={styles.mainContent}>
           
-          <a 
-            href={referral.referral_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            style={{ width: '100%', fontSize: '1.125rem', padding: '1rem' }}
-          >
-            Claim {referral.name} Bonus
-          </a>
-          <p className={styles.disclaimer}>
-            Disclosure: We may earn a small commission at no extra cost to you if you use our link.
-          </p>
-        </section>
+          <header className={styles.header}>
+            <div className={styles.brandMeta}>
+              <span className={styles.category}>{referral.category}</span>
+              <span className={styles.verified}>
+                <CheckCircle2 size={14} /> Verified for {currentMonth}
+              </span>
+            </div>
+            <h1 className={styles.title}>{referral.name} Referral Code & Sign Up Bonus</h1>
+            <p className={styles.subtitle}>
+              Maximize your rewards when creating a new account.
+            </p>
+          </header>
 
-        {/* Steps Section */}
-        <section className={styles.section}>
-          <h2>How to use the {referral.name} referral code</h2>
-          <ol className={styles.stepsList}>
-            {referral.steps.map((step, index) => (
-              <li key={index} className={styles.step}>
-                <span className={styles.stepNumber}>{index + 1}</span>
-                <p className={styles.stepText}>{step}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
+          <section className={styles.offerBox}>
+            <div className={styles.offerHeader}>
+              <h2>Your Sign-Up Reward</h2>
+              {isExpired && (
+                <div className={styles.expiredBadge}>
+                  <AlertCircle size={16} /> This offer may have expired.
+                </div>
+              )}
+            </div>
+            <div className={styles.rewardHighlight}>
+              {referral.benefit_user}
+            </div>
 
-        {/* FAQs Section */}
-        <section className={styles.section}>
-          <h2>Frequently Asked Questions</h2>
-          <div className={styles.faqList}>
-            {referral.faq.map((faq, index) => (
-              <div key={index} className={styles.faqItem}>
-                <h3 className={styles.faqQuestion}>{faq.question}</h3>
-                <p className={styles.faqAnswer}>{faq.answer}</p>
+            {referral.referral_code && (
+              <CopyCodeButton code={referral.referral_code} />
+            )}
+
+            <a 
+              href={referral.referral_link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.primaryCta}
+            >
+              Claim Offer via Link <ExternalLink size={18} />
+            </a>
+            <p className={styles.disclaimer}>
+              By using our link/code, we may earn a commission: "{referral.benefit_owner}". This helps keep ReferralBuddy free!
+            </p>
+          </section>
+
+          <section className={styles.stepsSection}>
+            <h2>How to Claim Your Bonus</h2>
+            <div className={styles.stepsList}>
+              {referral.steps.map((step, index) => (
+                <div key={index} className={styles.step}>
+                  <div className={styles.stepNumber}>{index + 1}</div>
+                  <p className={styles.stepText}>{step}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {referral.faq && referral.faq.length > 0 && (
+            <section className={styles.faqSection}>
+              <h2>Frequently Asked Questions</h2>
+              <div className={styles.faqList}>
+                {referral.faq.map((item, index) => (
+                  <div key={index} className={styles.faqItem}>
+                    <h3>{item.question}</h3>
+                    <p>{item.answer}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
+            </section>
+          )}
 
-        <RelatedLinks currentSlug={referral.slug} category={referral.category} />
+        </div>
+
+        <aside className={styles.sidebar}>
+          <div className={styles.metaCard}>
+            <h3>Offer Details</h3>
+            <ul className={styles.metaList}>
+              <li>
+                <Calendar size={16} />
+                <span>Valid until: {new Date(referral.expiry).toLocaleDateString()}</span>
+              </li>
+              <li>
+                <CheckCircle2 size={16} />
+                <span>Status: {referral.status === 'active' ? 'Active & Working' : 'Inactive'}</span>
+              </li>
+            </ul>
+          </div>
+          
+          <RelatedLinks currentSlug={referral.slug} category={referral.category} />
+        </aside>
+
       </div>
     </div>
   );

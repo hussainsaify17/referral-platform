@@ -9,6 +9,7 @@ export interface Referral {
   slug: string;
   category: string;
   referral_link: string;
+  referral_code?: string;
   benefit_user: string;
   benefit_owner: string;
   steps: string[];

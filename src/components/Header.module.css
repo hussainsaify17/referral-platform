@@ -23,9 +23,22 @@
   color: var(--primary);
 }
 
-.nav {
+.navContainer {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
 }
 
 .navLink {

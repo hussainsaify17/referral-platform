@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "./providers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ReferralHub | Best Sign Up Bonuses & Referral Codes",
-  description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for Fintech, Travel, and Shopping apps.",
+  title: "ReferralBuddy | India's Best Sign Up Bonuses & Referral Codes",
+  description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps (CRED, Swiggy, Groww, and more).",
 };
 
 export default function RootLayout({
@@ -25,11 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

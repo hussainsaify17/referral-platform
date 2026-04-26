@@ -1,39 +1,11 @@
 [
   {
-    "id": "revolut-1",
-    "name": "Revolut",
-    "slug": "revolut-referral-code",
-    "category": "Fintech",
-    "referral_link": "https://revolut.com/referral/hussain123",
-    "benefit_user": "Get ₹500 welcome bonus when you order a physical card and make 3 purchases.",
-    "benefit_owner": "I get ₹1000 when you complete the steps.",
-    "steps": [
-      "Click the referral link and download the Revolut app.",
-      "Verify your identity (KYC).",
-      "Add money to your account.",
-      "Order a physical debit card.",
-      "Make 3 separate purchases of at least ₹100 each."
-    ],
-    "faq": [
-      {
-        "question": "How long does it take to get the bonus?",
-        "answer": "The bonus is usually credited within 3-5 days after completing all required steps."
-      },
-      {
-        "question": "Do I need to pay for the physical card?",
-        "answer": "Yes, standard delivery fees may apply depending on your region, but the bonus covers it."
-      }
-    ],
-    "expiry": "2026-12-31T00:00:00.000Z",
-    "last_checked": "2026-04-26T00:00:00.000Z",
-    "status": "active"
-  },
-  {
     "id": "cred-1",
     "name": "CRED",
     "slug": "cred-referral-code",
     "category": "Fintech",
     "referral_link": "https://app.cred.club/spQx/referral",
+    "referral_code": "SPQX2026",
     "benefit_user": "Get up to ₹250 cashback on your first credit card bill payment.",
     "benefit_owner": "I get ₹500 in CRED balances.",
     "steps": [
@@ -57,6 +29,7 @@
     "slug": "fi-money-invite-code",
     "category": "Fintech",
     "referral_link": "https://fi.money/invite/HUSS123",
+    "referral_code": "HUSS123",
     "benefit_user": "Get ₹200 added to your new account.",
     "benefit_owner": "I get ₹200 added to my account.",
     "steps": [
@@ -75,22 +48,23 @@
     "status": "active"
   },
   {
-    "id": "airbnb-1",
-    "name": "Airbnb",
-    "slug": "airbnb-referral-link",
-    "category": "Travel",
-    "referral_link": "https://www.airbnb.com/c/hussains123",
-    "benefit_user": "Save up to $65 on your first qualifying booking.",
-    "benefit_owner": "I get $20 in travel credit.",
+    "id": "groww-1",
+    "name": "Groww",
+    "slug": "groww-referral-code",
+    "category": "Investing",
+    "referral_link": "https://groww.app.link/refe/hussain",
+    "referral_code": "HUSSGROWW",
+    "benefit_user": "Get ₹100 reward directly to your Groww balance.",
+    "benefit_owner": "I get ₹100 when you successfully open your Demat account.",
     "steps": [
-      "Click the link to sign up for a new Airbnb account.",
-      "Book a stay of $100 or more.",
-      "The discount will automatically apply at checkout."
+      "Click the link to download the Groww app.",
+      "Complete your KYC and open a free Demat account.",
+      "The ₹100 will be credited within 24-48 hours."
     ],
     "faq": [
       {
-        "question": "Is the credit valid for experiences?",
-        "answer": "Yes, $15 out of the $65 credit can be used for Airbnb Experiences."
+        "question": "Are there any account opening charges?",
+        "answer": "No, opening a Demat account on Groww is completely free."
       }
     ],
     "expiry": "2026-10-01T00:00:00.000Z",
@@ -98,22 +72,23 @@
     "status": "active"
   },
   {
-    "id": "uber-1",
-    "name": "Uber",
-    "slug": "uber-referral-code",
-    "category": "Travel",
-    "referral_link": "https://uber.com/invite/uberHUSS",
-    "benefit_user": "Get 50% off your first 3 rides (up to $10 each).",
-    "benefit_owner": "I get $10 off my next ride.",
+    "id": "upstox-1",
+    "name": "Upstox",
+    "slug": "upstox-referral-link",
+    "category": "Investing",
+    "referral_link": "https://link.upstox.com/huss",
+    "referral_code": "UPHUSS26",
+    "benefit_user": "Zero brokerage for the first 30 days.",
+    "benefit_owner": "I get ₹200 when you open an account.",
     "steps": [
-      "Download the Uber app.",
-      "Enter the code 'uberHUSS' in the promotions section before booking.",
-      "Take your first 3 rides."
+      "Sign up using the referral link.",
+      "Complete your e-KYC using Aadhaar and PAN.",
+      "Place your first trade to activate the account fully."
     ],
     "faq": [
       {
-        "question": "Does this work in all cities?",
-        "answer": "It depends on the city. The value may vary slightly by local currency."
+        "question": "Do I need to maintain a minimum balance?",
+        "answer": "No, there is no minimum balance requirement for Upstox."
       }
     ],
     "expiry": "2026-12-31T00:00:00.000Z",
@@ -121,22 +96,23 @@
     "status": "active"
   },
   {
-    "id": "amazon-prime-1",
-    "name": "Amazon Prime",
-    "slug": "amazon-prime-referral",
-    "category": "Shopping",
-    "referral_link": "https://amazon.com/prime?ref=huss123",
-    "benefit_user": "Get a 30-day free trial.",
-    "benefit_owner": "I receive a $5 Amazon gift card.",
+    "id": "swiggy-1",
+    "name": "Swiggy Instamart",
+    "slug": "swiggy-referral-code",
+    "category": "Food",
+    "referral_link": "https://swiggy.onelink.me/hussain",
+    "referral_code": "SWIGGYHUSS",
+    "benefit_user": "Get ₹100 off on your first Instamart order above ₹399.",
+    "benefit_owner": "I get ₹100 Swiggy Money.",
     "steps": [
-      "Click the referral link.",
-      "Sign up for the Prime 30-day trial.",
-      "Link a valid credit card."
+      "Download the Swiggy app if you haven't already.",
+      "Navigate to the Instamart section.",
+      "Add items worth ₹399 or more and apply the invite code."
     ],
     "faq": [
       {
-        "question": "Can I cancel before the trial ends?",
-        "answer": "Yes, you can cancel anytime before 30 days and you won't be charged."
+        "question": "Is this valid for Swiggy food delivery?",
+        "answer": "This specific code is exclusively for Swiggy Instamart groceries."
       }
     ],
     "expiry": "2027-01-01T00:00:00.000Z",
@@ -144,44 +120,23 @@
     "status": "active"
   },
   {
-    "id": "dropbox-1",
-    "name": "Dropbox",
-    "slug": "dropbox-referral",
-    "category": "Software",
-    "referral_link": "https://db.tt/huss123",
-    "benefit_user": "Get 500 MB of extra bonus space.",
-    "benefit_owner": "I get 500 MB of extra bonus space.",
+    "id": "zomato-1",
+    "name": "Zomato",
+    "slug": "zomato-promo-code",
+    "category": "Food",
+    "referral_link": "https://zoma.to/r/hussain",
+    "referral_code": "ZOMAHUSS",
+    "benefit_user": "Get 50% off (up to ₹100) on your first food delivery order.",
+    "benefit_owner": "I get ₹100 Zomato credits.",
     "steps": [
-      "Click the link to create a new Dropbox account.",
-      "Install the Dropbox desktop app.",
-      "Sign in from the desktop app."
+      "Download Zomato and register with a new phone number.",
+      "Add food to your cart from your favorite restaurant.",
+      "Enter the referral code in the promos section before paying."
     ],
     "faq": [
       {
-        "question": "Is the bonus space permanent?",
-        "answer": "Yes, the 500 MB bonus space is permanent."
-      }
-    ],
-    "expiry": "2030-01-01T00:00:00.000Z",
-    "last_checked": "2026-04-26T00:00:00.000Z",
-    "status": "active"
-  },
-  {
-    "id": "notion-1",
-    "name": "Notion",
-    "slug": "notion-signup-bonus",
-    "category": "Software",
-    "referral_link": "https://notion.so/invite/huss123",
-    "benefit_user": "Get $10 in Notion credit.",
-    "benefit_owner": "I get $5 in Notion credit.",
-    "steps": [
-      "Sign up for a Notion account using the link.",
-      "Use the product on Web, Mac, or Windows."
-    ],
-    "faq": [
-      {
-        "question": "What can I use the credit for?",
-        "answer": "The credit can be used to pay for premium plans like Notion Plus or AI."
+        "question": "Does it work for existing users?",
+        "answer": "No, referral codes only work for entirely new phone numbers and devices."
       }
     ],
     "expiry": "2026-12-31T00:00:00.000Z",
@@ -189,22 +144,71 @@
     "status": "active"
   },
   {
-    "id": "binance-1",
-    "name": "Binance",
-    "slug": "binance-referral-code",
-    "category": "Crypto",
-    "referral_link": "https://accounts.binance.com/register?ref=HUSS123",
-    "benefit_user": "Get 10% off trading fees for life and a $100 welcome bonus.",
-    "benefit_owner": "I get 10% commission on your trades.",
+    "id": "paytm-1",
+    "name": "Paytm",
+    "slug": "paytm-upi-referral",
+    "category": "Fintech",
+    "referral_link": "https://p.paytm.me/xCTH/huss",
+    "referral_code": "HUSS2026",
+    "benefit_user": "Get ₹100 cashback on your first UPI money transfer.",
+    "benefit_owner": "I get ₹100 cashback directly to my bank account.",
     "steps": [
-      "Create an account using the link.",
-      "Complete Identity Verification within 14 days.",
-      "Make a first deposit of $50 or more."
+      "Click the link to install the Paytm app.",
+      "Link your bank account to create a Paytm UPI ID.",
+      "Send a minimum of ₹1 to any UPI ID or phone number."
     ],
     "faq": [
       {
-        "question": "Is the fee discount permanent?",
-        "answer": "Yes, you will get 10% off your spot trading fees for life."
+        "question": "When do I get the cashback?",
+        "answer": "The scratch card with ₹100 cashback is issued immediately after your first transaction."
+      }
+    ],
+    "expiry": "2030-01-01T00:00:00.000Z",
+    "last_checked": "2026-04-26T00:00:00.000Z",
+    "status": "active"
+  },
+  {
+    "id": "jupiter-1",
+    "name": "Jupiter Money",
+    "slug": "jupiter-money-invite",
+    "category": "Fintech",
+    "referral_link": "https://jupiter.money/invite/huss",
+    "referral_code": "JUPITERHUSS",
+    "benefit_user": "Get ₹300 when you open an account and complete KYC.",
+    "benefit_owner": "I get ₹300 Jewels (Jupiter rewards).",
+    "steps": [
+      "Download the Jupiter app.",
+      "Use the referral code during the sign-up process.",
+      "Complete your video KYC to fully activate the zero-balance account."
+    ],
+    "faq": [
+      {
+        "question": "Is Jupiter a real bank?",
+        "answer": "Jupiter is a neo-bank that partners with Federal Bank to hold your money safely."
+      }
+    ],
+    "expiry": "2026-12-31T00:00:00.000Z",
+    "last_checked": "2026-04-26T00:00:00.000Z",
+    "status": "active"
+  },
+  {
+    "id": "flipkart-1",
+    "name": "Flipkart",
+    "slug": "flipkart-referral-code",
+    "category": "Shopping",
+    "referral_link": "https://flipkart.com/referral?code=HUSS123",
+    "referral_code": "HUSS123",
+    "benefit_user": "Get ₹100 off your first purchase of ₹500 or more.",
+    "benefit_owner": "I get ₹100 Flipkart Gift Card.",
+    "steps": [
+      "Sign up for a new Flipkart account using the link.",
+      "Add items worth at least ₹500 to your cart.",
+      "The discount will auto-apply at checkout."
+    ],
+    "faq": [
+      {
+        "question": "Can I use this on Big Billion Days?",
+        "answer": "Yes, but some bank-specific discounts might not stack with this offer."
       }
     ],
     "expiry": "2027-12-31T00:00:00.000Z",
@@ -212,22 +216,23 @@
     "status": "active"
   },
   {
-    "id": "doordash-1",
-    "name": "DoorDash",
-    "slug": "doordash-promo-code",
-    "category": "Food",
-    "referral_link": "https://drd.sh/HUSS123",
-    "benefit_user": "Get $15 off your first 3 orders ($5 off each).",
-    "benefit_owner": "I get $10 in DoorDash credits.",
+    "id": "myntra-1",
+    "name": "Myntra",
+    "slug": "myntra-invite-code",
+    "category": "Shopping",
+    "referral_link": "https://myntra.com/invite/hussain",
+    "referral_code": "MYNTRAHUSS",
+    "benefit_user": "Get ₹200 Myntra Cash on sign-up.",
+    "benefit_owner": "I get ₹200 Myntra Cash after your first order is delivered.",
     "steps": [
-      "Sign up using the link.",
-      "Place your first order with a subtotal of $15 or more.",
-      "The $5 discount will automatically apply."
+      "Download the Myntra app via the invite link.",
+      "Create a new account.",
+      "The ₹200 Myntra Cash will instantly reflect in your wallet."
     ],
     "faq": [
       {
-        "question": "Can I use this with other promotions?",
-        "answer": "Usually, sign-up bonuses cannot be stacked with other active promotions."
+        "question": "Does Myntra Cash expire?",
+        "answer": "Yes, promotional Myntra Cash usually expires within 30 days."
       }
     ],
     "expiry": "2026-12-31T00:00:00.000Z",

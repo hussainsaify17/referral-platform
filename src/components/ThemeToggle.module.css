@@ -1,0 +1,28 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.toggle:hover {
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  border-color: var(--card-border);
+  box-shadow: var(--shadow);
+}
+
+.placeholder {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon {
+  stroke-width: 1.5px;
+}

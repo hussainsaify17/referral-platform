@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "ReferralHub | Best Sign Up Bonuses & Referral Codes",
+  title: "ReferralBuddy | India's Best Sign Up Bonuses & Referral Codes",
   description: "Find verified referral codes, invite links, and sign-up bonuses to earn extra cash.",
 };
 
@@ -37,7 +37,7 @@ export default async function Home() {
 
         <div>
           <h2 className={styles.sectionTitle}>Latest Offers</h2>
-          <div className={styles.grid}>
+          <div className="bentoGrid">
             {referrals.slice(0, 6).map((ref) => (
               <ReferralCard key={ref.id} referral={ref} />
             ))}

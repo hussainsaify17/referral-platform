@@ -1,87 +1,143 @@
-.container {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+.pageContainer {
+  padding: 3rem 1.5rem;
 }
 
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--secondary-foreground);
-  margin-bottom: 2rem;
-}
-
-.breadcrumbs a {
-  transition: color 0.2s;
-}
-
-.breadcrumbs a:hover {
-  color: var(--foreground);
-}
-
-.separator {
-  color: var(--card-border);
-}
-
-.current {
-  color: var(--foreground);
-  font-weight: 500;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 3rem;
-  max-width: 800px;
-  margin: 0 auto;
+  align-items: start;
 }
 
-.heroCard {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 2.5rem;
-  box-shadow: var(--shadow);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (min-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr 350px;
+  }
 }
 
-.badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  background-color: rgba(16, 185, 129, 0.1);
-  color: var(--success);
-  border-radius: 9999px;
-  margin-bottom: 1.5rem;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--foreground);
-  margin-bottom: 1rem;
-  letter-spacing: -0.025em;
-}
-
-.benefit {
-  font-size: 1.25rem;
-  color: var(--secondary-foreground);
+.header {
   margin-bottom: 2.5rem;
 }
 
-.disclaimer {
-  font-size: 0.75rem;
-  color: var(--secondary-foreground);
-  margin-top: 1rem;
-  opacity: 0.8;
+.brandMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.section h2 {
+.category {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--accent-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.verified {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--secondary-foreground);
+  max-width: 600px;
+}
+
+.offerBox {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 3rem;
+}
+
+.offerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.offerHeader h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--secondary-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.expiredBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.rewardHighlight {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.primaryCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.primaryCta:hover {
+  background-color: var(--foreground);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.disclaimer {
+  font-size: 0.875rem;
+  color: var(--secondary-foreground);
+  text-align: center;
+}
+
+.stepsSection, .faqSection {
+  margin-bottom: 3rem;
+}
+
+.stepsSection h2, .faqSection h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -92,17 +148,16 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  list-style: none;
 }
 
 .step {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.25rem;
   background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   padding: 1.5rem;
   border-radius: var(--radius);
-  border: 1px solid var(--card-border);
 }
 
 .stepNumber {
@@ -111,18 +166,18 @@
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
-  background-color: var(--primary);
-  color: white;
+  background-color: var(--foreground);
+  color: var(--background);
   font-weight: 700;
-  font-size: 0.875rem;
+  border-radius: 50%;
   flex-shrink: 0;
 }
 
 .stepText {
+  font-size: 1.125rem;
   color: var(--foreground);
   line-height: 1.6;
-  margin-top: 0.1rem;
+  padding-top: 0.125rem;
 }
 
 .faqList {
@@ -134,18 +189,54 @@
 .faqItem {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: var(--radius);
   padding: 1.5rem;
+  border-radius: var(--radius);
 }
 
-.faqQuestion {
+.faqItem h3 {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--foreground);
   margin-bottom: 0.75rem;
 }
 
-.faqAnswer {
+.faqItem p {
   color: var(--secondary-foreground);
   line-height: 1.6;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.metaCard {
+  background-color: var(--secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.metaCard h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.metaList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.metaList li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--secondary-foreground);
+  font-size: 0.9375rem;
 }
