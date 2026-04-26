@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Required for static export (GitHub Pages)
   output: "export",
+  trailingSlash: true,
   
   // If your GitHub repository is named "referral-platform" and you host at username.github.io/referral-platform,
   // uncomment the following line and replace with your repository name.
