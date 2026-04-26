@@ -36,7 +36,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
   if (GOOGLE_SHEET_CSV_URL) {
     console.log("Fetching live data from Google Sheets...");
     try {
-      const response = await fetch(GOOGLE_SHEET_CSV_URL);
+      const response = await fetch(GOOGLE_SHEET_CSV_URL, { cache: "no-store" });
       const csvText = await response.text();
       
       const parsed = Papa.parse<Record<string, string>>(csvText, {
