@@ -1,0 +1,40 @@
+.header {
+  border-bottom: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.accent {
+  color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--secondary-foreground);
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--foreground);
+}

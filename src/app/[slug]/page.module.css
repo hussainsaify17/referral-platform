@@ -1,0 +1,151 @@
+.container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--secondary-foreground);
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs a {
+  transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+  color: var(--foreground);
+}
+
+.separator {
+  color: var(--card-border);
+}
+
+.current {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.benefit {
+  font-size: 1.25rem;
+  color: var(--secondary-foreground);
+  margin-bottom: 2.5rem;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  color: var(--secondary-foreground);
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.stepText {
+  color: var(--foreground);
+  line-height: 1.6;
+  margin-top: 0.1rem;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.faqQuestion {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.75rem;
+}
+
+.faqAnswer {
+  color: var(--secondary-foreground);
+  line-height: 1.6;
+}
