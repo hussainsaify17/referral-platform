@@ -34,7 +34,7 @@ export async function Footer() {
         </div>
       </div>
       <div className={styles.bottomBar}>
-        <p className={styles.copyright}>© {new Date().getFullYear()} ReferralBuddy. All rights reserved.</p>
+        <p className={styles.copyright}>© {new Date().getFullYear()} ReferBenefits. All rights reserved.</p>
       </div>
     </footer>
   );

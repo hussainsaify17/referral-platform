@@ -4,6 +4,7 @@ import { getAllReferrals, getReferralBySlug } from "@/lib/cms";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { CopyCodeButton } from "@/components/CopyCodeButton";
 import { CheckCircle2, AlertCircle, Calendar, ExternalLink } from "lucide-react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
 
 export async function generateStaticParams() {
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
       url,
       type: "article",
-      siteName: "ReferralBuddy",
+      siteName: "ReferBenefits",
     },
     twitter: {
       card: "summary_large_image",
@@ -56,10 +57,52 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
   const isExpired = new Date(referral.expiry) < new Date();
   const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: referral.category, href: `/category/${referral.category.toLowerCase()}` },
+    { label: referral.name, href: `/${referral.slug}` },
+  ];
+
+  const faqSchema = referral.faq && referral.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: referral.faq.map(item => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  } : null;
+
+  const offerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: `${referral.name} Sign Up Bonus`,
+    description: referral.benefit_user,
+    url: `https://referbenefits.co.in/${referral.slug}`,
+    price: "0",
+    priceCurrency: "INR",
+    availability: isExpired ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+    validThrough: referral.expiry
+  };
+
   return (
     <div className={`container ${styles.pageContainer}`}>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+      />
       <div className={styles.contentWrapper}>
         <div className={styles.mainContent}>
+          <Breadcrumbs items={breadcrumbItems} />
           
           <header className={styles.header}>
             <div className={styles.brandMeta}>
@@ -100,7 +143,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
               Claim Offer via Link <ExternalLink size={18} />
             </a>
             <p className={styles.disclaimer}>
-              By using our link/code, we may earn a commission: &quot;{referral.benefit_owner}&quot;. This helps keep ReferralBuddy free!
+              By using our link/code, we may earn a commission: &quot;{referral.benefit_owner}&quot;. This helps keep ReferBenefits free!
             </p>
           </section>
 

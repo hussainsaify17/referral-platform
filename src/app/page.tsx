@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "ReferralBuddy | India's Best Sign Up Bonuses & Referral Codes",
+  title: "ReferBenefits | India's Best Sign Up Bonuses & Referral Codes",
   description: "Find verified referral codes, invite links, and sign-up bonuses to earn extra cash.",
 };
 
@@ -12,8 +12,20 @@ export default async function Home() {
   const referrals = await getAllReferrals();
   const categories = await getCategories();
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ReferBenefits",
+    url: "https://referbenefits.co.in",
+    description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps.",
+  };
+
   return (
     <div className={styles.container}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <section className={styles.hero}>
         <h1 className={styles.title}>
           Stop Leaving Money on the Table

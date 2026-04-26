@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "./providers";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,21 +19,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://referbenefits.co.in"),
   title: {
-    default: "ReferralBuddy | India's Best Sign Up Bonuses & Referral Codes",
-    template: "%s | ReferralBuddy",
+    default: "ReferBenefits | India's Best Sign Up Bonuses & Referral Codes",
+    template: "%s | ReferBenefits",
   },
   description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps (CRED, Swiggy, Groww, and more). Updated daily.",
   openGraph: {
-    title: "ReferralBuddy | India's Best Sign Up Bonuses",
+    title: "ReferBenefits | India's Best Sign Up Bonuses",
     description: "Discover verified referral codes and sign-up bonuses to earn extra cash on top apps.",
     url: "https://referbenefits.co.in",
-    siteName: "ReferralBuddy",
+    siteName: "ReferBenefits",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ReferralBuddy | India's Best Sign Up Bonuses",
+    title: "ReferBenefits | India's Best Sign Up Bonuses",
     description: "Discover verified referral codes and sign-up bonuses to earn extra cash on top apps.",
   },
   alternates: {
@@ -48,6 +49,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-5EV07XX9Y4" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5EV07XX9Y4');
+          `}
+        </Script>
         <ThemeProvider>
           <Header />
           <main>{children}</main>

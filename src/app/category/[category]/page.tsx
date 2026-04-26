@@ -1,5 +1,6 @@
 import { getCategories, getReferralsByCategory } from "@/lib/cms";
 import { ReferralCard } from "@/components/ReferralCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url,
       type: "website",
-      siteName: "ReferralBuddy",
+      siteName: "ReferBenefits",
     },
     twitter: {
       card: "summary_large_image",
@@ -54,8 +55,14 @@ export default async function CategoryPage({ params }: Props) {
 
   const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: capitalized, href: `/category/${category.toLowerCase()}` },
+  ];
+
   return (
     <div className={`container ${styles.container}`}>
+      <Breadcrumbs items={breadcrumbItems} />
       <div className={styles.header}>
         <h1 className={styles.title}>{capitalized} Referral Codes</h1>
         <p className={styles.subtitle}>

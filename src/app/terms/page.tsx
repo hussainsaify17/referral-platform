@@ -1,8 +1,8 @@
 import styles from "../page.module.css";
 
 export const metadata = {
-  title: "Terms of Service | ReferralBuddy",
-  description: "Terms of Service and Conditions for using ReferralBuddy.",
+  title: "Terms of Service | ReferBenefits",
+  description: "Terms of Service and Conditions for using ReferBenefits.",
 };
 
 export default function TermsOfService() {
@@ -15,17 +15,17 @@ export default function TermsOfService() {
         
         <section>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>1. Acceptance of Terms</h2>
-          <p>By accessing and using ReferralBuddy ("the Website"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this Website.</p>
+          <p>By accessing and using ReferBenefits ("the Website"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this Website.</p>
         </section>
 
         <section>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>2. Description of Service</h2>
-          <p>ReferralBuddy provides a curated list of referral codes, sign-up bonuses, and invite links for various third-party services and platforms. We aggregate these links to help users discover financial benefits, discounts, and rewards.</p>
+          <p>ReferBenefits provides a curated list of referral codes, sign-up bonuses, and invite links for various third-party services and platforms. We aggregate these links to help users discover financial benefits, discounts, and rewards.</p>
         </section>
 
         <section>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>3. Affiliate Disclaimer</h2>
-          <p>Some of the links on this Website are affiliate or referral links. This means that if you click on the link and make a purchase or sign up for a service, we may receive a commission or referral bonus at no additional cost to you. These commissions help support the maintenance and operation of ReferralBuddy.</p>
+          <p>Some of the links on this Website are affiliate or referral links. This means that if you click on the link and make a purchase or sign up for a service, we may receive a commission or referral bonus at no additional cost to you. These commissions help support the maintenance and operation of ReferBenefits.</p>
         </section>
 
         <section>
@@ -35,7 +35,7 @@ export default function TermsOfService() {
 
         <section>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>5. Limitation of Liability</h2>
-          <p>ReferralBuddy and its operators shall not be liable for any direct, indirect, incidental, consequential, or exemplary damages resulting from your use of the Website or any third-party services linked from the Website. You engage with third-party services at your own risk.</p>
+          <p>ReferBenefits and its operators shall not be liable for any direct, indirect, incidental, consequential, or exemplary damages resulting from your use of the Website or any third-party services linked from the Website. You engage with third-party services at your own risk.</p>
         </section>
 
         <section>
