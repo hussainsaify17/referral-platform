@@ -39,7 +39,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
       const response = await fetch(GOOGLE_SHEET_CSV_URL);
       const csvText = await response.text();
       
-      const parsed = Papa.parse<Record<string, unknown>>(csvText, {
+      const parsed = Papa.parse<Record<string, string>>(csvText, {
         header: true,
         skipEmptyLines: true,
       });
@@ -60,7 +60,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
         faq: parseFaqs(row.faq),
         expiry: row.expiry || "2099-12-31T00:00:00.000Z",
         last_checked: new Date().toISOString(),
-        status: row.status || "active",
+        status: (row.status as "active" | "expired") || "active",
       }));
     } catch (error) {
       console.error("Failed to parse Google Sheet CSV:", error);
