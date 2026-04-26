@@ -1,6 +1,7 @@
 import { getCategories, getReferralsByCategory } from "@/lib/cms";
 import { ReferralCard } from "@/components/ReferralCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CategoryNav } from "@/components/CategoryNav";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CategoryPage({ params }: Props) {
   const { category } = await params;
   const referrals = await getReferralsByCategory(category);
+  const categories = await getCategories();
 
   if (referrals.length === 0) {
     notFound();
@@ -63,6 +65,8 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <div className={`container ${styles.container}`}>
       <Breadcrumbs items={breadcrumbItems} />
+      <CategoryNav categories={categories} />
+      
       <div className={styles.header}>
         <h1 className={styles.title}>{capitalized} Referral Codes</h1>
         <p className={styles.subtitle}>

@@ -1,19 +1,24 @@
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
+import { getCategories } from "@/lib/cms";
 import styles from "./Header.module.css";
 
-export function Header() {
+export async function Header() {
+  const categories = await getCategories();
+
   return (
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
-          Referral<span className={styles.accent}>Buddy</span>
+          Refer<span className={styles.accent}>Benefits</span>
         </Link>
         <div className={styles.navContainer}>
           <nav className={styles.nav}>
-            <Link href="/category/fintech" className={styles.navLink}>Fintech</Link>
-            <Link href="/category/investing" className={styles.navLink}>Investing</Link>
-            <Link href="/category/food" className={styles.navLink}>Food</Link>
+            {categories.slice(0, 4).map((cat) => (
+              <Link key={cat} href={`/category/${cat.toLowerCase()}`} className={styles.navLink}>
+                {cat}
+              </Link>
+            ))}
           </nav>
           <ThemeToggle />
         </div>

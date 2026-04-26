@@ -1,0 +1,48 @@
+.container {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.scrollArea {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+  /* Hide scrollbar for a cleaner look */
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.scrollArea::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  white-space: nowrap;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: var(--card-bg);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--card-border);
+}
+
+.pill:hover {
+  background-color: var(--secondary);
+  color: var(--foreground);
+}
+
+.active {
+  background-color: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+/* Dark mode fine-tuning */
+:global(.dark) .active {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}

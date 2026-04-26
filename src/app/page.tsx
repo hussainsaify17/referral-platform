@@ -1,5 +1,7 @@
 import { getAllReferrals, getCategories } from "@/lib/cms";
 import { ReferralCard } from "@/components/ReferralCard";
+import { CategoryNav } from "@/components/CategoryNav";
+import { Sparkles } from "lucide-react";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -27,24 +29,21 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <section className={styles.hero}>
+        <div className={styles.badge}>
+          <Sparkles size={16} className={styles.badgeIcon} />
+          <span>Updated today with {referrals.length} active offers</span>
+        </div>
         <h1 className={styles.title}>
           Stop Leaving Money on the Table
         </h1>
         <p className={styles.subtitle}>
-          Find the best referral codes, sign-up bonuses, and invite links. Updated daily.
+          Find the best referral codes, sign-up bonuses, and invite links for top Indian apps. Earn rewards instantly.
         </p>
       </section>
 
       <section className={`container ${styles.mainSection}`}>
         <div className={styles.categories}>
-          <h2 className={styles.sectionTitle}>Browse Categories</h2>
-          <div className={styles.categoryTags}>
-            {categories.map((cat) => (
-              <Link key={cat} href={`/category/${cat.toLowerCase()}`} className={styles.catTag}>
-                {cat}
-              </Link>
-            ))}
-          </div>
+          <CategoryNav categories={categories} />
         </div>
 
         <div>
