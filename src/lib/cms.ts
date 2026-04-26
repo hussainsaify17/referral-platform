@@ -33,43 +33,95 @@ function parseFaqs(faqString: string): FAQ[] {
 export async function getAllReferrals(): Promise<Referral[]> {
   let data: Referral[] = [];
 
-  if (GOOGLE_SHEET_CSV_URL) {
+  // Clean the URL in case of accidental quotes or spaces in the GitHub Secret
+  const rawUrl = process.env.GOOGLE_SHEET_CSV_URL || "";
+  const cleanedUrl = rawUrl.replace(/^["']|["']$/g, '').trim();
+
+  if (cleanedUrl) {
     console.log("Fetching live data from Google Sheets...");
     try {
-      const response = await fetch(GOOGLE_SHEET_CSV_URL, { cache: "no-store" });
+      // We append a timestamp to bypass Next.js build-time fetch caching without using 
+      // cache: "no-store", which would crash the static export (NEXT_STATIC_GEN_BAILOUT)
+      const cacheBusterUrl = cleanedUrl.includes("?") 
+        ? `${cleanedUrl}&_t=${Date.now()}` 
+        : `${cleanedUrl}?_t=${Date.now()}`;
+        
+      const response = await fetch(cacheBusterUrl);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
+      }
+
       const csvText = await response.text();
+      
+      // If the user accidentally pasted the "Web Page" link instead of CSV/TSV, the response will be HTML.
+      if (csvText.trim().startsWith("<!DOCTYPE html>") || csvText.trim().startsWith("<html")) {
+         throw new Error("The URL returned an HTML webpage instead of a CSV/TSV file. Make sure you published as Comma-separated values or Tab-separated values!");
+      }
       
       const parsed = Papa.parse<Record<string, string>>(csvText, {
         header: true,
         skipEmptyLines: true,
       });
 
+      if (parsed.errors.length > 0) {
+         console.warn("CSV Parsing Warnings:", parsed.errors);
+      }
+
       // Map rows to our strongly typed structure
-      data = parsed.data.map((row) => ({
-        id: row.id || row.slug,
-        name: row.name,
-        slug: row.slug,
-        category: row.category,
-        referral_link: row.referral_link,
-        referral_code: row.referral_code,
-        benefit_user: row.benefit_user,
-        benefit_owner: row.benefit_owner,
-        // Assuming steps are separated by |
-        steps: row.steps ? String(row.steps).split('|').map(s => s.trim()) : [],
-        // Assuming faq is valid JSON string in the cell
-        faq: parseFaqs(row.faq),
-        expiry: row.expiry || "2099-12-31T00:00:00.000Z",
-        last_checked: new Date().toISOString(),
-        status: (row.status as "active" | "expired") || "active",
-      }));
+      data = parsed.data
+        .map((row) => ({
+          id: row.id || row.slug,
+          name: row.name,
+          slug: row.slug,
+          category: row.category || "Uncategorized",
+          referral_link: row.referral_link,
+          referral_code: row.referral_code,
+          benefit_user: row.benefit_user,
+          benefit_owner: row.benefit_owner,
+          steps: row.steps ? String(row.steps).split('|').map(s => s.trim()) : [],
+          faq: parseFaqs(row.faq),
+          expiry: row.expiry || "2099-12-31T00:00:00.000Z",
+          last_checked: new Date().toISOString(),
+          status: (row.status as "active" | "expired") || "active",
+        }))
+        // Ensure the row actually has an ID and Name
+        .filter((row) => row.id && row.name);
+
+      if (data.length === 0) {
+        throw new Error("Successfully fetched the document, but found 0 valid rows. Check your column headers (must be id, name, slug, etc).");
+      }
+
     } catch (error) {
-      console.error("Failed to parse Google Sheet CSV:", error);
+      console.error("Live Data Fetch Error:", error);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      
+      // Instead of silently falling back to dummy data, display the exact error on the site!
+      return [{
+        id: "error-card-1",
+        name: "⚠️ Data Fetch Error",
+        slug: "error-card",
+        category: "Error",
+        referral_link: "#",
+        referral_code: "ERROR",
+        benefit_user: `There is a problem with the Google Sheet integration.`,
+        benefit_owner: errorMessage,
+        steps: [
+          "1. This means the GitHub Action tried to fetch your Google Sheet but failed.",
+          `2. The exact error is: ${errorMessage}`,
+          `3. The URL it tried to fetch was: ${cleanedUrl.substring(0, 50)}...`
+        ],
+        faq: [],
+        expiry: "2099-12-31T00:00:00.000Z",
+        status: "active",
+        last_checked: new Date().toISOString()
+      }];
     }
   }
 
-  // Fallback to local data if no URL is provided or fetch failed
+  // Fallback to local data only if the URL is completely missing
   if (data.length === 0) {
-    console.log("Using local fallback data...");
+    console.log("No URL provided. Using local fallback data...");
     const filePath = path.join(process.cwd(), "src/data/sample_referrals.json");
     const fileContents = await fs.readFile(filePath, "utf8");
     data = JSON.parse(fileContents);
