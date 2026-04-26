@@ -22,8 +22,8 @@ export function Footer() {
           </div>
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Legal</h3>
-            <span className={styles.link}>Privacy Policy (Coming Soon)</span>
-            <span className={styles.link}>Terms of Service (Coming Soon)</span>
+            <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
+            <Link href="/terms" className={styles.link}>Terms of Service</Link>
           </div>
         </div>
       </div>
