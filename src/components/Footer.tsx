@@ -17,13 +17,13 @@ export function Footer() {
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Categories</h3>
             <Link href="/category/fintech" className={styles.link}>Fintech</Link>
-            <Link href="/category/travel" className={styles.link}>Travel</Link>
-            <Link href="/category/crypto" className={styles.link}>Crypto</Link>
+            <Link href="/category/food" className={styles.link}>Food</Link>
+            <Link href="/category/shopping" className={styles.link}>Shopping</Link>
           </div>
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Legal</h3>
-            <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
-            <Link href="/terms" className={styles.link}>Terms of Service</Link>
+            <span className={styles.link}>Privacy Policy (Coming Soon)</span>
+            <span className={styles.link}>Terms of Service (Coming Soon)</span>
           </div>
         </div>
       </div>
