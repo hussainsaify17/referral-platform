@@ -1,0 +1,174 @@
+.container {
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.breadcrumbArea {
+  margin-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 2rem;
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  background-color: var(--accent-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--secondary-foreground) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--secondary-foreground);
+  font-size: 0.875rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--secondary-foreground);
+}
+
+.content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.highlightBox {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 2.5rem 0;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.highlightBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--success);
+}
+
+.highlightTitle {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.highlightValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px var(--foreground);
+}
+
+.faqItem {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 1.5rem;
+}
+
+.faqQuestion {
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}

@@ -1,0 +1,84 @@
+.container {
+  min-height: calc(100vh - 4rem - 200px); /* Adjust based on header/footer heights */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.glitchWrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--secondary-foreground) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: -0.05em;
+  text-shadow: 0 10px 30px var(--accent-light);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--secondary-foreground);
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px var(--foreground);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary-foreground);
+  transform: translateY(-2px);
+}
