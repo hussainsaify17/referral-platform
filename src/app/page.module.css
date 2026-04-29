@@ -118,3 +118,158 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ── Trust Row ──────────────────────────────────────────────── */
+.trustRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--secondary-foreground);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+}
+
+/* ── Featured Offer Card ────────────────────────────────────── */
+.featuredSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.featuredLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f59e0b;
+}
+
+.featuredCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, var(--accent-light) 0%, rgba(124, 58, 237, 0.08) 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.featuredCard::before {
+  content: '⭐ FEATURED';
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+.featuredCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.featuredLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.featuredCategory {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.featuredName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+}
+
+.featuredBenefit {
+  font-size: 0.95rem;
+  color: var(--secondary-foreground);
+  max-width: 500px;
+}
+
+.featuredRight {
+  flex-shrink: 0;
+}
+
+.featuredCta {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.featuredCard:hover .featuredCta {
+  background: var(--foreground);
+}
+
+@media (max-width: 640px) {
+  .featuredCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+  .featuredCta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── View All ───────────────────────────────────────────────── */
+.viewAllWrapper {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.viewAll {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--foreground);
+  background: var(--card-bg);
+  transition: var(--transition);
+}
+
+.viewAll:hover {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}

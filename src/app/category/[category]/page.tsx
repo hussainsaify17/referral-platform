@@ -18,6 +18,8 @@ export async function generateStaticParams() {
   }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
@@ -75,8 +77,8 @@ export default async function CategoryPage({ params }: Props) {
       </div>
 
       <div className="bentoGrid">
-        {referrals.map((ref) => (
-          <ReferralCard key={ref.id} referral={ref} />
+        {referrals.map((ref, index) => (
+          <ReferralCard key={ref.id} referral={ref} position={index} />
         ))}
       </div>
     </div>

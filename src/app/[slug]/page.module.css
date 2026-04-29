@@ -240,3 +240,36 @@
   color: var(--secondary-foreground);
   font-size: 0.9375rem;
 }
+
+/* ── Disclaimer Block ──────────────────────────────────────────────── */
+.disclaimerBlock {
+  background-color: var(--secondary);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid #f59e0b;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.disclaimerTitle {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f59e0b;
+  margin-bottom: 1rem;
+}
+
+.disclaimerText {
+  font-size: 0.875rem;
+  color: var(--secondary-foreground);
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.disclaimerText strong {
+  color: var(--foreground);
+}
+

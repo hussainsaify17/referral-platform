@@ -1,19 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import { Referral } from "@/lib/types";
 import { ArrowRight, Gift } from "lucide-react";
+import { trackCardClick } from "@/lib/analytics";
 import styles from "./ReferralCard.module.css";
 
 interface Props {
   referral: Referral;
+  /** 0-based position of this card in the list, used for analytics */
+  position?: number;
 }
 
-export function ReferralCard({ referral }: Props) {
-  // Try to extract the monetary value from benefit_user (e.g. ₹500, ₹100, etc.) for a premium highlight
+export function ReferralCard({ referral, position = 0 }: Props) {
   const match = referral.benefit_user.match(/(₹\d+)/);
   const highlightAmount = match ? match[1] : null;
 
+  const handleClick = () => {
+    trackCardClick(referral.name, referral.slug, referral.category, position);
+  };
+
   return (
-    <Link href={`/${referral.slug}`} className={styles.card}>
+    <Link href={`/${referral.slug}`} className={styles.card} onClick={handleClick}>
       <div className={styles.header}>
         <div>
           <span className={styles.category}>{referral.category}</span>
@@ -41,3 +49,4 @@ export function ReferralCard({ referral }: Props) {
     </Link>
   );
 }
+

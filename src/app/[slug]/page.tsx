@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import { getAllReferrals, getReferralBySlug } from "@/lib/cms";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { CopyCodeButton } from "@/components/CopyCodeButton";
-import { CheckCircle2, AlertCircle, Calendar, ExternalLink } from "lucide-react";
+import { ClaimOfferButton } from "@/components/ClaimOfferButton";
+import { CheckCircle2, AlertCircle, Calendar } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
 
@@ -13,6 +14,8 @@ export async function generateStaticParams() {
     slug: ref.slug,
   }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const slug = (await params).slug;
@@ -131,17 +134,19 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             </div>
 
             {referral.referral_code && (
-              <CopyCodeButton code={referral.referral_code} />
+              <CopyCodeButton
+                code={referral.referral_code}
+                brandName={referral.name}
+                slug={referral.slug}
+              />
             )}
 
-            <a 
-              href={referral.referral_link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={styles.primaryCta}
-            >
-              Claim Offer via Link <ExternalLink size={18} />
-            </a>
+            <ClaimOfferButton
+              href={referral.referral_link}
+              brandName={referral.name}
+              slug={referral.slug}
+              category={referral.category}
+            />
             <p className={styles.disclaimer}>
               By using our link/code, we may earn a commission: &quot;{referral.benefit_owner}&quot;. This helps keep ReferBenefits free!
             </p>
@@ -172,6 +177,17 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
               </div>
             </section>
           )}
+
+          {/* ── Disclaimer ─────────────────────────────────────── */}
+          <section className={styles.disclaimerBlock}>
+            <p className={styles.disclaimerTitle}>⚠️ Disclaimer</p>
+            <div className={styles.disclaimerText}>
+              <p>Please recheck details about the app you are going to use. <strong>We are not responsible for any profits or losses.</strong></p>
+              <p>Sometimes we don&apos;t even verify if the app is legal or not. If we have verified it, we update the same at the bottom of the post.</p>
+              <p>We just share the referral code or link. <strong>Using it and making profits or losses is completely at your own risk.</strong></p>
+              <p>Invest wisely. Play Safely. 🙏</p>
+            </div>
+          </section>
 
         </div>
 
