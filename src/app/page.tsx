@@ -52,7 +52,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className={`container ${styles.mainSection}`}>
+      <section className={`container ${styles.mainSection}`} id="offers">
         <CategoryNav categories={categories} />
 
         {/* ── Featured Offer (Revenue: top placement = highest-commission deal) */}

@@ -65,7 +65,7 @@ export default async function CategoryPage({ params }: Props) {
   ];
 
   return (
-    <div className={`container ${styles.container}`}>
+    <div className={`container ${styles.container}`} id="offers">
       <Breadcrumbs items={breadcrumbItems} />
       <CategoryNav categories={categories} />
       
