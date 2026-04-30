@@ -12,6 +12,7 @@ export interface Referral {
   referral_code?: string;
   benefit_user: string;
   benefit_owner: string;
+  bonus_amount?: string;
   steps: string[];
   faq: FAQ[];
   expiry: string;

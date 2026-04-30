@@ -13,9 +13,9 @@ interface Props {
 }
 
 export function ReferralCard({ referral, position = 0 }: Props) {
-  // Match either a Rupee amount or a Percentage, picking the first one it finds
-  const match = referral.benefit_user.match(/(₹\d+|\d+%)/);
-  const highlightAmount = match ? match[1] : null;
+  // Prioritize explicit bonus_amount column, fallback to regex extraction
+  const match = !referral.bonus_amount ? referral.benefit_user.match(/(₹\d+|\d+%)/) : null;
+  const highlightAmount = referral.bonus_amount || (match ? match[1] : null);
 
   const handleClick = () => {
     trackCardClick(referral.name, referral.slug, referral.category, position);

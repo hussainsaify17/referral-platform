@@ -79,6 +79,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
           referral_code: row.referral_code,
           benefit_user: row.benefit_user,
           benefit_owner: row.benefit_owner,
+          bonus_amount: row.bonus_amount,
           steps: row.steps ? String(row.steps).split('|').map(s => s.trim()) : [],
           faq: parseFaqs(row.faq),
           expiry: row.expiry || "2099-12-31T00:00:00.000Z",
