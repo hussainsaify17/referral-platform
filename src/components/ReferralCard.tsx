@@ -13,7 +13,8 @@ interface Props {
 }
 
 export function ReferralCard({ referral, position = 0 }: Props) {
-  const match = referral.benefit_user.match(/(₹\d+)/);
+  // Match either a Rupee amount or a Percentage, picking the first one it finds
+  const match = referral.benefit_user.match(/(₹\d+|\d+%)/);
   const highlightAmount = match ? match[1] : null;
 
   const handleClick = () => {
