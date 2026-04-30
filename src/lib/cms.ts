@@ -11,7 +11,7 @@ import { Referral, FAQ } from "./types";
  * 3. Choose "Entire Document" and "Comma-separated values (.csv)".
  * 4. Paste the generated link here.
  */
-const GOOGLE_SHEET_CSV_URL = process.env.GOOGLE_SHEET_CSV_URL || "";
+
 
 /**
  * Helper to parse the custom FAQ string format: "Q: ... A: ... | Q: ... A: ..."

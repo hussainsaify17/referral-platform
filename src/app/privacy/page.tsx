@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
         
         <section>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>1. Information We Collect</h2>
-          <p>ReferBenefits is primarily a static informational website. We do not require you to create an account or provide personal information to browse our referral codes. We may collect basic analytics data (such as IP addresses, browser types, and usage patterns) to improve our platform's performance and user experience.</p>
+          <p>ReferBenefits is primarily a static informational website. We do not require you to create an account or provide personal information to browse our referral codes. We may collect basic analytics data (such as IP addresses, browser types, and usage patterns) to improve our platform&apos;s performance and user experience.</p>
         </section>
 
         <section>

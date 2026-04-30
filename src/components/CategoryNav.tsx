@@ -16,7 +16,7 @@ export function CategoryNav({ categories }: Props) {
       <div className={styles.scrollArea}>
         <Link 
           href="/" 
-          className={`${styles.pill} ${pathname === '/' ? styles.active : ''}`}
+          className={`${styles.pill} ${pathname === '/' ? styles.active : ''}`} aria-current={pathname === '/' ? "page" : undefined}
         >
           All Offers
         </Link>

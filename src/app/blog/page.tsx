@@ -17,7 +17,7 @@ export default async function BlogIndexPage() {
       <div className={styles.header}>
         <h1 className={styles.title}>The ReferBenefits Blog</h1>
         <p className={styles.subtitle}>
-          Guides, tips, and deep-dives into maximizing your rewards with India's top apps.
+          Guides, tips, and deep-dives into maximizing your rewards with India&apos;s top apps.
         </p>
       </div>
 
@@ -29,7 +29,7 @@ export default async function BlogIndexPage() {
               How to maximize your {referral.name} rewards in {new Date().getFullYear()}
             </h2>
             <p className={styles.excerpt}>
-              Discover the best ways to earn {referral.benefit_user} and make the most out of {referral.name}'s referral program.
+              Discover the best ways to earn {referral.benefit_user} and make the most out of {referral.name}&apos;s referral program.
             </p>
             <div className={styles.readMore}>
               Read full guide <ArrowRight size={16} />

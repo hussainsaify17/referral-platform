@@ -1,6 +1,7 @@
 .container {
   margin: 2rem 0;
   width: 100%;
+  min-height: 2.5rem; /* reserve space to prevent CLS */
 }
 
 .scrollArea {
@@ -9,7 +10,7 @@
   gap: 0.75rem;
   padding-bottom: 0.5rem;
   /* Hide scrollbar for a cleaner look */
-  scrollbar-width: none; 
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
@@ -32,15 +33,32 @@
 .pill:hover {
   background-color: var(--secondary);
   color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .active {
-  background-color: var(--foreground);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: var(--background);
-  border-color: var(--foreground);
+  border-color: var(--primary);
+  position: relative;
 }
 
-/* Dark mode fine-tuning */
+/* Dot indicator */
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
 :global(.dark) .active {
   background-color: var(--primary);
   color: var(--primary-foreground);

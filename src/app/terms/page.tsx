@@ -15,7 +15,7 @@ export default function TermsOfService() {
         
         <section>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>1. Acceptance of Terms</h2>
-          <p>By accessing and using ReferBenefits ("the Website"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this Website.</p>
+          <p>By accessing and using ReferBenefits (&quot;the Website&quot;), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this Website.</p>
         </section>
 
         <section>
@@ -30,7 +30,7 @@ export default function TermsOfService() {
 
         <section>
           <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>4. Accuracy of Information</h2>
-          <p>While we strive to keep all referral codes and promotional information up to date, the terms of third-party promotions change frequently. We do not guarantee the accuracy, completeness, or validity of any offers listed on the Website. You are responsible for verifying the terms and conditions of the offer on the third-party provider's website before signing up.</p>
+          <p>While we strive to keep all referral codes and promotional information up to date, the terms of third-party promotions change frequently. We do not guarantee the accuracy, completeness, or validity of any offers listed on the Website. You are responsible for verifying the terms and conditions of the offer on the third-party provider&apos;s website before signing up.</p>
         </section>
 
         <section>

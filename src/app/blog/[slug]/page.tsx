@@ -1,9 +1,9 @@
 import { getReferralBySlug, getAllReferrals } from "@/lib/cms";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import styles from "./page.module.css";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -20,8 +20,7 @@ export async function generateStaticParams() {
 export const dynamicParams = false;
 
 export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
+  { params }: Props
 ): Promise<Metadata> {
   const { slug } = await params;
   const referral = await getReferralBySlug(slug);
@@ -80,7 +79,7 @@ export default async function BlogPostPage({ params }: Props) {
         </p>
         
         <p>
-          In this comprehensive guide, we'll show you exactly how to claim your exclusive sign-up bonus and maximize your long-term rewards using our verified {referral.name} invite system.
+          In this comprehensive guide, we&apos;ll show you exactly how to claim your exclusive sign-up bonus and maximize your long-term rewards using our verified {referral.name} invite system.
         </p>
 
         <div className={styles.highlightBox}>
