@@ -22,7 +22,7 @@ export function CategoryNav({ categories }: Props) {
         </Link>
         {categories.map((cat) => {
           const href = `/category/${cat.toLowerCase()}`;
-          const isActive = pathname === href;
+          const isActive = pathname === href || pathname === `${href}/`;
           return (
             <Link 
               key={cat} 

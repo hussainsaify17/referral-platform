@@ -121,6 +121,10 @@
   background-color: var(--success);
 }
 
+.highlightBoxAlt::before {
+  background-color: var(--accent);
+}
+
 .highlightTitle {
   font-weight: 700;
   font-size: 1.25rem;
@@ -165,6 +169,23 @@
   color: var(--foreground);
   margin-bottom: 0.5rem;
   font-size: 1.125rem;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.featureList li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
 }
 
 @media (min-width: 768px) {
