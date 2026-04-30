@@ -54,10 +54,14 @@ export default function RootLayout({
             <Script src="https://www.googletagmanager.com/gtag/js?id=G-5EV07XX9Y4" strategy="afterInteractive" />
             <Script id="google-analytics" strategy="afterInteractive">
               {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-5EV07XX9Y4');
+                if (window.localStorage && window.localStorage.getItem('disable_ga') === 'true') {
+                  window['ga-disable-G-5EV07XX9Y4'] = true;
+                } else {
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){window.dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-5EV07XX9Y4');
+                }
               `}
             </Script>
           </>
