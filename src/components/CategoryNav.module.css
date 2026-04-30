@@ -40,8 +40,8 @@
 }
 
 .active {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: var(--background);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
   border-color: var(--primary);
   position: relative;
 }

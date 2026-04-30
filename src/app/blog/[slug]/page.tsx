@@ -122,8 +122,8 @@ export default async function BlogPostPage({ params }: Props) {
         {referral.faq && referral.faq.length > 0 ? (
           referral.faq.map((item, index) => (
             <div key={index} className={styles.faqItem}>
-              <div className={styles.faqQuestion}>{item.q}</div>
-              <div>{item.a}</div>
+              <div className={styles.faqQuestion}>{item.question}</div>
+              <div>{item.answer}</div>
             </div>
           ))
         ) : (
