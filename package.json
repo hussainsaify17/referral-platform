@@ -11,6 +11,8 @@
     "generate-blogs": "node scripts/generate-blogs.mjs"
   },
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "dotenv": "^17.4.2",
     "googleapis": "^171.4.0",
     "lucide-react": "^1.11.0",

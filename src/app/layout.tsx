@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "./providers";
 import Script from "next/script";
+import { InteractiveBackground } from "@/components/InteractiveBackground";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -67,6 +68,7 @@ export default function RootLayout({
           </>
         )}
         <ThemeProvider>
+          <InteractiveBackground />
           <Header />
           <main>{children}</main>
           <Footer />
