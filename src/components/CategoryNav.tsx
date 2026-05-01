@@ -13,7 +13,7 @@ export function CategoryNav({ categories }: Props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.scrollArea}>
+      <div className={`${styles.scrollArea} hide-scrollbar`}>
         <Link 
           href="/#offers" 
           className={`${styles.pill} ${pathname === '/' ? styles.active : ''}`} aria-current={pathname === '/' ? "page" : undefined}

@@ -10,16 +10,8 @@
   overflow-y: hidden;
   gap: 1rem;
   padding: 1rem 0.5rem; /* padding for shadow/hover states */
-  margin: -1rem -0.5rem;
-  /* Hide scrollbar for a cleaner look */
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
-}
-
-.scrollArea::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
+  /* Remove negative margin to prevent artificial width expansion that causes scrolling */
+  margin: 0;
 }
 
 .pill {
