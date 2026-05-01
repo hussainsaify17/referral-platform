@@ -4,6 +4,7 @@ import { getAllReferrals, getReferralBySlug } from "@/lib/cms";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { CopyCodeButton } from "@/components/CopyCodeButton";
 import { ClaimOfferButton } from "@/components/ClaimOfferButton";
+import { ShareButtons } from "@/components/ShareButtons";
 import { CheckCircle2, AlertCircle, Calendar } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import styles from "./page.module.css";
@@ -150,6 +151,12 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             <p className={styles.disclaimer}>
               By using our link/code, we may earn a commission: &quot;{referral.benefit_owner}&quot;. This helps keep ReferBenefits free!
             </p>
+
+            <ShareButtons 
+              url={`https://referbenefits.co.in/${referral.slug}`} 
+              title={`${referral.name} Referral Code: ${referral.referral_code || 'Bonus Link'}`}
+              text={referral.benefit_user}
+            />
           </section>
 
           <section className={styles.stepsSection}>

@@ -19,14 +19,19 @@ export function NewsletterForm() {
     // Fire GA4 event
     trackEvent("newsletter_signup", { email_domain: email.split("@")[1] });
     try {
-      const res = await fetch("/api/newsletter", {
+      // Using formsubmit.co for static sites. Ensure NEXT_PUBLIC_ADMIN_EMAIL is set.
+      const endpoint = process.env.NEXT_PUBLIC_ADMIN_EMAIL 
+        ? `https://formsubmit.co/ajax/${process.env.NEXT_PUBLIC_ADMIN_EMAIL}`
+        : "https://formsubmit.co/ajax/hello@referbenefits.co.in";
+
+      const res = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({ email, _subject: "New Newsletter Subscriber!" }),
       });
+      
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || "Failed to subscribe");
+        throw new Error("Failed to subscribe");
       }
       setStatus("success");
       setMessage("🎉 You’re in! Check your inbox for weekly deals.");

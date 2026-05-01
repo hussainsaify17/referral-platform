@@ -1,6 +1,7 @@
 import { getAllReferrals, getCategories } from "@/lib/cms";
 import { ReferralCard } from "@/components/ReferralCard";
 import { CategoryNav } from "@/components/CategoryNav";
+import { OfferExplorer } from "@/components/OfferExplorer";
 import { Sparkles, TrendingUp, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -53,46 +54,41 @@ export default async function Home() {
       </section>
 
       <section className={`container ${styles.mainSection}`} id="offers">
-        <CategoryNav categories={categories} />
-
-        {/* ── Featured Offer (Revenue: top placement = highest-commission deal) */}
-        {featured && (
-          <div className={styles.featuredSection}>
-            <div className={styles.featuredLabel}>
-              <Sparkles size={14} />
-              Featured Offer
-            </div>
-            <Link href={`/${featured.slug}`} className={styles.featuredCard}>
-              <div className={styles.featuredLeft}>
-                <span className={styles.featuredCategory}>{featured.category}</span>
-                <h2 className={styles.featuredName}>{featured.name}</h2>
-                <p className={styles.featuredBenefit}>{featured.benefit_user}</p>
+        <OfferExplorer 
+          allReferrals={referrals} 
+          initialReferrals={restReferrals} 
+          categories={categories}
+          featuredNode={
+            featured && (
+              <div className={styles.featuredSection}>
+                <div className={styles.featuredLabel}>
+                  <Sparkles size={14} />
+                  Featured Offer
+                </div>
+                <Link href={`/${featured.slug}`} className={styles.featuredCard}>
+                  <div className={styles.featuredLeft}>
+                    <span className={styles.featuredCategory}>{featured.category}</span>
+                    <h2 className={styles.featuredName}>{featured.name}</h2>
+                    <p className={styles.featuredBenefit}>{featured.benefit_user}</p>
+                  </div>
+                  <div className={styles.featuredRight}>
+                    <span className={styles.featuredCta}>
+                      Claim Bonus →
+                    </span>
+                  </div>
+                </Link>
               </div>
-              <div className={styles.featuredRight}>
-                <span className={styles.featuredCta}>
-                  Claim Bonus →
-                </span>
-              </div>
+            )
+          }
+        />
+        
+        {referrals.length > 7 && (
+          <div className={styles.viewAllWrapper}>
+            <Link href="/category/fintech" className={styles.viewAll}>
+              View all {referrals.length} offers →
             </Link>
           </div>
         )}
-
-        {/* ── All Offers Grid ─────────────────────────────────────── */}
-        <div>
-          <h2 className={styles.sectionTitle}>Latest Offers</h2>
-          <div className="bentoGrid">
-            {restReferrals.map((ref, index) => (
-              <ReferralCard key={ref.id} referral={ref} position={index + 1} />
-            ))}
-          </div>
-          {referrals.length > 7 && (
-            <div className={styles.viewAllWrapper}>
-              <Link href="/category/fintech" className={styles.viewAll}>
-                View all {referrals.length} offers →
-              </Link>
-            </div>
-          )}
-        </div>
       </section>
     </div>
   );

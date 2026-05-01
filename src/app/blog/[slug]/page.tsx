@@ -1,6 +1,7 @@
 import { getReferralBySlug, getAllReferrals } from "@/lib/cms";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ShareButtons } from "@/components/ShareButtons";
 import { ArrowRight, Star, ShieldCheck, Zap } from "lucide-react";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
@@ -90,8 +91,28 @@ export default async function BlogPostPage({ params }: Props) {
     "Fintech Insider"
   ];
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: h1Variations[seed % 3],
+    author: {
+      "@type": "Person",
+      name: authorVariations[seed % 3]
+    },
+    datePublished: new Date().toISOString().split('T')[0], // Approximated
+    url: `https://referbenefits.co.in/blog/${referral.slug}`,
+    publisher: {
+      "@type": "Organization",
+      name: "ReferBenefits"
+    }
+  };
+
   return (
     <div className={styles.container}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className={styles.breadcrumbArea}>
         <Breadcrumbs items={breadcrumbItems} />
       </div>
@@ -208,6 +229,11 @@ export default async function BlogPostPage({ params }: Props) {
             <p>Claiming your bonus is straightforward. Simply use our promotional link above to navigate to the official {referral.name} site. During the registration process, ensure the referral code is applied. Once you complete your initial setup or first transaction, the {referral.benefit_user} will automatically be credited to your account dashboard.</p>
           </>
         )}
+
+        <ShareButtons 
+          url={`https://referbenefits.co.in/blog/${referral.slug}`} 
+          title={h1Variations[seed % 3]}
+        />
 
         <h2>Frequently Asked Questions</h2>
         {referral.faq && referral.faq.length > 0 ? (

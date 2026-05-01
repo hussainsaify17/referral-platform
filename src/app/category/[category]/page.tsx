@@ -1,7 +1,7 @@
 import { getCategories, getReferralsByCategory } from "@/lib/cms";
 import { ReferralCard } from "@/components/ReferralCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { CategoryNav } from "@/components/CategoryNav";
+import { OfferExplorer } from "@/components/OfferExplorer";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import type { Metadata } from "next";
@@ -67,7 +67,6 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <div className={`container ${styles.container}`} id="offers">
       <Breadcrumbs items={breadcrumbItems} />
-      <CategoryNav categories={categories} />
       
       <div className={styles.header}>
         <h1 className={styles.title}>{capitalized} Referral Codes</h1>
@@ -76,11 +75,11 @@ export default async function CategoryPage({ params }: Props) {
         </p>
       </div>
 
-      <div className="bentoGrid">
-        {referrals.map((ref, index) => (
-          <ReferralCard key={ref.id} referral={ref} position={index} />
-        ))}
-      </div>
+      <OfferExplorer 
+        allReferrals={await import('@/lib/cms').then(m => m.getAllReferrals())} 
+        initialReferrals={referrals} 
+        categories={categories}
+      />
     </div>
   );
 }
