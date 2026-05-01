@@ -42,23 +42,32 @@ async function generateBlogWithGemini(referral) {
 
   const prompt = `
 You are an expert SEO copywriter and personal finance/rewards blogger.
-Write a comprehensive, engaging, and human-sounding long-form blog post about the ${referral.name} referral code / sign-up bonus.
+Your task is to write a comprehensive, engaging, highly informative, and human-sounding long-form blog post about the ${referral.name} app and its referral code / sign-up bonus.
 
 Here is the data you have about the referral:
 - Name: ${referral.name}
 - Category: ${referral.category}
-- What the user gets: ${referral.benefit_user}
+- What the new user gets: ${referral.benefit_user}
 - What the referrer gets: ${referral.benefit_owner}
 - Bonus Amount (if explicit): ${referral.bonus_amount || 'N/A'}
+- Referral Code (if available): ${referral.referral_code || 'N/A'}
+- Referral Link (if available): ${referral.referral_link || 'N/A'}
 
-Write the blog post in Markdown format. Follow these rules:
-1. Do not include a main H1 (# ) title in the markdown, as the webpage will render its own H1. Start with H2s (## ) or introductory paragraphs.
-2. Make it read naturally, avoiding robotic patterns. Use formatting like bolding, bullet points, and short paragraphs.
-3. Structure it well: Introduction, Why choose ${referral.name}, How to claim the bonus, Step-by-step guide, and Conclusion.
-4. Naturally insert keywords like "${referral.name} referral code", "${referral.name} sign up bonus", "free ${referral.name} rewards".
-5. Do not include any placeholder text (like "[Insert Date Here]"). Ensure it reads as an evergreen post.
+To ensure the content passes every SEO benchmark and provides immense value, your article MUST cover the following:
+1. **Introduction & What it does:** Explain clearly what ${referral.name} is, its core features, and the primary problem it solves.
+2. **Pros of the product:** What are the biggest advantages of using ${referral.name} compared to alternatives?
+3. **How it makes life easier (Use cases & What people are saying):** Detail specific everyday use cases. Share thoughts on how real users benefit from it and why people love it (social proof). 
+4. **The Sign-Up Bonus:** Clearly explain the sign-up bonus (${referral.benefit_user}) and how lucrative it is.
+5. **Step-by-step Guide & Referral Injection:** A highly detailed, foolproof guide on how to claim the bonus. **CRUCIAL:** You must organically and conversationally weave the exact Referral Code (${referral.referral_code || 'the provided code'}) and/or Referral Link (${referral.referral_link || 'the provided link'}) into the article (e.g., "Just enter the code **${referral.referral_code || 'XYZ'}** when signing up", or "Click [here](${referral.referral_link || '#'}) to download the app"). Do this naturally so it pleases Google crawlers and doesn't look spammy.
+6. **SEO Optimization:** Naturally weave in high-intent keywords like "${referral.name} referral code", "${referral.name} sign up bonus", "${referral.name} review", and "free ${referral.name} rewards".
 
-Output ONLY the markdown content. No conversational intro/outro.
+Write the blog post entirely in Markdown format. Follow these rules:
+- Do not include a main H1 (# ) title in the markdown, as the webpage will render its own H1. Start with H2s (## ) or introductory paragraphs.
+- Make it read naturally, like a human expert wrote it. Avoid repetitive or robotic AI structures. 
+- Use rich formatting: bolding, bullet points, numbered lists, and short scannable paragraphs.
+- Do not include any placeholder text. Make it an evergreen post.
+
+Output ONLY the markdown content. Do not include any conversational intro or outro.
 `;
 
   const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
@@ -136,8 +145,8 @@ async function main() {
         };
         updatedCount++;
         
-        // Wait 2 seconds to avoid rate limits
-        await new Promise(r => setTimeout(r, 2000));
+        // Wait 5 seconds to avoid rate limits
+        await new Promise(r => setTimeout(r, 5000));
       } catch (err) {
         console.error(`Failed to generate blog for ${slug}:`, err.message);
       }
