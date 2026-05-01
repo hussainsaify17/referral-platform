@@ -27,6 +27,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  flex-shrink: 0; /* Prevents text from being cut off when scrolling */
 }
 
 /* liquid/glassmorphism hover effect */
