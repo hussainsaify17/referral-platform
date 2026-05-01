@@ -1,0 +1,2 @@
+npm run generate-blogs
+git add src/content/blogs

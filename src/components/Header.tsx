@@ -14,11 +14,12 @@ export async function Header() {
         </Link>
         <div className={styles.navContainer}>
           <nav className={styles.nav}>
-            {categories.slice(0, 4).map((cat) => (
+            {categories.slice(0, 3).map((cat) => (
               <Link key={cat} href={`/category/${cat.toLowerCase()}`} className={styles.navLink}>
                 {cat}
               </Link>
             ))}
+            <Link href="/blog" className={styles.navLink}>Blog</Link>
           </nav>
           <ThemeToggle />
         </div>

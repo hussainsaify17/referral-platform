@@ -99,6 +99,46 @@
   margin-bottom: 0.5rem;
 }
 
+.markdownWrapper {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--secondary-foreground);
+}
+
+.markdownWrapper h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.markdownWrapper h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdownWrapper p {
+  margin-bottom: 1.5rem;
+}
+
+.markdownWrapper ul, .markdownWrapper ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.markdownWrapper li {
+  margin-bottom: 0.5rem;
+}
+
+.markdownWrapper strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
 .highlightBox {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
