@@ -14,7 +14,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -52,6 +52,19 @@ jobs:
             
       - name: Install dependencies
         run: npm ci
+
+      - name: Generate new blogs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
+        run: npm run generate-blogs
+
+      - name: Commit and push generated blogs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/blogs/
+          git diff --quiet && git diff --staged --quiet || (git commit --no-verify -m "chore: auto-generate new referral blogs" && git push)
         
       - name: Build with Next.js
         # We pass the Google Sheets CSV URL as an environment variable so the build fetches the latest data
