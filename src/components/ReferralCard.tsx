@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Referral } from "@/lib/types";
-import { ArrowRight, Gift } from "lucide-react";
+import { ArrowRight, Gift, Sparkles } from "lucide-react";
 import { trackCardClick } from "@/lib/analytics";
 import styles from "./ReferralCard.module.css";
 
@@ -22,7 +22,18 @@ export function ReferralCard({ referral, position = 0 }: Props) {
   };
 
   return (
-    <Link href={`/${referral.slug}`} className={styles.card} onClick={handleClick}>
+    <Link 
+      href={`/${referral.slug}`} 
+      className={`${styles.card} ${referral.is_featured ? styles.featured : ''}`} 
+      onClick={handleClick}
+    >
+      {referral.is_featured && (
+        <div className={styles.featuredBadge}>
+          <Sparkles size={12} />
+          Featured
+        </div>
+      )}
+
       <div className={styles.header}>
         <div>
           <span className={styles.category}>{referral.category}</span>

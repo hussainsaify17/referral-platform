@@ -19,15 +19,19 @@ export function NewsletterForm() {
     // Fire GA4 event
     trackEvent("newsletter_signup", { email_domain: email.split("@")[1] });
     try {
-      // Using formsubmit.co for static sites. Ensure NEXT_PUBLIC_ADMIN_EMAIL is set.
-      const endpoint = process.env.NEXT_PUBLIC_ADMIN_EMAIL 
-        ? `https://formsubmit.co/ajax/${process.env.NEXT_PUBLIC_ADMIN_EMAIL}`
-        : "https://formsubmit.co/ajax/hello@referbenefits.co.in";
+      // You must create a Google Apps Script Web App that appends the row
+      // to your Google Sheet, and put its URL in your .env.local as NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK
+      const endpoint = process.env.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK || "";
+      
+      if (!endpoint) {
+        throw new Error("Newsletter webhook is not configured.");
+      }
 
       const res = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify({ email, _subject: "New Newsletter Subscriber!" }),
+        // GAS requires text/plain or application/x-www-form-urlencoded to avoid CORS preflight issues
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ email, timestamp: new Date().toISOString() }),
       });
       
       if (!res.ok) {

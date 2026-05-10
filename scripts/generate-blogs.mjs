@@ -51,14 +51,14 @@ Here is the data you have about the referral:
 - What the referrer gets: ${referral.benefit_owner}
 - Bonus Amount (if explicit): ${referral.bonus_amount || 'N/A'}
 - Referral Code (if available): ${referral.referral_code || 'N/A'}
-- Referral Link (if available): ${referral.referral_link || 'N/A'}
+- Referral Link (if available): https://referbenefits.co.in/go/${referral.slug}
 
 To ensure the content passes every SEO benchmark and provides immense value, your article MUST cover the following:
 1. **Introduction & What it does:** Explain clearly what ${referral.name} is, its core features, and the primary problem it solves.
 2. **Pros of the product:** What are the biggest advantages of using ${referral.name} compared to alternatives?
 3. **How it makes life easier (Use cases & What people are saying):** Detail specific everyday use cases. Share thoughts on how real users benefit from it and why people love it (social proof). 
 4. **The Sign-Up Bonus:** Clearly explain the sign-up bonus (${referral.benefit_user}) and how lucrative it is.
-5. **Step-by-step Guide & Referral Injection:** A highly detailed, foolproof guide on how to claim the bonus. **CRUCIAL:** You must organically and conversationally weave the exact Referral Code (${referral.referral_code || 'the provided code'}) and/or Referral Link (${referral.referral_link || 'the provided link'}) into the article (e.g., "Just enter the code **${referral.referral_code || 'XYZ'}** when signing up", or "Click [here](${referral.referral_link || '#'}) to download the app"). Do this naturally so it pleases Google crawlers and doesn't look spammy.
+5. **Step-by-step Guide & Referral Injection:** A highly detailed, foolproof guide on how to claim the bonus. **CRUCIAL:** You must organically and conversationally weave the exact Referral Code (${referral.referral_code || 'the provided code'}) and/or Referral Link (https://referbenefits.co.in/go/${referral.slug}) into the article (e.g., "Just enter the code **${referral.referral_code || 'XYZ'}** when signing up", or "Click [here](https://referbenefits.co.in/go/${referral.slug}) to download the app"). Do this naturally so it pleases Google crawlers and doesn't look spammy.
 6. **SEO Optimization:** Naturally weave in high-intent keywords like "${referral.name} referral code", "${referral.name} sign up bonus", "${referral.name} review", and "free ${referral.name} rewards".
 
 Write the blog post entirely in Markdown format. Follow these rules:

@@ -25,12 +25,14 @@ function fireEvent(eventName: string, params: Record<string, string | number | b
  * @param brandName  e.g. "CRED"
  * @param slug       e.g. "cred-referral-code"
  * @param category   e.g. "Fintech"
+ * @param source     e.g. "twitter", "reddit" (optional UTM source)
  */
-export function trackClaimOffer(brandName: string, slug: string, category: string) {
+export function trackClaimOffer(brandName: string, slug: string, category: string, source?: string) {
   fireEvent("claim_referral_offer", {
     brand_name: brandName,
     page_slug: slug,
     brand_category: category,
+    ...(source ? { utm_source: source } : {}),
   });
 }
 

@@ -18,4 +18,5 @@ export interface Referral {
   expiry: string;
   last_checked: string;
   status: "active" | "expired";
+  is_featured?: boolean;
 }

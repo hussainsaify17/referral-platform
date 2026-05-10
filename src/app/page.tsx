@@ -15,9 +15,15 @@ export default async function Home() {
   const referrals = await getAllReferrals();
   const categories = await getCategories();
 
-  // Featured = first referral (set your best/highest-value code first in Sheets)
-  const featured = referrals[0];
-  const restReferrals = referrals.slice(1, 7);
+  const sortedReferrals = [...referrals].sort((a, b) => {
+    if (a.is_featured && !b.is_featured) return -1;
+    if (!a.is_featured && b.is_featured) return 1;
+    return 0;
+  });
+
+  // Featured = first item (now properly sorted to favor is_featured: true)
+  const featured = sortedReferrals[0];
+  const restReferrals = sortedReferrals.slice(1, 7);
 
   const websiteSchema = {
     "@context": "https://schema.org",

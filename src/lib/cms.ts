@@ -85,6 +85,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
           expiry: row.expiry || "2099-12-31T00:00:00.000Z",
           last_checked: new Date().toISOString(),
           status: (row.status as "active" | "expired") || "active",
+          is_featured: String(row.is_featured).toLowerCase() === 'true',
         }))
         // Ensure the row actually has an ID and Name
         .filter((row) => row.id && row.name);
@@ -115,7 +116,8 @@ export async function getAllReferrals(): Promise<Referral[]> {
         faq: [],
         expiry: "2099-12-31T00:00:00.000Z",
         status: "active",
-        last_checked: new Date().toISOString()
+        last_checked: new Date().toISOString(),
+        is_featured: false
       }];
     }
   }
