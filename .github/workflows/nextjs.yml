@@ -67,9 +67,9 @@ jobs:
           git diff --quiet && git diff --staged --quiet || (git commit --no-verify -m "chore: auto-generate new referral blogs" && git push)
         
       - name: Build with Next.js
-        # We pass the Google Sheets CSV URL as an environment variable so the build fetches the latest data
         env:
           GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
+          NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK: ${{ secrets.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK }}
         run: npm run build
         
       - name: Upload artifact
