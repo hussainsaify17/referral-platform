@@ -1,0 +1,35 @@
+{
+  "pros": [
+    "Zero-balance savings account with no hidden monthly maintenance fees.",
+    "Real-time spend tracking and automatic expense categorization.",
+    "Earn rewards (Jewels) on both UPI transactions and Debit Card spends.",
+    "Seamless integration with Federal Bank ensuring bank-grade security."
+  ],
+  "cons": [
+    "Requires completing full Video KYC to unlock the sign-up bonus and account limits.",
+    "Users who already hold an active Federal Bank account may face onboarding restrictions."
+  ],
+  "detailed_review": "<h2>Jupiter Money Review: The Smart Way to Manage and Grow Your Money</h2><p>Jupiter Money is a premier neobanking platform designed for the mobile-first generation. Partnered with Federal Bank, Jupiter offers a fully digital, zero-balance savings account that takes the hassle out of traditional banking. With its sleek interface and powerful financial tools, it is built to help users track their expenses, save effortlessly, and earn rewards on daily transactions.</p><h3>Why Users Love Jupiter Money</h3><p>What sets Jupiter apart from traditional banking apps is its focus on financial wellness. Here are some of the standout features that users love:</p><ul><li><strong>Interactive Money Tracking:</strong> Jupiter automatically categorizes your expenses, giving you a clear breakdown of where your money goes each month.</li><li><strong>Pots (Goal-Based Savings):</strong> You can set aside money in digital 'Pots' for specific goals and earn interest, helping you save disciplinedly.</li><li><strong>Jewels Rewards Program:</strong> Earn rewards called 'Jewels' when you spend using your Jupiter debit card or UPI. These Jewels can be easily redeemed for cash or gold.</li><li><strong>Zero-Balance Account:</strong> No need to worry about maintaining a minimum balance; enjoy fee-free banking.</li></ul><h3>How to Maximize Your ₹300 Sign-Up Bonus</h3><p>To get the most out of your onboarding experience, ensure you complete your registration and KYC in one go. Once your account is successfully verified, you will receive a ₹300 bonus credited directly to your account. To maximize your rewards going forward, link your Jupiter UPI ID to your favorite merchant apps and utilize the Jupiter Debit Card for your regular monthly subscriptions, utility bills, and shopping to accumulate Jewels rapidly.</p>",
+  "steps": [
+    "Download the Jupiter Money app from the Google Play Store or Apple App Store.",
+    "Open the app and enter your mobile number (ensure it is the one linked to your Aadhaar card).",
+    "During the sign-up process, look for the 'Referral Code' prompt and enter the referral code to qualify for the bonus.",
+    "Provide your PAN card details and Aadhaar number to verify your identity.",
+    "Complete the quick Video KYC (VKYC) process within the app by showing your physical PAN card to the agent.",
+    "Once your KYC is approved and your account is activated, your ₹300 sign-up bonus will be credited to your wallet or bank account."
+  ],
+  "faq": [
+    {
+      "question": "Is Jupiter Money safe to use?",
+      "answer": "Yes, Jupiter Money is highly secure. Your savings account is hosted by Federal Bank, an RBI-licensed scheduled commercial bank. Furthermore, your funds are insured up to ₹5 Lakh by the DICGC (a subsidiary of the RBI)."
+    },
+    {
+      "question": "When will I receive my ₹300 sign-up bonus?",
+      "answer": "The ₹300 bonus is credited to your Jupiter account shortly after your Video KYC is successfully completed, verified, and your account is officially opened."
+    },
+    {
+      "question": "Are there any hidden charges for maintaining a Jupiter account?",
+      "answer": "No, Jupiter is a zero-balance savings account. There are no annual maintenance fees, account opening fees, or hidden charges for standard banking services."
+    }
+  ]
+}
