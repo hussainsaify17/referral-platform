@@ -30,18 +30,18 @@ export const AdBanner = ({
   }, []);
 
   return (
-    <div style={{ margin: '20px 0', minHeight: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#f5f5f5', border: '1px dashed #ccc', borderRadius: '8px' }}>
+    <div style={{ position: 'relative', margin: '20px 0', minHeight: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#111111', border: '1px dashed #333333', borderRadius: '8px', overflow: 'hidden' }}>
+      {/* Fallback text when adblock is enabled or running on localhost */}
+      <span style={{ position: 'absolute', color: '#444444', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Advertisement</span>
       <ins
         ref={adRef}
         className="adsbygoogle"
-        style={{ display: 'block', width: '100%' }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" // Placeholder, replace with actual publisher ID
+        style={{ display: 'block', width: '100%', position: 'relative', zIndex: 1 }}
+        data-ad-client="ca-pub-8766645415313410"
         data-ad-slot={dataAdSlot}
         data-ad-format={dataAdFormat}
         data-full-width-responsive={dataFullWidthResponsive}
       />
-      {/* Fallback text when adblock is enabled or running on localhost */}
-      <span style={{ position: 'absolute', color: '#999', fontSize: '14px', zIndex: -1 }}>Advertisement</span>
     </div>
   );
 };
