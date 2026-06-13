@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 import { getCategories, getAllReferrals } from "@/lib/cms";
 import { NewsletterForm } from "./NewsletterForm";
@@ -34,9 +35,10 @@ export async function Footer() {
         <div className={styles.footerMain}>
           {/* Column 1 – Brand */}
           <div className={styles.brand}>
-            <div className={styles.logo}>
+            <Link href="/" className={styles.logo}>
+              <Image src="/logo.png" alt="ReferBenefits Logo" width={32} height={32} className={styles.logoImage} />
               Refer<span className={styles.accent}>Benefits</span>
-            </div>
+            </Link>
             <p className={styles.tagline}>
               India&apos;s most trusted directory for referral codes, sign-up bonuses &amp; invite links. Verified daily.
             </p>

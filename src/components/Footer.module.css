@@ -172,10 +172,13 @@
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--foreground) 0%, var(--secondary-foreground) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoImage {
+  border-radius: 4px;
 }
 
 .accent {

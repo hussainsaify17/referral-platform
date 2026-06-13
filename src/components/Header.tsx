@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 import { getCategories } from "@/lib/cms";
@@ -11,6 +12,7 @@ export async function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
+          <Image src="/logo.png" alt="ReferBenefits Logo" width={32} height={32} className={styles.logoImage} />
           Refer<span className={styles.accent}>Benefits</span>
         </Link>
         <div className={styles.navContainer}>
