@@ -60,10 +60,10 @@ export default async function Home() {
           <span>Updated today with {referrals.length} active offers</span>
         </div>
         <h1 className={styles.title}>
-          Stop Leaving Money on the Table
+          Welcome to <span className={styles.brandText}>ReferBenefits</span>
         </h1>
         <p className={styles.subtitle}>
-          Find the best referral codes, sign-up bonuses, and invite links for top Indian apps. Earn rewards instantly.
+          Stop leaving money on the table. Find the best referral codes, sign-up bonuses, and invite links for top Indian apps. Earn rewards instantly.
         </p>
         <div className={styles.trustRow}>
           <span className={styles.trustItem}><ShieldCheck size={14} /> Verified Codes</span>

@@ -44,13 +44,18 @@
   font-size: 3.5rem;
   font-weight: 800;
   letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--foreground);
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--foreground) 0%, var(--secondary-foreground) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.brandText {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {

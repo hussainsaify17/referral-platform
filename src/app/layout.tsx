@@ -44,8 +44,49 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const schemaOrgJSONLD = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://referbenefits.co.in/#organization",
+        "name": "ReferBenefits",
+        "url": "https://referbenefits.co.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://referbenefits.co.in/logo.png"
+        },
+        "sameAs": [
+          "https://twitter.com/referbenefits",
+          "https://t.me/referbenefits",
+          "https://linkedin.com/company/referbenefits"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://referbenefits.co.in/#website",
+        "url": "https://referbenefits.co.in",
+        "name": "ReferBenefits",
+        "publisher": {
+          "@id": "https://referbenefits.co.in/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://referbenefits.co.in/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  };
+
   return (
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}
+        />
+      </head>
       <body>
         {process.env.NODE_ENV === 'production' && (
           <>
