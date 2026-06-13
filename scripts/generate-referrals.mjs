@@ -112,7 +112,7 @@ async function main() {
     const hasReview = ref.detailed_review && String(ref.detailed_review).trim().length > 0;
     
     let localData = {};
-    const localPath = path.join(REFERRALS_DIR, \`\${slug}.json\`);
+    const localPath = path.join(REFERRALS_DIR, `${slug}.json`);
     try {
       const localContent = await fs.readFile(localPath, 'utf8');
       localData = JSON.parse(localContent);
@@ -129,7 +129,7 @@ async function main() {
         break;
       }
       
-      console.log(\`Generating SEO data for: \${ref.name} (\${slug})...\`);
+      console.log(`Generating SEO data for: ${ref.name} (${slug})...`);
       
       try {
         const generatedJson = await generateDataWithGemini(ref);
@@ -139,13 +139,13 @@ async function main() {
         // Wait 5 seconds to avoid rate limits
         await new Promise(r => setTimeout(r, 5000));
       } catch (err) {
-        console.error(\`Failed to generate data for \${slug}:\`, err.message);
+        console.error(`Failed to generate data for ${slug}:`, err.message);
       }
     }
   }
 
   if (updatedCount > 0) {
-    console.log(\`Successfully generated \${updatedCount} referral profiles.\`);
+    console.log(`Successfully generated ${updatedCount} referral profiles.`);
   } else {
     console.log("All referrals are fully populated!");
   }
