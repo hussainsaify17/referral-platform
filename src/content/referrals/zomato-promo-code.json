@@ -1,0 +1,40 @@
+{
+  "pros": [
+    "Vast network of restaurants ranging from local street food vendors to premium fine-dining establishments.",
+    "Highly intuitive user interface with advanced filters, real-time GPS delivery tracking, and detailed user reviews.",
+    "Frequent curated discounts, bank offers, and the highly rewarding Zomato Gold loyalty program.",
+    "Efficient customer support with quick resolutions via in-app live chat."
+  ],
+  "cons": [
+    "Delivery fees, taxes, and platform charges can significantly increase the final bill amount.",
+    "Surge pricing and longer delivery times during peak hours, festivals, or adverse weather conditions."
+  ],
+  "detailed_review": "<h2>Zomato: The Ultimate Food Delivery and Restaurant Discovery Platform</h2><p>Zomato has established itself as a household name and a pioneer in the food tech industry. Originally starting as a restaurant discovery website, it has evolved into a hyper-local food delivery behemoth. Whether you are craving a comforting bowl of ramen, local street food, or a gourmet dessert, Zomato connects you to thousands of restaurants at the tap of a button.</p><h3>Why Food Lovers Choose Zomato</h3><p>What sets Zomato apart is its comprehensive database. It is not just a delivery app; it is a culinary guide. Users can view menus, read authentic reviews, browse food photos uploaded by other diners, and check hygiene ratings before placing an order. Key features that users love include:</p><ul><li><strong>Real-Time GPS Tracking:</strong> Watch your delivery partner pick up your order and navigate to your doorstep in real-time.</li><li><strong>Zomato Gold:</strong> A premium membership program that offers free delivery on orders above a certain threshold, extra discounts, and VIP access during peak hours.</li><li><strong>Diverse Payment Options:</strong> Seamless integration with UPI, major credit/debit cards, net banking, and digital wallets.</li></ul><h3>How to Maximize Your ₹300 Sign-Up Bonus</h3><p>New users can kickstart their culinary journey on Zomato with an attractive welcome bonus of ₹300 off on their first food delivery order. To maximize this deal, look out for restaurants that are already offering companion discounts (such as '50% off up to ₹100'). By combining restaurant-level discounts with your sign-up promo code, you can enjoy a premium meal for a fraction of the original price. Additionally, placing your first order from a restaurant close to your location can help minimize or eliminate delivery fees, ensuring you get the full value of your ₹300 discount.</p><h3>Our Verdict</h3><p>With its unmatched restaurant coverage, reliable delivery logistics, and highly rewarding promotional offers, Zomato is an essential app for anyone who loves food. The ₹300 sign-up bonus offers an unbeatable, risk-free opportunity to experience the convenience of premium food delivery directly to your home or office.</p>",
+  "steps": [
+    "Download the Zomato app from the Google Play Store or Apple App Store.",
+    "Open the app and register a new account using your mobile number, Google account, or email address.",
+    "Set your delivery location to see all available restaurants in your area.",
+    "Browse the menus and add your favorite dishes to the cart, ensuring you meet any minimum cart value required for the promo.",
+    "Proceed to the checkout page and click on the 'Apply Promo Code' or 'Use Referral Code' option.",
+    "Enter the referral code or select the ₹300 off new user coupon from the available offers list.",
+    "Select your preferred payment method, complete the transaction, and wait for your discounted meal to arrive."
+  ],
+  "faq": [
+    {
+      "question": "How do I claim the ₹300 discount on my first Zomato order?",
+      "answer": "To claim the discount, download the Zomato app, sign up as a new user, add items to your cart, and apply the referral or welcome promo code at the checkout screen before making your payment."
+    },
+    {
+      "question": "Is there a minimum order value required to use the first-order bonus?",
+      "answer": "Yes, most Zomato first-order promotions require a minimum order value to be eligible for the ₹300 discount. You can view the specific terms and conditions by tapping on the offer details on the checkout page."
+    },
+    {
+      "question": "Can I use the Zomato sign-up bonus more than once?",
+      "answer": "No, the ₹300 sign-up discount is strictly a one-time offer valid only for new users on their very first order. Creating multiple accounts to abuse the promotion violates Zomato's terms of service."
+    },
+    {
+      "question": "Does the ₹300 discount cover delivery fees and taxes?",
+      "answer": "The promotional discount applies directly to the food item subtotal. Government taxes, restaurant charges, and delivery fees are calculated separately and may still apply to your final bill."
+    }
+  ]
+}
