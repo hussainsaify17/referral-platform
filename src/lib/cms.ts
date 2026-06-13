@@ -69,26 +69,51 @@ export async function getAllReferrals(): Promise<Referral[]> {
       }
 
       // Map rows to our strongly typed structure
-      data = parsed.data
-        .map((row) => ({
+      data = [];
+      for (const row of parsed.data) {
+        if (!row.id && !row.slug) continue;
+        if (!row.name) continue;
+
+        const slug = row.slug || row.id;
+        
+        // Attempt to load AI-generated local data
+        let localData: any = {};
+        try {
+          const localPath = path.join(process.cwd(), 'src/content/referrals', `${slug}.json`);
+          const localContent = await fs.readFile(localPath, 'utf8');
+          localData = JSON.parse(localContent);
+        } catch (e) {
+          // No local file exists yet
+        }
+
+        const steps = row.steps ? String(row.steps).split('|').map(s => s.trim()) : [];
+        const faq = parseFaqs(row.faq);
+        const pros = row.pros ? String(row.pros).split('|').map(s => s.trim()).filter(Boolean) : [];
+        const cons = row.cons ? String(row.cons).split('|').map(s => s.trim()).filter(Boolean) : [];
+        const detailed_review = row.detailed_review || "";
+
+        data.push({
           id: row.id || row.slug,
           name: row.name,
-          slug: row.slug,
+          slug: slug,
           category: row.category || "Uncategorized",
           referral_link: row.referral_link,
           referral_code: row.referral_code,
           benefit_user: row.benefit_user,
           benefit_owner: row.benefit_owner,
           bonus_amount: row.bonus_amount,
-          steps: row.steps ? String(row.steps).split('|').map(s => s.trim()) : [],
-          faq: parseFaqs(row.faq),
+          // Merge logic: If CSV has data, use it. Otherwise, use local AI data.
+          steps: steps.length > 0 ? steps : (localData.steps || []),
+          faq: faq.length > 0 ? faq : (localData.faq || []),
+          pros: pros.length > 0 ? pros : (localData.pros || []),
+          cons: cons.length > 0 ? cons : (localData.cons || []),
+          detailed_review: detailed_review ? detailed_review : (localData.detailed_review || ""),
           expiry: row.expiry || "2099-12-31T00:00:00.000Z",
           last_checked: new Date().toISOString(),
           status: (row.status as "active" | "expired") || "active",
           is_featured: String(row.is_featured).toLowerCase() === 'true',
-        }))
-        // Ensure the row actually has an ID and Name
-        .filter((row) => row.id && row.name);
+        });
+      }
 
       if (data.length === 0) {
         throw new Error("Successfully fetched the document, but found 0 valid rows. Check your column headers (must be id, name, slug, etc).");

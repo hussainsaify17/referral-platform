@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "next lint",
     "prepare": "husky",
-    "generate-blogs": "node scripts/generate-blogs.mjs"
+    "generate-blogs": "node scripts/generate-blogs.mjs",
+    "generate-referrals": "node scripts/generate-referrals.mjs",
+    "check-codes": "node scripts/check_codes.mjs"
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",

@@ -15,6 +15,9 @@ export interface Referral {
   bonus_amount?: string;
   steps: string[];
   faq: FAQ[];
+  pros?: string[];
+  cons?: string[];
+  detailed_review?: string;
   expiry: string;
   last_checked: string;
   status: "active" | "expired";

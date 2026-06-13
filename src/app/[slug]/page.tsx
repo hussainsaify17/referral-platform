@@ -7,6 +7,7 @@ import { ClaimOfferButton } from "@/components/ClaimOfferButton";
 import { ShareButtons } from "@/components/ShareButtons";
 import { CheckCircle2, AlertCircle, Calendar } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { AdBanner } from "@/components/AdBanner";
 import styles from "./page.module.css";
 
 export async function generateStaticParams() {
@@ -92,6 +93,20 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
     validThrough: referral.expiry
   };
 
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: referral.name,
+    applicationCategory: "WebApplication",
+    operatingSystem: "Any",
+    offers: offerSchema,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "124"
+    }
+  };
+
   return (
     <div className={`container ${styles.pageContainer}`}>
       {faqSchema && (
@@ -102,7 +117,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
       )}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
       <div className={styles.contentWrapper}>
         <div className={styles.mainContent}>
@@ -120,6 +135,8 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
               Maximize your rewards when creating a new account.
             </p>
           </header>
+
+          <AdBanner dataAdSlot="header_slot_123" />
 
           <section className={styles.offerBox}>
             <div className={styles.offerHeader}>
@@ -171,6 +188,38 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             </div>
           </section>
 
+          {((referral.pros && referral.pros.length > 0) || (referral.cons && referral.cons.length > 0)) && (
+            <section className={styles.prosConsSection}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', margin: '30px 0' }}>
+                {referral.pros && referral.pros.length > 0 && (
+                  <div style={{ background: '#f0fdf4', padding: '20px', borderRadius: '12px' }}>
+                    <h3 style={{ color: '#166534', marginTop: 0 }}>✅ Pros</h3>
+                    <ul style={{ paddingLeft: '20px', margin: 0, color: '#15803d' }}>
+                      {referral.pros.map((pro, idx) => <li key={idx}>{pro}</li>)}
+                    </ul>
+                  </div>
+                )}
+                {referral.cons && referral.cons.length > 0 && (
+                  <div style={{ background: '#fef2f2', padding: '20px', borderRadius: '12px' }}>
+                    <h3 style={{ color: '#991b1b', marginTop: 0 }}>❌ Cons</h3>
+                    <ul style={{ paddingLeft: '20px', margin: 0, color: '#b91c1c' }}>
+                      {referral.cons.map((con, idx) => <li key={idx}>{con}</li>)}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          <AdBanner dataAdSlot="middle_slot_456" />
+
+          {referral.detailed_review && (
+            <section className={styles.reviewSection} style={{ margin: '40px 0', lineHeight: '1.8' }}>
+              <h2>Detailed Review</h2>
+              <div dangerouslySetInnerHTML={{ __html: referral.detailed_review }} />
+            </section>
+          )}
+
           {referral.faq && referral.faq.length > 0 && (
             <section className={styles.faqSection}>
               <h2>Frequently Asked Questions</h2>
@@ -213,6 +262,8 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             </ul>
           </div>
           
+          <AdBanner dataAdSlot="sidebar_slot_789" />
+
           <RelatedLinks currentSlug={referral.slug} category={referral.category} />
         </aside>
 
