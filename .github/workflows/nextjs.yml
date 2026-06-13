@@ -59,7 +59,6 @@ jobs:
           GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
         run: |
           npm run generate-referrals
-          npm run generate-blogs
 
       - name: Commit and push generated content
         run: |

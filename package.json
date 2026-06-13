@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "generate-blogs": "node scripts/generate-blogs.mjs",
     "generate-referrals": "node scripts/generate-referrals.mjs",
     "check-codes": "node scripts/check_codes.mjs"
   },

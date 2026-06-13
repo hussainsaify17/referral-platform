@@ -1,7 +1,5 @@
 import { MetadataRoute } from 'next';
 import { getAllReferrals, getCategories } from '@/lib/cms';
-import fs from 'fs/promises';
-import path from 'path';
 
 export const dynamic = 'force-static';
 
@@ -12,43 +10,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const referrals = await getAllReferrals();
   const categories = await getCategories();
 
-  // Get blogs metadata
-  let blogs: { slug: string; lastGenerated: number }[] = [];
-  try {
-    const metadataPath = path.join(process.cwd(), 'src/content/blogs/metadata.json');
-    const metaStr = await fs.readFile(metadataPath, 'utf-8');
-    const metadata = JSON.parse(metaStr);
-    blogs = Object.entries(metadata).map(([slug, data]: [string, any]) => ({
-      slug,
-      lastGenerated: data.lastGenerated,
-    }));
-  } catch (e) {
-    console.warn("Could not read blogs metadata for sitemap", e);
-  }
-
   // Map dynamic referral pages
   const referralUrls = referrals.map((ref) => ({
     url: `${baseUrl}/${ref.slug}`,
-    lastModified: new Date(ref.last_checked),
+    lastModified: new Date(ref.last_checked || Date.now()),
     changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }));
-
-  // Map dynamic category pages
-  const categoryUrls = categories.map((cat) => ({
-    url: `${baseUrl}/category/${cat.toLowerCase()}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
     priority: 0.9,
   }));
 
-  // Map blog pages
-  const blogUrls = blogs.map((blog) => ({
-    url: `${baseUrl}/blog/${blog.slug}`,
-    lastModified: new Date(blog.lastGenerated),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+  // Map dynamic category pages
+  const categoryUrls = categories.map((cat) => {
+    // Find the most recently updated referral in this category
+    const catReferrals = referrals.filter(r => r.category === cat);
+    const latestUpdate = catReferrals.length > 0
+      ? Math.max(...catReferrals.map(r => new Date(r.last_checked || Date.now()).getTime()))
+      : Date.now();
+
+    return {
+      url: `${baseUrl}/category/${cat.toLowerCase()}`,
+      lastModified: new Date(latestUpdate),
+      changeFrequency: 'daily' as const,
+      priority: 0.8,
+    };
+  });
 
   // Static routes
   const staticRoutes = [
@@ -72,5 +56,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  return [...staticRoutes, ...categoryUrls, ...blogUrls, ...referralUrls];
+  return [...staticRoutes, ...categoryUrls, ...referralUrls];
 }

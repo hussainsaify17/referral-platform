@@ -7,6 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/go/',
     },
     sitemap: 'https://referbenefits.co.in/sitemap.xml',
   };

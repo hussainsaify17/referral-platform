@@ -1,2 +1,2 @@
-npm run generate-blogs
-git add src/content/blogs
+npm run generate-referrals
+git add src/content/referrals

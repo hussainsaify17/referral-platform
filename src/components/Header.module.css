@@ -86,3 +86,20 @@
 .navLink:hover::after {
   width: 100%;
 }
+
+.submitBtnDesktop {
+  padding: 0.5rem 1rem;
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.submitBtnDesktop:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+}

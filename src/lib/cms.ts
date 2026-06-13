@@ -40,13 +40,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
   if (cleanedUrl) {
     console.log("Fetching live data from Google Sheets...");
     try {
-      // We append a timestamp to bypass Next.js build-time fetch caching without using 
-      // cache: "no-store", which would crash the static export (NEXT_STATIC_GEN_BAILOUT)
-      const cacheBusterUrl = cleanedUrl.includes("?") 
-        ? `${cleanedUrl}&_t=${Date.now()}` 
-        : `${cleanedUrl}?_t=${Date.now()}`;
-        
-      const response = await fetch(cacheBusterUrl);
+      const response = await fetch(cleanedUrl);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);

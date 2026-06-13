@@ -37,9 +37,6 @@ export const metadata: Metadata = {
     title: "ReferBenefits | India's Best Sign Up Bonuses",
     description: "Discover verified referral codes and sign-up bonuses to earn extra cash on top apps.",
   },
-  alternates: {
-    canonical: "https://referbenefits.co.in",
-  },
 };
 
 export default function RootLayout({
@@ -71,7 +68,7 @@ export default function RootLayout({
               async 
               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8766645415313410" 
               crossOrigin="anonymous" 
-              strategy="afterInteractive" 
+              strategy="lazyOnload" 
             />
           </>
         )}

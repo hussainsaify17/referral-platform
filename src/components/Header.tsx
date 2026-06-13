@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 import { getCategories } from "@/lib/cms";
+import { MobileMenu } from "./MobileMenu";
 import styles from "./Header.module.css";
 
 export async function Header() {
@@ -19,8 +20,12 @@ export async function Header() {
                 {cat}
               </Link>
             ))}
+            <Link href="mailto:submit@referbenefits.co.in" className={styles.submitBtnDesktop}>
+              Submit a Code
+            </Link>
           </nav>
           <ThemeToggle />
+          <MobileMenu categories={categories} />
         </div>
       </div>
     </header>

@@ -99,12 +99,8 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
     name: referral.name,
     applicationCategory: "WebApplication",
     operatingSystem: "Any",
-    offers: offerSchema,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "124"
-    }
+    image: "https://referbenefits.co.in/favicon.ico",
+    offers: offerSchema
   };
 
   return (
@@ -190,19 +186,19 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
 
           {((referral.pros && referral.pros.length > 0) || (referral.cons && referral.cons.length > 0)) && (
             <section className={styles.prosConsSection}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', margin: '30px 0' }}>
+              <div className={styles.prosConsGrid}>
                 {referral.pros && referral.pros.length > 0 && (
-                  <div style={{ background: '#f0fdf4', padding: '20px', borderRadius: '12px' }}>
-                    <h3 style={{ color: '#166534', marginTop: 0 }}>✅ Pros</h3>
-                    <ul style={{ paddingLeft: '20px', margin: 0, color: '#15803d' }}>
+                  <div className={styles.prosBox}>
+                    <h3>✅ Pros</h3>
+                    <ul>
                       {referral.pros.map((pro, idx) => <li key={idx}>{pro}</li>)}
                     </ul>
                   </div>
                 )}
                 {referral.cons && referral.cons.length > 0 && (
-                  <div style={{ background: '#fef2f2', padding: '20px', borderRadius: '12px' }}>
-                    <h3 style={{ color: '#991b1b', marginTop: 0 }}>❌ Cons</h3>
-                    <ul style={{ paddingLeft: '20px', margin: 0, color: '#b91c1c' }}>
+                  <div className={styles.consBox}>
+                    <h3>❌ Cons</h3>
+                    <ul>
                       {referral.cons.map((con, idx) => <li key={idx}>{con}</li>)}
                     </ul>
                   </div>

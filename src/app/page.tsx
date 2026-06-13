@@ -21,9 +21,22 @@ export default async function Home() {
     return 0;
   });
 
+  // Strip heavy markdown fields from the payload before passing to Client Components
+  const stripPayload = (ref: any) => ({
+    id: ref.id,
+    name: ref.name,
+    slug: ref.slug,
+    category: ref.category,
+    benefit_user: ref.benefit_user,
+    bonus_amount: ref.bonus_amount || null,
+    is_featured: ref.is_featured || false,
+  });
+
+  const lightweightReferrals = sortedReferrals.map(stripPayload);
+
   // Featured = first item (now properly sorted to favor is_featured: true)
-  const featured = sortedReferrals[0];
-  const restReferrals = sortedReferrals.slice(1, 7);
+  const featured = lightweightReferrals[0];
+  const restReferrals = lightweightReferrals.slice(1, 7);
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -61,7 +74,7 @@ export default async function Home() {
 
       <section className={`container ${styles.mainSection}`} id="offers">
         <OfferExplorer 
-          allReferrals={referrals} 
+          allReferrals={lightweightReferrals} 
           initialReferrals={restReferrals} 
           categories={categories}
           featuredNode={
@@ -88,13 +101,24 @@ export default async function Home() {
           }
         />
         
-        {referrals.length > 7 && (
+        {lightweightReferrals.length > 7 && (
           <div className={styles.viewAllWrapper}>
             <Link href="/category/fintech" className={styles.viewAll}>
-              View all {referrals.length} offers →
+              View all {lightweightReferrals.length} offers →
             </Link>
           </div>
         )}
+
+        {/* SEO Trust Section */}
+        <div className={styles.seoTrustBox}>
+          <h2>Why Trust ReferBenefits?</h2>
+          <p>
+            ReferBenefits is India's most trusted platform for discovering verified sign-up bonuses, referral codes, and invite links. We manually verify and update every single offer daily to ensure you never get an expired code. 
+          </p>
+          <p>
+            Whether you are looking for fintech apps like CRED and Groww, or food delivery apps like Swiggy and Zomato, using our referral codes ensures you get the maximum possible cash bonus when creating a new account. Stop leaving money on the table!
+          </p>
+        </div>
       </section>
     </div>
   );

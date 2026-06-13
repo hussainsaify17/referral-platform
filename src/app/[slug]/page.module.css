@@ -251,6 +251,66 @@
   margin-bottom: 3rem;
 }
 
+.disclaimerText p {
+  margin-bottom: 0.75rem;
+}
+
+.disclaimerText p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Pros & Cons Section ───────────────────────────────────── */
+.prosConsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .prosConsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.prosBox, .consBox {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--card-border);
+}
+
+.prosBox {
+  background-color: rgba(22, 163, 74, 0.05); /* success light with opacity */
+}
+
+.consBox {
+  background-color: rgba(220, 38, 38, 0.05); /* destructive light with opacity */
+}
+
+.prosBox h3 {
+  color: var(--success);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.consBox h3 {
+  color: var(--destructive);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.prosBox ul, .consBox ul {
+  padding-left: 1.25rem;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.prosBox ul li, .consBox ul li {
+  margin-bottom: 0.5rem;
+}
+
 .disclaimerTitle {
   font-size: 0.75rem;
   font-weight: 800;
