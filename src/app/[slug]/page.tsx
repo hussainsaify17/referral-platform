@@ -64,7 +64,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: referral.category, href: `/category/${referral.category.toLowerCase()}` },
+    { label: referral.category, href: `/category/${referral.category.toLowerCase().replace(/\s+/g, '-')}` },
     { label: referral.name, href: `/${referral.slug}` },
   ];
 

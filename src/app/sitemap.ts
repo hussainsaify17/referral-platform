@@ -27,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       : Date.now();
 
     return {
-      url: `${baseUrl}/category/${cat.toLowerCase()}`,
+      url: `${baseUrl}/category/${cat.toLowerCase().replace(/\s+/g, '-')}`,
       lastModified: new Date(latestUpdate),
       changeFrequency: 'daily' as const,
       priority: 0.8,

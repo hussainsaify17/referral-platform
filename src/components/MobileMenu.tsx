@@ -24,7 +24,7 @@ export function MobileMenu({ categories }: { categories: string[] }) {
             {categories.map((cat) => (
               <Link 
                 key={cat} 
-                href={`/category/${cat.toLowerCase()}`} 
+                href={`/category/${cat.toLowerCase().replace(/\s+/g, '-')}`} 
                 className={styles.navLink}
                 onClick={() => setIsOpen(false)}
               >

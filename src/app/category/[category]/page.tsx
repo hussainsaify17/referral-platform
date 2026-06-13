@@ -14,7 +14,7 @@ type Props = {
 export async function generateStaticParams() {
   const categories = await getCategories();
   return categories.map((c) => ({
-    category: c.toLowerCase(),
+    category: c.toLowerCase().replace(/\s+/g, '-'),
   }));
 }
 
@@ -61,7 +61,7 @@ export default async function CategoryPage({ params }: Props) {
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: capitalized, href: `/category/${category.toLowerCase()}` },
+    { label: capitalized, href: `/category/${category.toLowerCase().replace(/\s+/g, '-')}` },
   ];
 
   return (

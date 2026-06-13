@@ -16,7 +16,7 @@ export async function Header() {
         <div className={styles.navContainer}>
           <nav className={styles.nav}>
             {categories.slice(0, 4).map((cat) => (
-              <Link key={cat} href={`/category/${cat.toLowerCase()}`} className={styles.navLink}>
+              <Link key={cat} href={`/category/${cat.toLowerCase().replace(/\s+/g, '-')}`} className={styles.navLink}>
                 {cat}
               </Link>
             ))}

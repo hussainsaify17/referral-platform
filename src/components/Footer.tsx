@@ -79,7 +79,7 @@ export async function Footer() {
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Browse by Category</h3>
             {categories.map((cat) => (
-              <Link key={cat} href={`/category/${cat.toLowerCase()}`} className={styles.link}>
+              <Link key={cat} href={`/category/${cat.toLowerCase().replace(/\s+/g, '-')}`} className={styles.link}>
                 {cat}
               </Link>
             ))}

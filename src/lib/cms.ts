@@ -165,7 +165,7 @@ export async function getCategories(): Promise<string[]> {
   return Array.from(categories);
 }
 
-export async function getReferralsByCategory(category: string): Promise<Referral[]> {
+export async function getReferralsByCategory(categorySlug: string): Promise<Referral[]> {
   const all = await getAllReferrals();
-  return all.filter(r => r.category.toLowerCase() === category.toLowerCase());
+  return all.filter(r => r.category.toLowerCase().replace(/\s+/g, '-') === categorySlug.toLowerCase());
 }
