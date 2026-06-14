@@ -1,0 +1,39 @@
+{
+  "pros": [
+    "Automatically finds and applies the best coupon codes at checkout.",
+    "Detailed price history charts help you buy at the absolute lowest price.",
+    "Generous ₹250 signup bonus for new users using a referral link.",
+    "Earn real cashback on top of existing e-commerce discounts."
+  ],
+  "cons": [
+    "Cashback confirmation can sometimes take up to 60-90 days depending on the retailer.",
+    "The mobile app interface can occasionally feel cluttered with deals."
+  ],
+  "detailed_review": "<h2>Introduction to BuyHatke</h2><p>BuyHatke is one of India's premier shopping assistants, designed to help online shoppers save money effortlessly. Operating as both a mobile app and a browser extension, BuyHatke aggregates coupons, compares prices across millions of products, and offers lucrative cashback on popular e-commerce platforms like Flipkart, Amazon, Myntra, and Ajio.</p><h3>Why Smart Shoppers Love BuyHatke</h3><p>The standout feature of BuyHatke is its price variation graph, which tracks the historical pricing of products. This ensures you never buy an item during a fake sale or artificial price hike. Additionally, its automatic coupon-applying tool saves shoppers from the tedious task of searching for and testing promo codes manually. Combined with direct cashback rewards, it is an indispensable tool for anyone looking to maximize their purchasing power.</p><h3>Unlocking the ₹250 Signup Bonus</h3><p>To welcome new users, BuyHatke offers a generous ₹250 bonus. This incentive is credited to your account when you sign up using a valid referral link and code, and complete your first eligible transaction. It's an excellent way to kickstart your savings journey on the platform.</p><h3>How to Maximize Your Savings</h3><ul><li><b>Use the Price Alert Feature:</b> Set alerts for products you want, and BuyHatke will notify you when the price drops to your target level.</li><li><b>Stack Your Rewards:</b> Combine retailer discounts, bank credit card offers, and BuyHatke cashback to get triple-layered savings.</li><li><b>Share Your Referral Code:</b> Once registered, share your unique referral link with friends and family to earn additional referral bonuses.</li></ul>",
+  "steps": [
+    "Click on a valid BuyHatke referral link to download the app from the Google Play Store or iOS App Store.",
+    "Open the app and begin the registration process by entering your email address or mobile number.",
+    "During signup, locate the field labeled 'Referral Code' and enter the referral code to ensure you qualify for the bonus.",
+    "Verify your account using the OTP sent to your registered mobile number or email.",
+    "Complete your first eligible purchase or order through the BuyHatke platform within the specified promotional period.",
+    "Once your transaction is tracked and verified, the ₹250 signup bonus will be credited to your BuyHatke wallet."
+  ],
+  "faq": [
+    {
+      "question": "What is the BuyHatke referral signup bonus?",
+      "answer": "New users can get a ₹250 bonus when they sign up using a referral link and code and complete their first eligible transaction or order on the platform."
+    },
+    {
+      "question": "Where do I enter the BuyHatke referral code?",
+      "answer": "You must enter the referral code in the designated referral code field during the initial registration and signup process on the app."
+    },
+    {
+      "question": "Can I withdraw my BuyHatke cashback to my bank account?",
+      "answer": "Yes, once your cashback and referral bonuses transition from 'pending' to 'confirmed' status, you can transfer the balance to your bank account or redeem it as popular gift vouchers."
+    },
+    {
+      "question": "Why has my signup bonus not been credited yet?",
+      "answer": "The signup bonus usually remains pending until your first purchase is tracked and the retailer's return/cancellation window has closed. This verification process can take a few weeks."
+    }
+  ]
+}

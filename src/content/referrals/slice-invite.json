@@ -1,0 +1,39 @@
+{
+  "pros": [
+    "Earn up to 3% cashback on daily payments, even on transactions as small as ₹10.",
+    "High-yield savings account earning daily interest at 100% of the RBI repo rate.",
+    "Completely free to use with zero account fees and no minimum balance requirements.",
+    "Seamlessly combines UPI convenience with credit card rewards for daily banking."
+  ],
+  "cons": [
+    "The maximum 3% cashback rate is category-dependent and may vary per transaction.",
+    "Savings interest rates are linked to the RBI repo rate, meaning they will fluctuate with market changes."
+  ],
+  "detailed_review": "<h2>Introduction to Slice: Redefining Daily Banking</h2><p>Slice has emerged as a powerhouse in the Indian fintech space, transitioning from a simple credit card alternative to a comprehensive daily banking hub. Designed specifically for the digital-first generation, Slice seamlessly integrates high-yield savings, instant UPI payments, and credit card rewards into a single, intuitive application. It is designed to make every single transaction—no matter how small—rewarding.</p><h3>Why Users Love the Slice Experience</h3><p>The standout feature of Slice is its incredible reward system. Unlike traditional credit cards that only reward large purchases, Slice offers up to 3% cashback on everyday transactions, including your daily ₹10 chai. Additionally, Slice acts as a powerful savings tool. By offering daily interest calculated at 100% of the RBI repo rate, it ensures your idle money works just as hard as you do. Coupled with zero account fees and no minimum balance pressure, it presents a risk-free, highly lucrative banking alternative.</p><h3>How to Maximize Your Rewards</h3><p>To get the most out of Slice, make it your primary app for daily micro-transactions. Use the Slice UPI credit card for routine grocery, dining, and transit expenses to stack up cashback. Simultaneously, park your emergency fund or short-term savings in the Slice account to maximize the daily interest payouts, which track the official RBI repo rate directly.</p><h3>Unlocking the ₹250 Sign-Up Bonus</h3><p>New users can kickstart their journey with an instant ₹250 cash bonus. By signing up using a valid referral code and completing your first transaction, the bonus is credited directly to your account. It is a simple, foolproof way to experience the benefits of Slice with a free cash reward right from day one.</p>",
+  "steps": [
+    "Download the official Slice app from the Google Play Store or Apple App Store.",
+    "Open the app and begin the registration process by entering your mobile number.",
+    "On the registration screen, tap on 'Have a Referral Code?' and enter the referral code to qualify for the bonus.",
+    "Complete your quick digital KYC verification using your PAN and Aadhaar details.",
+    "Set up your Slice UPI ID and link your bank account or activate your Slice savings account.",
+    "Make your very first transaction of any amount to instantly unlock and receive your ₹250 sign-up bonus."
+  ],
+  "faq": [
+    {
+      "question": "How do I qualify for the ₹250 Slice referral bonus?",
+      "answer": "To qualify, you must download the Slice app, enter a valid referral code during the sign-up process, complete your KYC, and make your first transaction."
+    },
+    {
+      "question": "What is the interest rate on the Slice savings account?",
+      "answer": "Slice offers daily interest on your savings balance at a rate equivalent to 100% of the current RBI repo rate, allowing your savings to grow dynamically with central bank benchmarks."
+    },
+    {
+      "question": "Are there any annual or hidden fees with Slice?",
+      "answer": "No, Slice is completely free to use. There are zero joining fees, zero annual fees, and no minimum balance requirements."
+    },
+    {
+      "question": "Can I earn cashback on very small transactions?",
+      "answer": "Yes! Slice rewards daily spending by offering up to 3% cashback on transactions as small as a ₹10 UPI payment."
+    }
+  ]
+}

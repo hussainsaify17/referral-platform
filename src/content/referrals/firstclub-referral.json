@@ -1,0 +1,38 @@
+{
+  "pros": [
+    "Premium, curated welcome gifts delivered directly to your door upon signing up.",
+    "Ultra-high-quality groceries sourced with clean ingredients and zero artificial additives.",
+    "Lightning-fast quick commerce delivery that prioritizes freshness and speed.",
+    "An elevated, boutique shopping experience that far surpasses traditional grocery apps."
+  ],
+  "cons": [
+    "Slightly higher price point reflecting the premium quality of the goods.",
+    "Currently limited to select metropolitan delivery zones."
+  ],
+  "detailed_review": "<h2>Introduction to FirstClub: The Premium Quick Commerce Revolution</h2><p>FirstClub is completely redefining the quick commerce landscape by shifting the focus from cheap, mass-produced items to high-quality, curated groceries and lifestyle products. If you are tired of bruised produce, questionable ingredients, and subpar substitutions from standard delivery apps, FirstClub offers a breath of fresh air with its uncompromising standards of excellence.</p><h3>Why Shoppers are Raving About FirstClub</h3><p>The standout feature of FirstClub is its absolute dedication to quality. Every single product on the platform is carefully vetted to ensure it is free from \"shady\" additives, artificial preservatives, or low-grade fillers. Users consistently report that the taste of FirstClub's fresh produce, organic meats, and artisanal pantry staples is unmatched. Additionally, the unboxing experience is designed to feel luxurious, starting with their signature curated welcome gifts for new members that make you feel like a true VIP from day one.</p><h3>Maximizing Your Sign-Up Bonus and Perks</h3><p>When you join FirstClub using a referral link or code, you don't just get a generic discount; you receive a beautifully curated welcome package filled with premium treats and artisanal products. To get the most out of your membership, we recommend:</p><ul><li>Using a verified referral link during registration to instantly unlock the exclusive welcome gift.</li><li>Exploring the \"FirstClub Exclusives\" section for highly-rated products you cannot find on any other delivery platform.</li><li>Setting up your delivery preferences to take advantage of their rapid, white-glove delivery service.</li></ul>",
+  "steps": [
+    "Download the FirstClub app from the iOS App Store or Google Play Store.",
+    "Begin the registration process by entering your phone number and verifying it via SMS.",
+    "On the account creation screen, look for the 'Have a Referral Code?' field and enter the valid referral code.",
+    "Complete your profile setup and enter your delivery address to view the curated inventory in your area.",
+    "Place your first order to trigger and receive your premium, curated welcome gift."
+  ],
+  "faq": [
+    {
+      "question": "What exactly comes in the FirstClub welcome gift?",
+      "answer": "The welcome gift is a curated selection of premium, high-quality snacks, artisanal goods, or lifestyle items designed to introduce you to the superior quality of FirstClub's inventory. The exact contents vary seasonally to ensure maximum freshness and delight."
+    },
+    {
+      "question": "Are the ingredients in FirstClub products really clean?",
+      "answer": "Yes. FirstClub has a strict vetting process that excludes artificial preservatives, hydrogenated oils, high-fructose corn syrup, and other undesirable additives, ensuring everything you order is clean, wholesome, and delicious."
+    },
+    {
+      "question": "Does FirstClub deliver to my area?",
+      "answer": "FirstClub currently operates in select major metropolitan areas to maintain their high standards of quick commerce delivery. You can check your eligibility instantly by entering your zip code upon opening the app."
+    },
+    {
+      "question": "Is there a subscription fee to use FirstClub?",
+      "answer": "While FirstClub offers premium member benefits and exclusive perks, downloading the app and placing your first order to claim the welcome bonus does not require a paid monthly subscription."
+    }
+  ]
+}

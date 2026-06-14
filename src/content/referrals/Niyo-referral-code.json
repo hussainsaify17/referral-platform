@@ -1,0 +1,39 @@
+{
+  "pros": [
+    "Zero forex markup on international spending, saving you 3-5% compared to standard credit/debit cards.",
+    "Global acceptance in over 180 countries and at millions of ATMs worldwide.",
+    "Seamless, 100% digital onboarding process with quick KYC verification.",
+    "In-app features like real-time currency conversion, instant card lock/unlock, and spending analytics."
+  ],
+  "cons": [
+    "ATM withdrawal fees may apply depending on the partner bank network.",
+    "Requires completing a full biometric or video KYC before unlocking all high-limit features."
+  ],
+  "detailed_review": "<h2>Why Niyo is the Ultimate Travel Companion</h2><p>For international travelers, students studying abroad, and frequent globetrotters, high foreign exchange fees have always been a major pain point. Enter Niyo, a revolutionary fintech platform designed to eliminate the stress of exorbitant forex markups. By partnering with leading banks, Niyo offers multi-currency and zero-forex cards that ensure you pay the exact visa exchange rate without any hidden margins.</p><h3>Key Benefits: Zero Forex & Global Acceptance</h3><p>The standout feature of Niyo cards is the absolute <strong>zero forex markup</strong>. Whether you are swiping at a cafe in Paris, booking a train ticket in Tokyo, or shopping online on international websites, you save significantly on every transaction. Accepted in over 180 countries, Niyo takes the hassle out of carrying physical cash or expensive traveler's cheques. The companion app also provides real-time tracking, instant coin rewards, and top-tier security controls.</p><h3>How to Maximize Your Niyo Coins Rewards</h3><p>Niyo doesn't just save you money; it also rewards you for joining. By using the referral code <strong>HUSSA800</strong> during your sign-up process, you instantly unlock a joining bonus of ₹250 in Niyo Coins. To maximize these rewards:</p><ul><li>Use your Niyo card for all international bookings, including flights and hotels, to accumulate more coins.</li><li>Keep an eye on in-app promotions and partner offers to redeem your Niyo Coins for premium lifestyle rewards, travel discounts, or cashback.</li><li>Refer your friends and family to build up your Niyo Coin balance before your next international trip.</li></ul>",
+  "steps": [
+    "Download the Niyo app from the Google Play Store or Apple App Store.",
+    "Start the registration process by entering your mobile number and verifying it via OTP.",
+    "During the sign-up flow, look for the 'Referral Code' field and enter <strong>HUSSA800</strong> to qualify for the sign-up bonus.",
+    "Complete your digital KYC by providing your PAN and Aadhaar details as prompted.",
+    "Once your account is approved, load funds and activate your virtual card or order a physical card.",
+    "Your ₹250 in Niyo Coins joining bonus will be credited to your rewards balance upon successful account activation."
+  ],
+  "faq": [
+    {
+      "question": "What is zero forex markup?",
+      "answer": "Zero forex markup means that when you transact in a foreign currency, Niyo does not charge any additional percentage or fee over the real-time interbank or card network exchange rate, saving you up to 5% per transaction."
+    },
+    {
+      "question": "How do I claim the ₹250 joining bonus?",
+      "answer": "To claim the ₹250 in Niyo Coins, you must enter the referral code HUSSA800 during your registration process on the Niyo app and successfully complete your account setup."
+    },
+    {
+      "question": "Can I use the Niyo card to withdraw cash abroad?",
+      "answer": "Yes, Niyo cards can be used at international ATMs. While Niyo does not charge a markup on the conversion, standard ATM withdrawal fees set by the partner bank or the local ATM operator may apply."
+    },
+    {
+      "question": "Are Niyo Coins redeemable for real value?",
+      "answer": "Yes, Niyo Coins accumulated in your account can be redeemed for various rewards, vouchers, or travel-related benefits directly through the rewards section of the Niyo app."
+    }
+  ]
+}
