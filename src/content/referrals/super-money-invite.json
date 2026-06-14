@@ -1,0 +1,34 @@
+{
+  "pros": [
+    "Earn up to 5% real cashback on daily UPI payments, replacing useless brand discount coupons.",
+    "Lightning-fast transaction speeds powered by a highly optimized, modern user interface.",
+    "Direct-to-bank cashback deposits, removing the hassle of managing locked virtual wallets.",
+    "Built on secure, NPCI-approved UPI infrastructure ensuring top-tier financial safety."
+  ],
+  "cons": [
+    "The 5% cashback rate is an 'up to' limit, meaning individual transaction rewards will vary dynamically.",
+    "Cashback caps and monthly limits are enforced to prevent promotional exploitation."
+  ],
+  "detailed_review": "<h2>super.money Review: Bringing Real Rewards Back to UPI</h2><p>For years, UPI payments have been incredibly convenient, but the excitement of rewards has completely vanished. Legacy payment apps have replaced real cash rewards with frustrating scratch cards and irrelevant discount vouchers. Enter <strong>super.money</strong>, a disruptive fintech platform built to change the game by offering up to 5% real cashback on your everyday UPI transactions.</p><h3>Why super.money is a Game-Changer</h3><p>The primary appeal of super.money is its commitment to real, tangible value. Every time you scan a merchant QR code or make a peer-to-peer transfer, you stand a chance to earn actual cash back. Because the platform is built on secure, government-approved UPI rails, your transactions are processed instantly, and your earned rewards are credited directly to your linked bank account.</p><h3>How to Maximize Your super.money Cashback</h3><ul><li><strong>Make it Your Primary UPI App:</strong> Route all daily transactions—from your morning coffee to online shopping checkouts—through super.money.</li><li><strong>Target Merchant Partners:</strong> Keep an eye on featured merchants within the app to unlock the highest potential cashback percentages.</li><li><strong>Leverage the Referral Program:</strong> Share your unique referral link with friends and family to secure additional bonus payouts.</li></ul>",
+  "steps": [
+    "Download the super.money app from the official Google Play Store or Apple App Store.",
+    "Register using the mobile number linked to your active bank account and verify via secure OTP.",
+    "During the setup process, look for the 'Referral Code' option and enter your code to unlock the exclusive sign-up cashback offer.",
+    "Select your bank and complete the secure SMS verification to link your UPI profile.",
+    "Make your first UPI transaction of any amount (such as scanning a local merchant QR code) to instantly activate your account and claim your welcome bonus."
+  ],
+  "faq": [
+    {
+      "question": "Is super.money safe for UPI transactions?",
+      "answer": "Yes, super.money is highly secure. It operates on the official NPCI UPI network in partnership with leading licensed banks, ensuring bank-grade encryption and safety for all transactions."
+    },
+    {
+      "question": "How do I receive my cashback?",
+      "answer": "Unlike traditional apps that store rewards in proprietary wallets, super.money deposits your earned cashback directly into your linked primary bank account."
+    },
+    {
+      "question": "Do I need a referral code to get the welcome rewards?",
+      "answer": "While you can use the app without one, entering a valid referral code during signup ensures you qualify for exclusive promotional sign-up bonuses and maximized cashback rates on your first few transactions."
+    }
+  ]
+}

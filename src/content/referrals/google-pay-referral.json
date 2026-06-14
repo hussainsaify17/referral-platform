@@ -1,0 +1,41 @@
+{
+  "pros": [
+    "Seamless UPI integration allowing direct bank-to-bank transfers without wallet top-ups.",
+    "Industry-leading security protocols backed by Google's advanced fraud detection.",
+    "Wide acceptance across millions of local merchants, online stores, and utility billers.",
+    "Frequent opportunities to earn scratch cards, cashback, and vouchers through regular transactions."
+  ],
+  "cons": [
+    "Occasional transaction delays or failures during peak hours due to bank server congestion.",
+    "Customer support response times can be slow when resolving complex transaction disputes."
+  ],
+  "detailed_review": "<h2>Introduction to Google Pay</h2><p>Google Pay (GPay) has revolutionized the digital payments landscape in India, establishing itself as a premier fintech application. By leveraging the Unified Payments Interface (UPI) network, Google Pay facilitates instantaneous, secure, and direct bank-to-bank money transfers without the need to maintain a separate digital wallet balance.</p><h3>Why Millions Choose Google Pay</h3><p>Users flock to Google Pay for its clean, intuitive interface and robust security framework. Whether you are splitting a dinner bill with friends, paying your local vendor, recharging your mobile, or managing monthly utility bills, Google Pay handles it all effortlessly. The app integrates seamlessly with your phone's contact list, making peer-to-peer transactions as simple as sending a text message.</p><h3>Unlocking the Sign-Up Bonus</h3><p>To welcome new users, Google Pay offers an attractive sign-up incentive. By using a referral link or entering a referral code, new users can earn a ₹21 cashback bonus on their very first transaction. Interestingly, this offer is not just restricted to brand-new accounts; it also applies to returning users who have not transacted on Google Pay for the last 180 days, making it an excellent opportunity to reactivate your account and claim free rewards.</p><h3>How to Maximize Your Earnings</h3><p>Beyond the initial signup bonus, Google Pay is famous for its gamified rewards ecosystem. Users can earn scratch cards containing real cashback or merchant discount vouchers by completing everyday tasks like sending money to friends, paying bills, or scanning merchant QR codes. Additionally, participating in seasonal campaigns (such as Diwali or end-of-year events) can yield significant cashback rewards.</p>",
+  "steps": [
+    "Download the Google Pay app using a friend's referral link or directly from the Google Play Store / Apple App Store.",
+    "Open the app and register using the mobile number linked to your bank account.",
+    "Set up your Google PIN or use your device's biometric lock for secure access.",
+    "Link your bank account by selecting your bank from the list and verifying your details via SMS.",
+    "Before making your first payment, tap your profile picture in the top-right corner of the home screen.",
+    "Tap the three vertical dots in the top-right corner, select 'Referral code', and enter the referral code if it is not already applied.",
+    "Send a minimum payment of ₹1 or more to any contact, UPI ID, or by scanning a merchant QR code.",
+    "Once the payment is successful, your ₹21 cashback bonus will be credited directly to your linked bank account."
+  ],
+  "faq": [
+    {
+      "question": "Who is eligible for the Google Pay ₹21 referral bonus?",
+      "answer": "The bonus is available to users who are completely new to Google Pay, as well as existing users who have not performed any transaction on the app for the last 180 days."
+    },
+    {
+      "question": "Where do I enter the referral code in Google Pay?",
+      "answer": "Open Google Pay, tap your profile icon in the top right corner, tap the three-dot menu icon, select 'Referral code', enter the code, and tap 'Apply'."
+    },
+    {
+      "question": "Is there a minimum transaction amount required to get the cashback?",
+      "answer": "There is no high minimum limit; sending as little as ₹1 to a friend or scanning a merchant QR code will trigger the ₹21 cashback."
+    },
+    {
+      "question": "How long does it take for the ₹21 cashback to be credited?",
+      "answer": "The cashback is usually credited instantly to your primary linked bank account, though in rare cases it may take up to 24 to 48 hours."
+    }
+  ]
+}
