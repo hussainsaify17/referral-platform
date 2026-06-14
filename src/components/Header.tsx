@@ -12,7 +12,7 @@ export async function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" alt="ReferBenefits Logo" width={32} height={32} className={styles.logoImage} />
+          <Image src="/logo.png" alt="ReferBenefits Logo" width={32} height={32} priority={true} className={styles.logoImage} />
           Refer<span className={styles.accent}>Benefits</span>
         </Link>
         <div className={styles.navContainer}>

@@ -10,11 +10,14 @@ export function InteractiveBackground() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    const timeout = setTimeout(() => {
+      initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      }).then(() => {
+        setInit(true);
+      });
+    }, 1000); // 1 second delay to prioritize LCP rendering
+    return () => clearTimeout(timeout);
   }, []);
 
   if (!init) return null;
