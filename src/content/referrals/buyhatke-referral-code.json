@@ -1,0 +1,38 @@
+{
+  "pros": [
+    "Comprehensive price comparison across major e-commerce platforms like Amazon and Flipkart.",
+    "Detailed price history charts to track if a deal is genuinely a discount.",
+    "Automatic coupon code finder and applicator at checkout to save time and money.",
+    "Lucrative referral program offering a ₹250 bonus for new users."
+  ],
+  "cons": [
+    "The app and browser extension can occasionally experience minor lag during peak sale events.",
+    "Some smaller, niche e-commerce sites are not fully supported for automatic coupon application."
+  ],
+  "detailed_review": "<h2>Unbiased BuyHatke Review: The Ultimate Shopping Companion</h2><p>BuyHatke has established itself as one of India's premier shopping assistants and price comparison tools. Designed for the savvy online shopper, it eliminates the tedious process of manually comparing prices across multiple e-commerce platforms. By offering real-time price tracking, historical price charts, and automated coupon application, BuyHatke ensures you never overpay for your online purchases.</p><h3>Why Smart Shoppers Choose BuyHatke</h3><p>The standout feature of BuyHatke is its powerful price comparison engine. When you search for a product, the platform instantly pulls pricing data from various marketplaces, allowing you to buy from the vendor offering the absolute lowest price. Additionally, the price history graph is an invaluable tool for major shopping festivals like Diwali sales, helping users identify whether a 'discount' is genuine or artificially inflated. The automated coupon finder is another massive time-saver, automatically testing and applying the best promo codes at checkout.</p><h3>How to Maximize Your ₹250 Sign-Up Bonus</h3><p>To kickstart your savings journey, BuyHatke offers an attractive ₹250 bonus for new users who sign up using a referral link and code. To ensure you receive this bonus, make sure to complete your first eligible transaction or registration requirement promptly. You can maximize your overall savings by combining this signup bonus with the platform's automatic coupons and price drop alerts on high-ticket items you plan to purchase.</p>",
+  "steps": [
+    "Download the BuyHatke app or install the browser extension using the referral link.",
+    "Initiate the registration process using your email address or mobile number.",
+    "During the sign-up flow, look for the 'Referral Code' field and enter the valid referral code.",
+    "Verify your account via the OTP sent to your registered mobile number or email.",
+    "Complete your first eligible order or qualifying signup action to trigger the ₹250 bonus credit."
+  ],
+  "faq": [
+    {
+      "question": "What is the BuyHatke referral bonus?",
+      "answer": "New users receive a ₹250 bonus on their first eligible signup or order when they register using a valid referral link and code."
+    },
+    {
+      "question": "How does BuyHatke's price tracking work?",
+      "answer": "BuyHatke monitors prices across multiple online retailers and displays a historical price chart, showing you the lowest and highest prices a product has reached over time so you can buy at the optimal moment."
+    },
+    {
+      "question": "Is BuyHatke safe and free to use?",
+      "answer": "Yes, BuyHatke is completely free to use. It is a highly secure platform trusted by millions of shoppers to find coupons, compare prices, and earn cashback rewards."
+    },
+    {
+      "question": "When will my ₹250 signup bonus be credited?",
+      "answer": "The ₹250 bonus is typically credited to your BuyHatke account wallet once your first eligible purchase or signup verification is successfully completed and confirmed by the platform."
+    }
+  ]
+}
