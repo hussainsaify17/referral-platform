@@ -23,3 +23,13 @@ export interface Referral {
   status: "active" | "expired";
   is_featured?: boolean;
 }
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  category: string;
+  content: string;
+}

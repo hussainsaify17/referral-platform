@@ -1,7 +1,7 @@
 import Papa from "papaparse";
 import fs from "fs/promises";
 import path from "path";
-import { Referral, FAQ } from "./types";
+import { Referral, FAQ, BlogPost } from "./types";
 
 /**
  * Replace this with your Google Sheet's published CSV URL.
@@ -168,4 +168,62 @@ export async function getCategories(): Promise<string[]> {
 export async function getReferralsByCategory(categorySlug: string): Promise<Referral[]> {
   const all = await getAllReferrals();
   return all.filter(r => r.category.toLowerCase().replace(/\s+/g, '-') === categorySlug.toLowerCase());
+}
+
+function parseMarkdownFile(fileContent: string, slug: string): BlogPost {
+  const parts = fileContent.split("---");
+  const frontmatterText = parts[1] || "";
+  const content = parts.slice(2).join("---").trim();
+
+  const metadata: Record<string, string> = {};
+  const lines = frontmatterText.split("\n");
+  for (const line of lines) {
+    const colonIdx = line.indexOf(":");
+    if (colonIdx !== -1) {
+      const key = line.substring(0, colonIdx).trim();
+      const val = line.substring(colonIdx + 1).trim().replace(/^["']|["']$/g, "");
+      metadata[key] = val;
+    }
+  }
+
+  return {
+    slug,
+    title: metadata.title || "Untitled",
+    description: metadata.description || "",
+    date: metadata.date || new Date().toISOString().split("T")[0],
+    author: metadata.author || "Anonymous",
+    category: metadata.category || "Uncategorized",
+    content,
+  };
+}
+
+export async function getBlogPosts(): Promise<BlogPost[]> {
+  const blogDir = path.join(process.cwd(), "src/content/blog");
+  try {
+    const files = await fs.readdir(blogDir);
+    const posts: BlogPost[] = [];
+    for (const file of files) {
+      if (file.endsWith(".md")) {
+        const filePath = path.join(blogDir, file);
+        const fileContent = await fs.readFile(filePath, "utf8");
+        const slug = file.replace(/\.md$/, "");
+        posts.push(parseMarkdownFile(fileContent, slug));
+      }
+    }
+    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  } catch (error) {
+    console.error("Error reading blog directory:", error);
+    return [];
+  }
+}
+
+export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  const filePath = path.join(process.cwd(), "src/content/blog", `${slug}.md`);
+  try {
+    const fileContent = await fs.readFile(filePath, "utf8");
+    return parseMarkdownFile(fileContent, slug);
+  } catch (error) {
+    console.error(`Error reading blog post: ${slug}`, error);
+    return null;
+  }
 }
