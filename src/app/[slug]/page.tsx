@@ -234,10 +234,10 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
           <section className={styles.disclaimerBlock}>
             <p className={styles.disclaimerTitle}>⚠️ Disclaimer</p>
             <div className={styles.disclaimerText}>
-              <p>Please recheck details about the app you are going to use. <strong>We are not responsible for any profits or losses.</strong></p>
-              <p>Sometimes we don&apos;t even verify if the app is legal or not. If we have verified it, we update the same at the bottom of the post.</p>
-              <p>We just share the referral code or link. <strong>Using it and making profits or losses is completely at your own risk.</strong></p>
-              <p>Invest wisely. Play Safely. 🙏</p>
+              <p>Please independently verify all details and terms of service of the third-party apps or platforms before participating. <strong>ReferBenefits is not responsible for any direct or indirect financial outcomes, profits, or losses.</strong></p>
+              <p>All referral links and promo codes are provided for informational and promotional purposes only. We aim to keep listings accurate, but we do not guarantee the availability or validity of third-party offers.</p>
+              <p><strong>Engaging with external services and using these codes is done entirely at your own discretion and risk.</strong></p>
+              <p>Please make financial decisions responsibly. 🙏</p>
             </div>
           </section>
 
