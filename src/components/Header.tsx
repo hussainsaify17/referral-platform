@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 import { getCategories } from "@/lib/cms";
 import { MobileMenu } from "./MobileMenu";
+import { Logo } from "./Logo";
 import styles from "./Header.module.css";
 
 export async function Header() {
@@ -12,7 +12,7 @@ export async function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.headerContainer}`}>
         <Link href="/" className={styles.logo}>
-          <Image src="/logo.png" alt="ReferBenefits Logo" width={32} height={32} priority={true} className={styles.logoImage} />
+          <Logo size={32} className={styles.logoImage} />
           Refer<span className={styles.accent}>Benefits</span>
         </Link>
         <div className={styles.navContainer}>
