@@ -12,6 +12,7 @@
     "check-codes": "node scripts/check_codes.mjs"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^1.5.3",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
     "dotenv": "^17.4.2",
