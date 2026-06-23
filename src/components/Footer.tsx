@@ -1,8 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 import { getCategories, getAllReferrals } from "@/lib/cms";
 import { NewsletterForm } from "./NewsletterForm";
-import { Logo } from "./Logo";
 
 export async function Footer() {
   const categories = await getCategories();
@@ -36,7 +36,7 @@ export async function Footer() {
           {/* Column 1 – Brand */}
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>
-              <Logo size={32} className={styles.logoImage} />
+              <Image src="/logo.png" alt="ReferBenefits Logo" width={32} height={32} className={styles.logoImage} />
               Refer<span className={styles.accent}>Benefits</span>
             </Link>
             <p className={styles.tagline}>
