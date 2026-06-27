@@ -151,7 +151,52 @@ export async function getAllReferrals(): Promise<Referral[]> {
   
   // Filter out expired items in the ingestion layer
   const now = new Date().toISOString();
-  return data.filter(item => item.status === "active" && item.expiry > now);
+  const activeReferrals = data.filter(item => item.status === "active" && item.expiry > now);
+
+  // Apply Google Analytics ranking overrides if present
+  try {
+    const rankingPath = path.join(process.cwd(), "src/data/analytics_ranking.json");
+    const rankingContent = await fs.readFile(rankingPath, "utf8");
+    const rankingData = JSON.parse(rankingContent);
+    const topOffers = rankingData.topOffers || [];
+
+    if (topOffers.length > 0) {
+      activeReferrals.sort((a, b) => {
+        const indexA = topOffers.indexOf(a.slug);
+        const indexB = topOffers.indexOf(b.slug);
+
+        // If both are in the top ranking, sort by ranking index
+        if (indexA !== -1 && indexB !== -1) {
+          return indexA - indexB;
+        }
+        // If only A is in the top ranking, A comes first
+        if (indexA !== -1) return -1;
+        // If only B is in the top ranking, B comes first
+        if (indexB !== -1) return 1;
+
+        // Fallback to spreadsheet featured flag
+        if (a.is_featured && !b.is_featured) return -1;
+        if (!a.is_featured && b.is_featured) return 1;
+        return 0;
+      });
+
+      // Dynamically set the top ranked item as the featured offer
+      if (activeReferrals.length > 0 && topOffers.includes(activeReferrals[0].slug)) {
+        activeReferrals.forEach(ref => {
+          ref.is_featured = ref.slug === activeReferrals[0].slug;
+        });
+      }
+    }
+  } catch (error) {
+    // Fallback sorting: is_featured first
+    activeReferrals.sort((a, b) => {
+      if (a.is_featured && !b.is_featured) return -1;
+      if (!a.is_featured && b.is_featured) return 1;
+      return 0;
+    });
+  }
+
+  return activeReferrals;
 }
 
 export async function getReferralBySlug(slug: string): Promise<Referral | null> {

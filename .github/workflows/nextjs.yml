@@ -57,7 +57,9 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
+          GA_SERVICE_ACCOUNT_KEY: ${{ secrets.GA_SERVICE_ACCOUNT_KEY }}
         run: |
+          node scripts/update_featured_by_analytics.mjs
           npm run generate-referrals
 
       - name: Commit and push generated content
@@ -65,7 +67,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/content/referrals/
-          git diff --quiet && git diff --staged --quiet || (git commit --no-verify -m "chore: auto-generate new referral content" && git push)
+          if [ -f src/data/analytics_ranking.json ]; then git add src/data/analytics_ranking.json; fi
+          git diff --quiet && git diff --staged --quiet || (git commit --no-verify -m "chore: auto-generate new referral and analytics content" && git push)
         
       - name: Build with Next.js
         env:
