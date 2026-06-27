@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./Footer.module.css";
 import { getCategories, getAllReferrals } from "@/lib/cms";
 import { NewsletterForm } from "./NewsletterForm";
+import { FeedbackForm } from "./FeedbackForm";
 
 export async function Footer() {
   const categories = await getCategories();
@@ -112,6 +113,7 @@ export async function Footer() {
             <a href="mailto:hello@referbenefits.co.in" className={styles.link}>
               Contact Us
             </a>
+            <FeedbackForm className={styles.link} />
             <a href="mailto:partner@referbenefits.co.in" className={styles.link}>
               📢 Partner / Advertise
             </a>
