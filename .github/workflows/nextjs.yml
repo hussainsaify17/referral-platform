@@ -58,8 +58,10 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_SHEET_CSV_URL: ${{ secrets.GOOGLE_SHEET_CSV_URL }}
           GA_SERVICE_ACCOUNT_KEY: ${{ secrets.GA_SERVICE_ACCOUNT_KEY }}
+          NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK: ${{ secrets.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK }}
         run: |
           node scripts/update_featured_by_analytics.mjs
+          node scripts/check_expirations.mjs
           npm run generate-referrals
 
       - name: Commit and push generated content
