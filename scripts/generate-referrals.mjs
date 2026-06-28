@@ -28,8 +28,8 @@ async function getLiveReferrals() {
     skipEmptyLines: true,
   });
 
-  // Mandatory fields: must have at least referral_code and referral_link to be valid
-  return parsed.data.filter(row => row.referral_code && row.referral_link && row.status !== 'expired');
+  // Mandatory fields: name, referral_link, and referral_code must be provided
+  return parsed.data.filter(row => row.name && row.referral_code && row.referral_link && row.status !== 'expired');
 }
 
 async function generateDataWithGemini(referral) {
