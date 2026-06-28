@@ -62,7 +62,7 @@ Please provide a JSON object containing EXACTLY these keys:
 Respond ONLY with valid JSON. Do not use markdown code blocks like \`\`\`json. Just the raw JSON object.
 `;
 
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
+  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
