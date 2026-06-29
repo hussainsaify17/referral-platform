@@ -63,6 +63,7 @@ jobs:
           node scripts/update_featured_by_analytics.mjs
           node scripts/check_expirations.mjs
           npm run generate-referrals
+          node scripts/qa_content_validator.mjs
 
       - name: Commit and push generated content
         run: |

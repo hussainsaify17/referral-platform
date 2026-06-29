@@ -1,41 +1,42 @@
 {
   "pros": [
-    "Seamless UPI integration allowing direct bank-to-bank transfers without wallet top-ups.",
-    "Industry-leading security protocols backed by Google's advanced fraud detection.",
-    "Wide acceptance across millions of local merchants, online stores, and utility billers.",
-    "Frequent opportunities to earn scratch cards, cashback, and vouchers through regular transactions."
+    "Seamless UPI payments for instant money transfers.",
+    "Robust security features backed by Google's infrastructure.",
+    "Convenient for bill payments, mobile recharges, and merchant transactions.",
+    "Opportunity to earn rewards, scratch cards, and cashback regularly.",
+    "User-friendly interface with wide acceptance across India."
   ],
   "cons": [
-    "Occasional transaction delays or failures during peak hours due to bank server congestion.",
-    "Customer support response times can be slow when resolving complex transaction disputes."
+    "Customer support response times can sometimes be slow.",
+    "Requires linking a bank account, which some users might find intrusive.",
+    "Occasional UI updates can take a short time to get accustomed to."
   ],
-  "detailed_review": "<h2>Introduction to Google Pay</h2><p>Google Pay (GPay) has revolutionized the digital payments landscape in India, establishing itself as a premier fintech application. By leveraging the Unified Payments Interface (UPI) network, Google Pay facilitates instantaneous, secure, and direct bank-to-bank money transfers without the need to maintain a separate digital wallet balance.</p><h3>Why Millions Choose Google Pay</h3><p>Users flock to Google Pay for its clean, intuitive interface and robust security framework. Whether you are splitting a dinner bill with friends, paying your local vendor, recharging your mobile, or managing monthly utility bills, Google Pay handles it all effortlessly. The app integrates seamlessly with your phone's contact list, making peer-to-peer transactions as simple as sending a text message.</p><h3>Unlocking the Sign-Up Bonus</h3><p>To welcome new users, Google Pay offers an attractive sign-up incentive. By using a referral link or entering a referral code, new users can earn a ₹21 cashback bonus on their very first transaction. Interestingly, this offer is not just restricted to brand-new accounts; it also applies to returning users who have not transacted on Google Pay for the last 180 days, making it an excellent opportunity to reactivate your account and claim free rewards.</p><h3>How to Maximize Your Earnings</h3><p>Beyond the initial signup bonus, Google Pay is famous for its gamified rewards ecosystem. Users can earn scratch cards containing real cashback or merchant discount vouchers by completing everyday tasks like sending money to friends, paying bills, or scanning merchant QR codes. Additionally, participating in seasonal campaigns (such as Diwali or end-of-year events) can yield significant cashback rewards.</p>",
+  "detailed_review": "<h2>Discover Google Pay: Your Ultimate Digital Wallet</h2><p>Google Pay, often simply called GPay, has revolutionized digital payments in India, making transactions faster, safer, and incredibly convenient. Developed by Google, this fintech powerhouse leverages the Unified Payments Interface (UPI) to allow users to send and receive money directly from their bank accounts, pay bills, recharge phones, and make purchases both online and offline.</p><h3>Why Google Pay Stands Out</h3><ul><li><strong>Instant UPI Payments:</strong> Send money to friends, family, or merchants in seconds, directly from your bank account, without sharing account details.</li><li><strong>Top-Tier Security:</strong> Backed by Google's multi-layered security and fraud prevention systems, your transactions and personal data are protected with bank-grade security.</li><li><strong>All-in-One Payment Hub:</strong> From paying electricity bills and gas bills to recharging your mobile or DTH, Google Pay handles all your utility payments effortlessly.</li><li><strong>Rewarding Experience:</strong> Users frequently receive scratch cards, cashback offers, and discounts on various transactions, adding value to every payment.</li><li><strong>Wide Acceptance:</strong> Accepted at millions of stores, websites, and apps across India, Google Pay ensures you're always ready to pay.</li></ul><h3>Maximize Your Welcome Bonus</h3><p>Google Pay offers an attractive incentive for new users or those who haven't used the app for a significant period. By using a referral code, you can earn a bonus of ₹21 on your very first qualifying payment. This is a fantastic way to kickstart your digital payment journey and get a little extra cash in your bank account.</p><p>Don't miss out on this opportunity to experience the convenience and rewards of Google Pay. Sign up today and simplify your financial life!</p>",
   "steps": [
-    "Download the Google Pay app using a friend's referral link or directly from the Google Play Store / Apple App Store.",
-    "Open the app and register using the mobile number linked to your bank account.",
-    "Set up your Google PIN or use your device's biometric lock for secure access.",
-    "Link your bank account by selecting your bank from the list and verifying your details via SMS.",
-    "Before making your first payment, tap your profile picture in the top-right corner of the home screen.",
-    "Tap the three vertical dots in the top-right corner, select 'Referral code', and enter the referral code if it is not already applied.",
-    "Send a minimum payment of ₹1 or more to any contact, UPI ID, or by scanning a merchant QR code.",
-    "Once the payment is successful, your ₹21 cashback bonus will be credited directly to your linked bank account."
+    "Click on the referral link: https://gpay.app.goo.gl/invite-lJ36U or download the Google Pay app from your device's app store.",
+    "Open the Google Pay app and register using your mobile number, ensuring it's the one linked to your bank account.",
+    "Follow the prompts to link your bank account to Google Pay and set up your UPI PIN.",
+    "During the registration process, or in the 'Offers' or 'Referral' section, look for an option to 'Enter a referral code' or 'Have a promo code?'.",
+    "Enter the referral code **lJ36U** when prompted. (Often, clicking the referral link automatically applies the code.)",
+    "Make your very first qualifying payment using Google Pay (e.g., send money to a friend, pay a bill, or complete a merchant transaction of any amount).",
+    "Once your first payment is successful, the ₹21 cashback will be credited directly to your linked bank account."
   ],
   "faq": [
     {
-      "question": "Who is eligible for the Google Pay ₹21 referral bonus?",
-      "answer": "The bonus is available to users who are completely new to Google Pay, as well as existing users who have not performed any transaction on the app for the last 180 days."
+      "question": "What is Google Pay?",
+      "answer": "Google Pay is a secure digital payment app by Google that allows users to send and receive money, pay bills, recharge mobile phones, and make purchases online and offline using UPI (Unified Payments Interface)."
     },
     {
-      "question": "Where do I enter the referral code in Google Pay?",
-      "answer": "Open Google Pay, tap your profile icon in the top right corner, tap the three-dot menu icon, select 'Referral code', enter the code, and tap 'Apply'."
+      "question": "How do I qualify for the ₹21 sign-up bonus?",
+      "answer": "To get the ₹21 bonus, you must be a new Google Pay user or have not used Google Pay for the last 180 days. You need to sign up using a referral link or enter the referral code **lJ36U**, and then complete your first qualifying payment."
     },
     {
-      "question": "Is there a minimum transaction amount required to get the cashback?",
-      "answer": "There is no high minimum limit; sending as little as ₹1 to a friend or scanning a merchant QR code will trigger the ₹21 cashback."
+      "question": "Is Google Pay safe for my transactions?",
+      "answer": "Yes, Google Pay employs multi-layered security features from Google, including UPI PIN protection, device screen lock, and Google's advanced security infrastructure to ensure your transactions and personal data are safe and secure."
     },
     {
-      "question": "How long does it take for the ₹21 cashback to be credited?",
-      "answer": "The cashback is usually credited instantly to your primary linked bank account, though in rare cases it may take up to 24 to 48 hours."
+      "question": "What kind of payments can I make with Google Pay?",
+      "answer": "You can make peer-to-peer payments, pay merchants (both online and at physical stores via QR code or phone number), pay utility bills (electricity, water, gas), recharge mobile phones and DTH, and even book various services directly within the app."
     }
   ]
 }
