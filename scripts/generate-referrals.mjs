@@ -293,6 +293,8 @@ async function main() {
         }
 
         updatedCount++;
+        // Add a 1.5-second delay between webhook requests to avoid Google Apps Script concurrency limits & sheet locks
+        await new Promise(r => setTimeout(r, 1500));
       } catch (err) {
         console.error(`❌ Failed to process referral:`, err.message);
       }
