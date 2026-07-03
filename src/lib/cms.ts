@@ -40,7 +40,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
   if (cleanedUrl) {
     console.log("Fetching live data from Google Sheets...");
     try {
-      const response = await fetch(cleanedUrl);
+      const response = await fetch(cleanedUrl, { next: { revalidate: 3600 } });
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
@@ -150,8 +150,27 @@ export async function getAllReferrals(): Promise<Referral[]> {
   }
   
   // Filter out expired items in the ingestion layer
-  const now = new Date().toISOString();
-  const activeReferrals = data.filter(item => item.status === "active" && item.expiry > now);
+  const now = new Date();
+  console.log(`[getAllReferrals] Before filtering: total=${data.length}, now=${now.toISOString()}`);
+  const bhimRaw = data.find(item => item.slug === "bhim-referral-code");
+  if (bhimRaw) {
+    const expiryDate = new Date(bhimRaw.expiry);
+    console.log(`[getAllReferrals] Found bhimRaw: status=${bhimRaw.status}, expiry="${bhimRaw.expiry}", expiry > now? ${expiryDate > now}`);
+  } else {
+    console.log("[getAllReferrals] bhim-referral-code not found in raw data");
+  }
+
+  const activeReferrals = data.filter(item => {
+    if (item.status !== "active") return false;
+    if (!item.expiry) return true; // active by default if no expiry is set
+    try {
+      const expiryDate = new Date(item.expiry);
+      if (isNaN(expiryDate.getTime())) return true;
+      return expiryDate > now;
+    } catch {
+      return true;
+    }
+  });
 
   // Apply Google Analytics ranking overrides if present
   try {
