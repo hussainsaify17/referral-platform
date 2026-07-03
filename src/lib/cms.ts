@@ -80,10 +80,25 @@ export async function getAllReferrals(): Promise<Referral[]> {
           // No local file exists yet
         }
 
-        const steps = row.steps ? String(row.steps).split('|').map(s => s.trim()) : [];
+        const parseSheetArray = (val: any) => {
+          if (!val) return [];
+          const str = String(val).trim();
+          if (str.includes('|')) {
+            return str.split('|').map(s => s.trim()).filter(Boolean);
+          }
+          if (str.includes('\n')) {
+            return str.split('\n').map(s => s.trim()).filter(Boolean);
+          }
+          if (str.includes(',')) {
+            return str.split(',').map(s => s.trim()).filter(Boolean);
+          }
+          return [str];
+        };
+
+        const steps = parseSheetArray(row.steps);
         const faq = parseFaqs(row.faq);
-        const pros = row.pros ? String(row.pros).split('|').map(s => s.trim()).filter(Boolean) : [];
-        const cons = row.cons ? String(row.cons).split('|').map(s => s.trim()).filter(Boolean) : [];
+        const pros = parseSheetArray(row.pros);
+        const cons = parseSheetArray(row.cons);
         const detailed_review = row.detailed_review || "";
 
         data.push({
