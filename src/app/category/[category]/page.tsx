@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
   const title = `Best ${capitalized} Referral Codes & Sign Up Bonuses`;
-  const description = `Browse the best working referral codes, invite links, and sign-up bonuses for ${capitalized} apps and services.`;
+  const description = `Find the best working ${capitalized} referral codes, sign-up bonuses, and invite links. Verified and updated daily to help you save money.`;
   const url = `https://referbenefits.co.in/category/${category}/`;
 
   return {
@@ -35,6 +35,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     alternates: {
       canonical: url,
+      languages: {
+        "en-IN": url,
+        "x-default": url,
+      },
     },
     openGraph: {
       title,

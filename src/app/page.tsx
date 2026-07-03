@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 
 export const metadata = {
   title: {
-    absolute: "ReferBenefits | India's Best Sign Up Bonuses & Referral Codes",
+    absolute: "ReferBenefits | Best Sign Up Bonuses & Referral Codes",
   },
   description: "Find the latest verified referral codes, invite links, and sign-up bonuses for top Indian apps like CRED, Swiggy, and Groww. Updated daily.",
   alternates: {

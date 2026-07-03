@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps (CRED, Swiggy, Groww, and more). Updated daily.",
   alternates: {
     canonical: "https://referbenefits.co.in/",
+    languages: {
+      "en-IN": "https://referbenefits.co.in/",
+      "x-default": "https://referbenefits.co.in/",
+    },
   },
   openGraph: {
     title: "ReferBenefits | India's Best Sign Up Bonuses",
@@ -102,8 +106,8 @@ export default function RootLayout({
       <body>
         {process.env.NODE_ENV === 'production' && (
           <>
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-5EV07XX9Y4" strategy="afterInteractive" />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script src="https://www.googletagmanager.com/gtag/js?id=G-5EV07XX9Y4" strategy="lazyOnload" />
+            <Script id="google-analytics" strategy="lazyOnload">
               {`
                 if (window.localStorage && window.localStorage.getItem('disable_ga') === 'true') {
                   window['ga-disable-G-5EV07XX9Y4'] = true;

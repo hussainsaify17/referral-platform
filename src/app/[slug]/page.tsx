@@ -148,7 +148,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
   const title = `${referral.name} Referral Code | Free Bonus (${currentMonth})`;
-  const description = `Use our verified ${referral.name} referral code to get ${referral.benefit_user}. Working as of ${currentMonth}.`;
+  const description = `Get the verified ${referral.name} referral code to claim your ${referral.benefit_user} sign-up bonus. Working and updated daily for ${currentMonth}.`;
   const url = `https://referbenefits.co.in/${slug}/`;
 
   return {
@@ -156,6 +156,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description,
     alternates: {
       canonical: url,
+      languages: {
+        "en-IN": url,
+        "x-default": url,
+      },
     },
     openGraph: {
       title,
