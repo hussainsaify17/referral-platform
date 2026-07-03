@@ -70,7 +70,7 @@ export function OfferExplorer({ allReferrals, initialReferrals, categories, feat
         {searchResults.length > 0 ? (
           <div className="bentoGrid">
             {searchResults.map((ref, index) => (
-              <ReferralCard key={ref.id} referral={ref} position={index + 1} />
+              <ReferralCard key={ref.id || ref.slug || `ref-card-${index}`} referral={ref} position={index + 1} />
             ))}
           </div>
         ) : (

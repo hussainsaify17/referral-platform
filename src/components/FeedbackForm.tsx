@@ -66,9 +66,8 @@ export function FeedbackForm({ className }: { className?: string }) {
 
   return (
     <>
-      {/* Link in Footer */}
-      <button onClick={toggleModal} className={className || styles.footerLink} aria-label="Open Feedback Form">
-        💬 Give Feedback
+      <button onClick={toggleModal} className={className || styles.footerLink}>
+        <span aria-hidden="true">💬</span> Give Feedback
       </button>
 
       {/* Glassmorphic Modal overlay */}

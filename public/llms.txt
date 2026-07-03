@@ -1,0 +1,12 @@
+# ReferBenefits
+
+[ReferBenefits](https://referbenefits.co.in/) is India's most trusted platform for discovering verified sign-up bonuses, referral codes, and invite links.
+
+## Categories
+- [Fintech Offers](https://referbenefits.co.in/category/fintech/) (CRED, Swiggy, Groww, NiYO)
+- [Food & Delivery Offers](https://referbenefits.co.in/category/food/) (Zomato, Swiggy)
+- [Shopping Offers](https://referbenefits.co.in/category/shopping/) (AJIO, BuyHatke)
+- [Investing & Wealth Offers](https://referbenefits.co.in/category/investing/) (Groww)
+
+## Access Information
+All referral detail pages are served statically. Affiliate redirect URLs are located under `/go/[slug]/`.

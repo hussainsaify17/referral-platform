@@ -5,12 +5,14 @@
   --primary: #000000;
   --primary-foreground: #ffffff;
   --secondary: #f4f4f5;
-  --secondary-foreground: #71717a;
+  --secondary-foreground: #52525b;
   --card-bg: rgba(255, 255, 255, 0.7);
   --card-border: rgba(228, 228, 231, 0.8);
   --bg-pattern: rgba(0, 0, 0, 0.1);
   --accent: #2563eb;
   --accent-light: rgba(37, 99, 235, 0.15);
+  --accent-btn-bg: #2563eb;
+  --accent-btn-fg: #ffffff;
   --success: #16a34a;
   --success-light: rgba(22, 163, 74, 0.15);
   --radius: 0.75rem;
@@ -34,6 +36,8 @@
   --bg-pattern: rgba(255, 255, 255, 0.08);
   --accent: #3b82f6;
   --accent-light: rgba(59, 130, 246, 0.15);
+  --accent-btn-bg: #2563eb;
+  --accent-btn-fg: #ffffff;
   --success: #10b981;
   --success-light: rgba(16, 185, 129, 0.15);
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);

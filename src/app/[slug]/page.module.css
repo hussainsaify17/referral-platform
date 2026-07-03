@@ -111,8 +111,8 @@
   gap: 0.5rem;
   width: 100%;
   padding: 1.25rem;
-  background-color: var(--accent);
-  color: white;
+  background-color: var(--accent-btn-bg);
+  color: var(--accent-btn-fg);
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: var(--radius);

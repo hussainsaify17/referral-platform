@@ -73,7 +73,7 @@ export default async function Home() {
           categories={categories}
           featuredNode={
             featured && (
-              <div className={styles.featuredSection}>
+              <div className={styles.featuredSection} key="featured-offer-section">
                 <div className={styles.featuredLabel}>
                   <Sparkles size={14} />
                   Featured Offer

@@ -54,8 +54,8 @@
 .submitBtn {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: var(--accent);
-  color: white;
+  background-color: var(--accent-btn-bg);
+  color: var(--accent-btn-fg);
   border-radius: var(--radius);
   text-align: center;
   font-weight: 600;

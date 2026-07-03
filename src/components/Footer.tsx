@@ -37,7 +37,7 @@ export async function Footer() {
           {/* Column 1 – Brand */}
           <div className={styles.brand}>
             <Link href="/" className={styles.logo}>
-              <Image src="/logo.png" alt="ReferBenefits Logo" width={32} height={32} className={styles.logoImage} />
+              <Image src="/logo-small.png" alt="ReferBenefits Logo" width={32} height={32} className={styles.logoImage} />
               Refer<span className={styles.accent}>Benefits</span>
             </Link>
             <p className={styles.tagline}>
@@ -57,7 +57,7 @@ export async function Footer() {
                 className={styles.socialIcon}
                 aria-label="Follow on Twitter/X"
               >
-                𝕏
+                <span aria-hidden="true">𝕏</span>
               </a>
               <a
                 href="https://t.me/referbenefits"
@@ -66,14 +66,14 @@ export async function Footer() {
                 className={styles.socialIcon}
                 aria-label="Join Telegram channel"
               >
-                ✈
+                <span aria-hidden="true">✈</span>
               </a>
               <a
                 href="mailto:hello@referbenefits.co.in"
                 className={styles.socialIcon}
                 aria-label="Contact via email"
               >
-                ✉
+                <span aria-hidden="true">✉</span>
               </a>
             </div>
           </div>

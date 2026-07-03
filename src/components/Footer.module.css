@@ -325,7 +325,6 @@
 .disclaimer {
   font-size: 0.72rem;
   color: var(--secondary-foreground);
-  opacity: 0.7;
   max-width: 480px;
   line-height: 1.5;
 }

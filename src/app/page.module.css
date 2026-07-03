@@ -230,8 +230,8 @@
 .featuredCta {
   display: inline-block;
   padding: 0.85rem 1.5rem;
-  background: var(--accent);
-  color: #fff;
+  background: var(--accent-btn-bg);
+  color: var(--accent-btn-fg);
   font-weight: 700;
   font-size: 0.95rem;
   border-radius: var(--radius);

@@ -56,11 +56,11 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: var(--accent);
+  background-color: var(--accent-btn-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--accent-btn-fg);
   font-weight: 700;
 }
 
