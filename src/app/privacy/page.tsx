@@ -1,8 +1,11 @@
 import styles from "../page.module.css";
 
 export const metadata = {
-  title: "Privacy Policy | ReferBenefits",
-  description: "Privacy Policy for ReferBenefits platform.",
+  title: "Privacy Policy",
+  description: "Privacy Policy for the ReferBenefits platform. Learn how we handle your data, cookies, and third-party advertising.",
+  alternates: {
+    canonical: "https://referbenefits.co.in/privacy/",
+  },
 };
 
 export default function PrivacyPolicy() {

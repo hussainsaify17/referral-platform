@@ -7,8 +7,13 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "ReferBenefits | India's Best Sign Up Bonuses & Referral Codes",
-  description: "Find verified referral codes, invite links, and sign-up bonuses to earn extra cash.",
+  title: {
+    absolute: "ReferBenefits | India's Best Sign Up Bonuses & Referral Codes",
+  },
+  description: "Find the latest verified referral codes, invite links, and sign-up bonuses for top Indian apps like CRED, Swiggy, and Groww. Updated daily.",
+  alternates: {
+    canonical: "https://referbenefits.co.in/",
+  },
 };
 
 export default async function Home() {
@@ -38,20 +43,9 @@ export default async function Home() {
   const featured = lightweightReferrals[0];
   const restReferrals = lightweightReferrals.slice(1, 7);
 
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "ReferBenefits",
-    url: "https://referbenefits.co.in",
-    description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps.",
-  };
 
   return (
     <div className={styles.container}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className={styles.hero}>

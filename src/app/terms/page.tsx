@@ -1,8 +1,11 @@
 import styles from "../page.module.css";
 
 export const metadata = {
-  title: "Terms of Service | ReferBenefits",
-  description: "Terms of Service and Conditions for using ReferBenefits.",
+  title: "Terms of Service",
+  description: "Terms of Service and conditions for using the ReferBenefits platform.",
+  alternates: {
+    canonical: "https://referbenefits.co.in/terms/",
+  },
 };
 
 export default function TermsOfService() {

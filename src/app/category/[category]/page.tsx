@@ -22,10 +22,13 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
-  const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
+  const capitalized = category
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
   const title = `Best ${capitalized} Referral Codes & Sign Up Bonuses`;
   const description = `Browse the best working referral codes, invite links, and sign-up bonuses for ${capitalized} apps and services.`;
-  const url = `https://referbenefits.co.in/category/${category}`;
+  const url = `https://referbenefits.co.in/category/${category}/`;
 
   return {
     title,
@@ -39,11 +42,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       type: "website",
       siteName: "ReferBenefits",
+      images: [{ url: "https://referbenefits.co.in/logo.png", width: 512, height: 512, alt: "ReferBenefits Logo" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["https://referbenefits.co.in/logo.png"],
     }
   };
 }
@@ -57,7 +62,10 @@ export default async function CategoryPage({ params }: Props) {
     notFound();
   }
 
-  const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
+  const capitalized = category
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },

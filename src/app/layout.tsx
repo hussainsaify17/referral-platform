@@ -24,18 +24,30 @@ export const metadata: Metadata = {
     template: "%s | ReferBenefits",
   },
   description: "Find the latest and verified referral codes, sign-up bonuses, and invite links for top Indian apps (CRED, Swiggy, Groww, and more). Updated daily.",
+  alternates: {
+    canonical: "https://referbenefits.co.in/",
+  },
   openGraph: {
     title: "ReferBenefits | India's Best Sign Up Bonuses",
     description: "Discover verified referral codes and sign-up bonuses to earn extra cash on top apps.",
-    url: "https://referbenefits.co.in",
+    url: "https://referbenefits.co.in/",
     siteName: "ReferBenefits",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://referbenefits.co.in/logo.png",
+        width: 512,
+        height: 512,
+        alt: "ReferBenefits - India's Best Referral Codes",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ReferBenefits | India's Best Sign Up Bonuses",
     description: "Discover verified referral codes and sign-up bonuses to earn extra cash on top apps.",
+    images: ["https://referbenefits.co.in/logo.png"],
   },
 };
 

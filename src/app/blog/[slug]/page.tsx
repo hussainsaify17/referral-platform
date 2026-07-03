@@ -21,22 +21,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return { title: "Not Found" };
 
   return {
-    title: `${post.title} | ReferBenefits Blog`,
+    title: `${post.title} | Blog`,
     description: post.description,
     alternates: {
-      canonical: `https://referbenefits.co.in/blog/${slug}`,
+      canonical: `https://referbenefits.co.in/blog/${slug}/`,
     },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://referbenefits.co.in/blog/${slug}`,
+      url: `https://referbenefits.co.in/blog/${slug}/`,
       type: "article",
       siteName: "ReferBenefits",
+      images: [{ url: "https://referbenefits.co.in/logo.png", width: 512, height: 512, alt: "ReferBenefits Logo" }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: ["https://referbenefits.co.in/logo.png"],
     }
   };
 }
@@ -55,8 +57,36 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     { label: post.title, href: `/blog/${post.slug}` },
   ];
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.description,
+    "datePublished": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ReferBenefits",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://referbenefits.co.in/logo.png",
+      },
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://referbenefits.co.in/blog/${post.slug}/`,
+    },
+  };
+
   return (
     <article className={`container ${styles.container}`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className={styles.breadcrumbArea}>
         <Breadcrumbs items={breadcrumbItems} />
       </div>

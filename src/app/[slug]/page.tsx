@@ -149,7 +149,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
   const title = `${referral.name} Referral Code | Free Bonus (${currentMonth})`;
   const description = `Use our verified ${referral.name} referral code to get ${referral.benefit_user}. Working as of ${currentMonth}.`;
-  const url = `https://referbenefits.co.in/${slug}`;
+  const url = `https://referbenefits.co.in/${slug}/`;
 
   return {
     title,
@@ -163,11 +163,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url,
       type: "article",
       siteName: "ReferBenefits",
+      images: [{ url: "https://referbenefits.co.in/logo.png", width: 512, height: 512, alt: `${referral.name} Referral Code` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["https://referbenefits.co.in/logo.png"],
     }
   };
 }
@@ -333,8 +335,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
           <AdBanner dataAdSlot="middle_slot_456" />
 
           {referral.detailed_review && (
-            <section className={styles.reviewSection} style={{ margin: '40px 0', lineHeight: '1.8' }}>
-              <h2>Detailed Review</h2>
+            <section className={styles.reviewSection} style={{ margin: '40px 0', lineHeight: '1.8' }} aria-label="Detailed Review">
               <div dangerouslySetInnerHTML={{ __html: referral.detailed_review }} />
             </section>
           )}

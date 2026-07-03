@@ -30,7 +30,7 @@ export const AdBanner = ({
   }, []);
 
   return (
-    <div style={{ position: 'relative', margin: '20px 0', minHeight: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#111111', border: '1px dashed #333333', borderRadius: '8px', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', margin: '20px 0', minHeight: '280px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#111111', border: '1px dashed #333333', borderRadius: '8px', overflow: 'hidden' }}>
       {/* Fallback text when adblock is enabled or running on localhost */}
       <span style={{ position: 'absolute', color: '#444444', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Advertisement</span>
       <ins
