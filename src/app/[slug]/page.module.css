@@ -333,3 +333,21 @@
   color: var(--foreground);
 }
 
+.stepLink {
+  color: var(--accent);
+  text-decoration: underline;
+  word-break: break-all;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.stepLink:hover {
+  color: #2563eb; /* fallback blue hover */
+  opacity: 0.85;
+}
+
+.stepBold {
+  font-weight: 700;
+  color: var(--foreground);
+}
+

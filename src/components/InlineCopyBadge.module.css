@@ -1,0 +1,102 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border: 1.5px dashed var(--accent);
+  border-radius: 6px;
+  padding: 0.1rem 0.45rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+  user-select: none;
+  vertical-align: middle;
+}
+
+.badge:hover {
+  background-color: rgba(37, 99, 235, 0.22);
+  border-style: solid;
+  transform: translateY(-1px);
+}
+
+.copied {
+  background-color: var(--success-light) !important;
+  color: var(--success) !important;
+  border-color: var(--success) !important;
+  border-style: solid !important;
+}
+
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+.iconContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: var(--transition);
+}
+
+.badge:hover .iconContainer {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.iconCheck {
+  color: var(--success);
+  animation: scaleUp 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #09090b;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.15s ease-out forwards;
+  z-index: 10;
+  font-weight: 500;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #09090b transparent transparent transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}

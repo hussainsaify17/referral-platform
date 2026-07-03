@@ -8,7 +8,128 @@ import { ShareButtons } from "@/components/ShareButtons";
 import { CheckCircle2, AlertCircle, Calendar } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AdBanner } from "@/components/AdBanner";
+import { InlineCopyBadge } from "@/components/InlineCopyBadge";
 import styles from "./page.module.css";
+
+function cleanStepText(text: string): string {
+  if (!text) return "";
+  let cleaned = text;
+  
+  // 1. Replace HTML links <a href='URL'>TEXT</a> with just the URL
+  cleaned = cleaned.replace(/<a\s+href=['"]([^'"]+)['"]>[^<]*<\/a>/gi, "$1");
+  
+  // 2. Replace other raw HTML tags:
+  // - <strong>text</strong> or <b>text</b> or <code>text</code> -> **text**
+  cleaned = cleaned.replace(/<\/?(strong|b|code)>/gi, "**");
+  
+  // - Remove any other random HTML tags like <span>, </p>, etc.
+  cleaned = cleaned.replace(/<\/?[a-z0-9]+[^>]*>/gi, "");
+  
+  // 3. Normalize multiple asterisks:
+  // - ***text*** -> **text**
+  cleaned = cleaned.replace(/\*\*\*+([^*]+)\*\*\*+/g, "**$1**");
+  
+  // 4. Remove backticks:
+  // - `text` -> text
+  cleaned = cleaned.replace(/`([^`]+)`/g, "$1");
+  cleaned = cleaned.replace(/`/g, "");
+  
+  // 5. Clean up any double bold markup caused by replacements (e.g. ****text**** -> **text**)
+  cleaned = cleaned.replace(/\*\*+/g, "**");
+  
+  return cleaned;
+}
+
+function parseStepText(
+  text: string,
+  referralCode?: string,
+  brandName?: string,
+  slug?: string
+) {
+  if (!text) return [];
+  const cleanedText = cleanStepText(text);
+
+  if (!referralCode) {
+    const pattern = /(https?:\/\/[^\s,()]+)|\*\*([^*]+)\*\*/gi;
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(cleanedText)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(cleanedText.substring(lastIndex, match.index));
+      }
+      if (match[1]) {
+        parts.push(
+          <a
+            key={match.index}
+            href={match[1]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.stepLink}
+          >
+            {match[1]}
+          </a>
+        );
+      } else if (match[2]) {
+        parts.push(<strong key={match.index} className={styles.stepBold}>{match[2]}</strong>);
+      }
+      lastIndex = pattern.lastIndex;
+    }
+    if (lastIndex < cleanedText.length) {
+      parts.push(cleanedText.substring(lastIndex));
+    }
+    return parts.length > 0 ? parts : [cleanedText];
+  }
+
+  const escapedCode = referralCode.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  const pattern = new RegExp(
+    `(\\*\\*${escapedCode}\\*\\*)|\\b(${escapedCode})\\b|(https?:\\/\\/[^\\s,()]+)|\\*\\*([^*]+)\\*\\*`,
+    "gi"
+  );
+
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = pattern.exec(cleanedText)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(cleanedText.substring(lastIndex, match.index));
+    }
+
+    if (match[1] || match[2]) {
+      parts.push(
+        <InlineCopyBadge
+          key={match.index}
+          code={referralCode}
+          brandName={brandName || ""}
+          slug={slug || ""}
+        />
+      );
+    } else if (match[3]) {
+      parts.push(
+        <a
+          key={match.index}
+          href={match[3]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.stepLink}
+        >
+          {match[3]}
+        </a>
+      );
+    } else if (match[4]) {
+      parts.push(<strong key={match.index} className={styles.stepBold}>{match[4]}</strong>);
+    }
+
+    lastIndex = pattern.lastIndex;
+  }
+
+  if (lastIndex < cleanedText.length) {
+    parts.push(cleanedText.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : [cleanedText];
+}
 
 export async function generateStaticParams() {
   const referrals = await getAllReferrals();
@@ -178,7 +299,9 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
               {referral.steps.map((step, index) => (
                 <div key={index} className={styles.step}>
                   <div className={styles.stepNumber}>{index + 1}</div>
-                  <p className={styles.stepText}>{step}</p>
+                  <p className={styles.stepText}>
+                    {parseStepText(step, referral.referral_code, referral.name, referral.slug)}
+                  </p>
                 </div>
               ))}
             </div>
