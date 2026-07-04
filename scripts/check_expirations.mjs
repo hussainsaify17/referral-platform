@@ -66,6 +66,31 @@ async function run() {
             }),
           });
           console.log(`✉️ Expiry alert sent to webhook for "${row.name}".`);
+        } else if (timeDiff <= 0) {
+          // The offer has expired! Let's mark it as expired in the Google Sheet.
+          console.log(`🚫 Offer Expired: "${row.name}" has expired! Marking it as expired in Google Sheets...`);
+          
+          try {
+            const res = await fetch(webhookUrl, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify({
+                type: "update_referral",
+                slug: row.slug,
+                updates: {
+                  status: "expired"
+                }
+              }),
+            });
+            const resText = await res.text();
+            if (res.ok) {
+              console.log(`✅ Marked "${row.name}" as expired successfully in Google Sheets. Response: ${resText}`);
+            } else {
+              console.error(`⚠️ Failed to mark "${row.name}" as expired: ${res.statusText}`);
+            }
+          } catch (fetchErr) {
+            console.error(`⚠️ Webhook request failed to mark "${row.name}" as expired:`, fetchErr.message);
+          }
         }
       }
     }
