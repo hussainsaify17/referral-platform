@@ -23,7 +23,7 @@ export function ReferralCard({ referral, position = 0 }: Props) {
 
   return (
     <Link 
-      href={`/${referral.slug}`} 
+      href={`/${referral.slug}/`} 
       className={`${styles.card} ${referral.is_featured ? styles.featured : ''}`} 
       onClick={handleClick}
     >

@@ -53,8 +53,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: "Blog", href: "/blog" },
-    { label: post.title, href: `/blog/${post.slug}` },
+    { label: "Blog", href: "/blog/" },
+    { label: post.title, href: `/blog/${post.slug}/` },
   ];
 
   const articleSchema = {

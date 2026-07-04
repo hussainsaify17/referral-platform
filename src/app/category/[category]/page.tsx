@@ -73,7 +73,7 @@ export default async function CategoryPage({ params }: Props) {
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: capitalized, href: `/category/${category.toLowerCase().replace(/\s+/g, '-')}` },
+    { label: capitalized, href: `/category/${category.toLowerCase().replace(/\s+/g, '-')}/` },
   ];
 
   return (

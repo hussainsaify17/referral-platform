@@ -45,7 +45,7 @@ export default async function BlogIndexPage() {
       ) : (
         <div className={styles.grid}>
           {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none" }}>
+            <Link key={post.slug} href={`/blog/${post.slug}/`} style={{ textDecoration: "none" }}>
               <article className={styles.card}>
                 <span className={styles.category}>{post.category}</span>
                 <h2 className={styles.postTitle}>{post.title}</h2>

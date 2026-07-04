@@ -97,7 +97,7 @@ export default async function Home() {
         
         {lightweightReferrals.length > 7 && (
           <div className={styles.viewAllWrapper}>
-            <Link href="/category/fintech" className={styles.viewAll}>
+            <Link href="/category/fintech/" className={styles.viewAll}>
               View all {lightweightReferrals.length} offers →
             </Link>
           </div>

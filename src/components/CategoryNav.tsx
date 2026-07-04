@@ -71,7 +71,7 @@ export function CategoryNav({ categories }: Props) {
           All Offers
         </Link>
         {categories.map((cat) => {
-          const href = `/category/${cat.toLowerCase().replace(/\s+/g, '-')}`;
+          const href = `/category/${cat.toLowerCase().replace(/\s+/g, '-')}/`;
           const isActive = pathname === href || pathname === `${href}/`;
           return (
             <Link 

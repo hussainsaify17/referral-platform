@@ -191,8 +191,8 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: referral.category, href: `/category/${referral.category.toLowerCase().replace(/\s+/g, '-')}` },
-    { label: referral.name, href: `/${referral.slug}` },
+    { label: referral.category, href: `/category/${referral.category.toLowerCase().replace(/\s+/g, '-')}/` },
+    { label: referral.name, href: `/${referral.slug}/` },
   ];
 
   const faqSchema = referral.faq && referral.faq.length > 0 ? {
@@ -213,7 +213,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
     "@type": "Offer",
     name: `${referral.name} Sign Up Bonus`,
     description: referral.benefit_user,
-    url: `https://referbenefits.co.in/${referral.slug}`,
+    url: `https://referbenefits.co.in/${referral.slug}/`,
     price: "0",
     priceCurrency: "INR",
     availability: isExpired ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
@@ -293,7 +293,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             </p>
 
             <ShareButtons 
-              url={`https://referbenefits.co.in/${referral.slug}`} 
+              url={`https://referbenefits.co.in/${referral.slug}/`} 
               title={`${referral.name} Referral Code: ${referral.referral_code || 'Bonus Link'}`}
               text={referral.benefit_user}
             />
