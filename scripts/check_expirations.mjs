@@ -60,6 +60,9 @@ async function run() {
               code: row.referral_code || "Link-Only",
               expiry: row.expiry,
               hoursLeft: hoursLeft,
+              slug: row.slug,
+              category: row.category || "General",
+              link: row.referral_link || ""
             }),
           });
           console.log(`✉️ Expiry alert sent to webhook for "${row.name}".`);
