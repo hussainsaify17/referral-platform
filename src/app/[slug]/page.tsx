@@ -381,7 +381,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
               </li>
               <li>
                 <CheckCircle2 size={16} />
-                <span>Status: {referral.status === 'active' ? 'Active & Working' : 'Inactive'}</span>
+                <span>Status: {referral.status === 'active' ? 'Active & Working' : 'Expired'}</span>
               </li>
             </ul>
           </div>

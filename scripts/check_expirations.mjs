@@ -78,7 +78,7 @@ async function run() {
                 type: "update_referral",
                 slug: row.slug,
                 updates: {
-                  status: "expired"
+                  status: "not active"
                 }
               }),
             });

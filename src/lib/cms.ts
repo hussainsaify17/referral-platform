@@ -119,7 +119,7 @@ export async function getAllReferrals(): Promise<Referral[]> {
           detailed_review: detailed_review ? detailed_review : (localData.detailed_review || ""),
           expiry: row.expiry || "2099-12-31T00:00:00.000Z",
           last_checked: new Date().toISOString(),
-          status: (row.status as "active" | "expired") || "active",
+          status: (!row.status || String(row.status).trim().toLowerCase() === "active") ? "active" : "expired",
           is_featured: String(row.is_featured).toLowerCase() === 'true',
         });
       }
