@@ -2,6 +2,30 @@
   margin: 2rem 0;
   width: 100%;
   min-height: 2.5rem; /* reserve space to prevent CLS */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scrollBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.scrollBtn:hover {
+  background-color: var(--border-color);
+  transform: scale(1.05);
 }
 
 .scrollArea {
@@ -12,6 +36,13 @@
   padding: 1rem 0.5rem; /* padding for shadow/hover states */
   /* Remove negative margin to prevent artificial width expansion that causes scrolling */
   margin: 0;
+  flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  .scrollBtn {
+    display: none;
+  }
 }
 
 .pill {

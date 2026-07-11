@@ -22,7 +22,7 @@ export async function Header() {
                 {cat}
               </Link>
             ))}
-            <Link href="mailto:submit@referbenefits.co.in" className={styles.submitBtnDesktop}>
+            <Link href="/contact/" className={styles.submitBtnDesktop}>
               Submit a Code
             </Link>
           </nav>

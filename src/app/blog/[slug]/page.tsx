@@ -113,6 +113,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </header>
 
+      <div style={{
+        padding: "1rem 1.25rem",
+        borderRadius: "8px",
+        backgroundColor: "var(--card-bg)",
+        borderLeft: "4px solid var(--accent)",
+        fontSize: "14px",
+        lineHeight: "1.6",
+        color: "var(--secondary-foreground)",
+        marginBottom: "2rem"
+      }}>
+        <p style={{ margin: 0 }}>
+          <strong>💡 Disclaimer:</strong> Referral programs, card rewards, and fintech services terms change frequently. The information below is for educational and general informational purposes only and does not constitute formal financial advice. Always verify terms on the official banking or provider website before signing up or applying.
+        </p>
+      </div>
+
       <div className={styles.markdownWrapper}>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
           {post.content}

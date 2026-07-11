@@ -20,6 +20,8 @@ export interface Referral {
   detailed_review?: string;
   expiry: string;
   last_checked: string;
+  last_verified?: string;
+  verified_by?: string;
   status: "active" | "expired";
   is_featured?: boolean;
 }

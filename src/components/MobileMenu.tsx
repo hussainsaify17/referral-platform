@@ -32,7 +32,7 @@ export function MobileMenu({ categories }: { categories: string[] }) {
               </Link>
             ))}
             <Link 
-              href="mailto:submit@referbenefits.co.in" 
+              href="/contact/" 
               className={styles.submitBtn}
               onClick={() => setIsOpen(false)}
             >

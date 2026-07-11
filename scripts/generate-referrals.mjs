@@ -206,9 +206,12 @@ async function main() {
 
           // Save local JSON file for build-time static generation
           const actualLocalPath = path.join(REFERRALS_DIR, `${finalSlug}.json`);
+          const currentMonthYear = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
           const richData = {
             bonus_amount: finalBonus,
             benefit_owner: finalBenefitOwner,
+            last_verified: currentMonthYear,
+            verified_by: "Hussain",
             pros: generated.pros || [],
             cons: generated.cons || [],
             detailed_review: generated.detailed_review || "",
@@ -222,12 +225,15 @@ async function main() {
         } else {
           // We have the local data, just use it to sync to the sheet
           console.log(`📦 Syncing existing local details for offer "${ref.name || tempSlug}" to Google Sheets...`);
+          const currentMonthYear = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
           generated = {
             name: ref.name,
             category: ref.category || localData.category,
             benefit_user: ref.benefit_user || localData.benefit_user,
             bonus_amount: ref.bonus_amount || localData.bonus_amount || "Welcome Reward",
             benefit_owner: ref.benefit_owner || localData.benefit_owner || "Referrer reward",
+            last_verified: localData.last_verified || ref.last_verified || currentMonthYear,
+            verified_by: localData.verified_by || ref.verified_by || "Hussain",
             pros: localData.pros || [],
             cons: localData.cons || [],
             detailed_review: localData.detailed_review || "",
@@ -269,6 +275,8 @@ async function main() {
                   status: ref.status || 'active',
                   expiry: ref.expiry || new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
                   is_featured: ref.is_featured || 'FALSE',
+                  last_verified: generated.last_verified || '',
+                  verified_by: generated.verified_by || '',
                   pros: (generated.pros || []).join(', '),
                   cons: (generated.cons || []).join(', '),
                   detailed_review: generated.detailed_review || '',
@@ -333,6 +341,8 @@ async function main() {
         benefit_owner: ref.benefit_owner || localData.benefit_owner || "Referrer reward",
         referral_code: ref.referral_code,
         referral_link: ref.referral_link,
+        last_verified: localData.last_verified || ref.last_verified || "",
+        verified_by: localData.verified_by || ref.verified_by || "",
         expiry: ref.expiry || ""
       });
     }

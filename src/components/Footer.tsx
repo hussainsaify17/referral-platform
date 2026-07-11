@@ -104,19 +104,19 @@ export async function Footer() {
           {/* Column 4 – Company */}
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Company</h3>
+            <Link href="/about/" className={styles.link}>About Us</Link>
             <Link href="/blog" className={styles.link}>
               Blog
               <span className={styles.linkNew}>New</span>
             </Link>
             <Link href="/privacy" className={styles.link}>Privacy Policy</Link>
             <Link href="/terms" className={styles.link}>Terms of Service</Link>
-            <a href="mailto:hello@referbenefits.co.in" className={styles.link}>
-              Contact Us
-            </a>
+            <Link href="/disclaimer/" className={styles.link}>Affiliate Disclosure</Link>
+            <Link href="/contact/" className={styles.link}>Contact Us</Link>
             <FeedbackForm className={styles.link} />
-            <a href="mailto:partner@referbenefits.co.in" className={styles.link}>
+            <Link href="/contact/" className={styles.link}>
               📢 Partner / Advertise
-            </a>
+            </Link>
           </div>
         </div>
 

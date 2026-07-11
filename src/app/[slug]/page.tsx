@@ -64,7 +64,7 @@ function parseStepText(
             key={match.index}
             href={match[1]}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer sponsored nofollow"
             className={styles.stepLink}
           >
             {match[1]}
@@ -111,7 +111,7 @@ function parseStepText(
           key={match.index}
           href={match[3]}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer sponsored nofollow"
           className={styles.stepLink}
         >
           {match[3]}
@@ -250,7 +250,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             <div className={styles.brandMeta}>
               <span className={styles.category}>{referral.category}</span>
               <span className={styles.verified}>
-                <CheckCircle2 size={14} /> Verified for {currentMonth}
+                <CheckCircle2 size={14} /> {referral.last_verified ? `Manually verified: ${referral.last_verified} by ${referral.verified_by || 'Staff'}` : `Verified for ${currentMonth}`}
               </span>
             </div>
             <h1 className={styles.title}>{referral.name} Referral Code & Sign Up Bonus</h1>
@@ -300,7 +300,10 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
           </section>
 
           <section className={styles.stepsSection}>
-            <h2>How to Claim Your Bonus</h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
+              <h2 style={{ margin: 0 }}>How to Claim Your Bonus</h2>
+              <span style={{ fontSize: '12px', color: 'var(--secondary-foreground)' }}>ℹ️ Outbound links on this page are affiliate links.</span>
+            </div>
             <div className={styles.stepsList}>
               {referral.steps.map((step, index) => (
                 <div key={index} className={styles.step}>
@@ -340,7 +343,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
 
           {referral.detailed_review && (
             <section className={styles.reviewSection} style={{ margin: '40px 0', lineHeight: '1.8' }} aria-label="Detailed Review">
-              <div dangerouslySetInnerHTML={{ __html: referral.detailed_review }} />
+              <div dangerouslySetInnerHTML={{ __html: referral.detailed_review.replace(/<a\s+(href=['"][^'"]+['"])/gi, '<a rel="noopener noreferrer sponsored nofollow" $1') }} />
             </section>
           )}
 

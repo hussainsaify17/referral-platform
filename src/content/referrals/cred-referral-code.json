@@ -38,5 +38,7 @@
       "question": "Is it safe to link my email account with CRED?",
       "answer": "Yes, CRED uses secure APIs with read-only permissions to scan your credit card statements for bill generation and hidden charges. If you are uncomfortable sharing email access, you can opt-out and manage your statements manually."
     }
-  ]
+  ],
+  "last_verified": "July 2026",
+  "verified_by": "Hussain"
 }
