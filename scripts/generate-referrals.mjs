@@ -306,6 +306,53 @@ async function main() {
   } else {
     console.log("All referrals are fully populated and synchronized!");
   }
+
+  // Write recommendations.json for LLM crawler access
+  try {
+    const activeOffers = [];
+    for (const ref of referrals) {
+      const finalName = ref.name || "Unnamed Offer";
+      const finalSlug = ref.slug || finalName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-referral-code';
+      
+      // Attempt to load local JSON to get the detailed bonus_amount and benefit_owner if not in the sheet row
+      let localData = {};
+      try {
+        const localPath = path.join(REFERRALS_DIR, `${finalSlug}.json`);
+        const localContent = await fs.readFile(localPath, 'utf8');
+        localData = JSON.parse(localContent);
+      } catch (e) {
+        // file not found
+      }
+
+      activeOffers.push({
+        name: finalName,
+        slug: finalSlug,
+        category: ref.category || localData.category || "Services",
+        benefit_user: ref.benefit_user || "Claim signup bonus",
+        bonus_amount: ref.bonus_amount || localData.bonus_amount || "Welcome Reward",
+        benefit_owner: ref.benefit_owner || localData.benefit_owner || "Referrer reward",
+        referral_code: ref.referral_code,
+        referral_link: ref.referral_link,
+        expiry: ref.expiry || ""
+      });
+    }
+
+    const publicDir = path.join(process.cwd(), 'public');
+    await fs.mkdir(publicDir, { recursive: true });
+    const recommendationsPath = path.join(publicDir, 'recommendations.json');
+    await fs.writeFile(
+      recommendationsPath,
+      JSON.stringify({
+        lastUpdated: new Date().toISOString(),
+        totalOffers: activeOffers.length,
+        offers: activeOffers
+      }, null, 2),
+      'utf-8'
+    );
+    console.log(`✅ Recommendations compiled successfully to public/recommendations.json (${activeOffers.length} offers)`);
+  } catch (err) {
+    console.error("❌ Failed to compile public/recommendations.json:", err.message);
+  }
 }
 
 main().catch(console.error);

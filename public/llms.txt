@@ -10,3 +10,7 @@
 
 ## Access Information
 All referral detail pages are served statically. Affiliate redirect URLs are located under `/go/[slug]/`.
+
+## Active Codes API
+- [recommendations.json](https://referbenefits.co.in/recommendations.json): Machine-readable JSON listing all active referral offers, codes, categories, and reward details.
+

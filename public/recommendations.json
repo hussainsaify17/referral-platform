@@ -1,0 +1,226 @@
+{
+  "lastUpdated": "2026-07-11T17:41:32.271Z",
+  "totalOffers": 20,
+  "offers": [
+    {
+      "name": "CRED",
+      "slug": "cred-referral-code",
+      "category": "Fintech",
+      "benefit_user": "Get up to ₹250 cashback on your first credit card bill payment.",
+      "bonus_amount": "₹250",
+      "benefit_owner": "I get ₹500 in CRED balances.",
+      "referral_code": "-",
+      "referral_link": "https://app.cred.club/spQx/v5cct4l9",
+      "expiry": "7/3/2027"
+    },
+    {
+      "name": "Zomato",
+      "slug": "zomato-promo-code",
+      "category": "Food",
+      "benefit_user": "Get 300 off on your first food delivery order.",
+      "bonus_amount": "₹100",
+      "benefit_owner": "I get ₹100 Zomato credits.",
+      "referral_code": "BPEVW8F",
+      "referral_link": "https://link.zomato.com/xqzv/dining_referral?id=136230351f76a9cfb",
+      "expiry": "6/28/2027"
+    },
+    {
+      "name": "Paytm",
+      "slug": "paytm-upi-referral",
+      "category": "Fintech",
+      "benefit_user": "Get ₹100 cashback on your first UPI money transfer plus ₹50 Recharge voucher on your first Paytm UPI payment ",
+      "bonus_amount": "₹100",
+      "benefit_owner": "I get ₹100 cashback directly to my bank account.",
+      "referral_code": "Gooddeeds",
+      "referral_link": "https://p.paytm.me/xCTH/q91isvi1?utmt=042623",
+      "expiry": "6/29/2027"
+    },
+    {
+      "name": "Jupiter Money",
+      "slug": "jupiter-money-invite",
+      "category": "Fintech",
+      "benefit_user": "Get ₹300 when you open an account and complete KYC.",
+      "bonus_amount": "₹300",
+      "benefit_owner": "I get 300 Jewels (Jupiter rewards).",
+      "referral_code": "TjFC1E",
+      "referral_link": "http://jptr.onelink.me/TOMp/59f998d9b6",
+      "expiry": "7/12/2026"
+    },
+    {
+      "name": "Google Pay",
+      "slug": "google-pay-referral",
+      "category": "Fintech",
+      "benefit_user": "Earn ₹21 on your first payment, if you're new or have not used Google Pay for the last 180 days.",
+      "bonus_amount": "₹21",
+      "benefit_owner": "I get ₹21 cashback directly to my bank account.",
+      "referral_code": "lJ36U",
+      "referral_link": "https://gpay.app.goo.gl/invite-lJ36U",
+      "expiry": "7/1/2027"
+    },
+    {
+      "name": "Super Money",
+      "slug": "super-money-invite",
+      "category": "Fintech",
+      "benefit_user": "Yo — this is wild. I’m getting *up to 5% cashback* on all UPI payments with super.money!",
+      "bonus_amount": "₹150",
+      "benefit_owner": "I get ₹150 cashback directly to my bank account.",
+      "referral_code": "2vxYZscIyYb",
+      "referral_link": "https://link.super.money/2vxYZscIyYb",
+      "expiry": "7/2/2027"
+    },
+    {
+      "name": "Slice",
+      "slug": "slice-invite",
+      "category": "Fintech",
+      "benefit_user": "Switched to slice for daily banking and honestly, it’s rewarding every spend. Get up to 3% cashback even on a ₹10 chai using their UPI credit card, plus earn daily interest at 100% of the RBI repo rate on your savings. Zero fees. No minimum balance. Sign up with the referral and grab ₹250 bonus instantly.",
+      "bonus_amount": "₹500",
+      "benefit_owner": "I get ₹500 cashback directly to my bank account.",
+      "referral_code": "&HUSSAINSAIFY",
+      "referral_link": "https://slice.bank.in/t?c=KK4BHI9&ic=HUSSAINSAIFY",
+      "expiry": "7/3/2027"
+    },
+    {
+      "name": "Snabbit",
+      "slug": "snabbit-referral-code",
+      "category": "Marketplace",
+      "benefit_user": "They send trained experts in minutes — for home cleaning, dishwashing, bathroom cleaning, packing/unpacking, and laundry. Get ₹50 using my referral.",
+      "bonus_amount": "₹50",
+      "benefit_owner": "I get ₹150 cashback directly to my bank account.",
+      "referral_code": "DTP3ZT",
+      "referral_link": "https://snabbit.onelink.me/9VLH/xndqece9?deep_link_value=DTP3ZT&referral_code=DTP3ZT",
+      "expiry": "7/4/2027"
+    },
+    {
+      "name": "Urban Company",
+      "slug": "urban-company-referral-code",
+      "category": "Marketplace",
+      "benefit_user": "Get an instant ₹ 100 voucher to use on Urban Company's trusted services https://m.urbancompany.com/ImbW/tz2slvwr. To redeem the voucher, please install the app using the link provided by me. Hurry! reward expires in 4 weeks",
+      "bonus_amount": "₹100",
+      "benefit_owner": "I get ₹100 cashback directly to my bank account.",
+      "referral_code": "-",
+      "referral_link": "https://m.urbancompany.com/ImbW/tz2slvwr",
+      "expiry": "7/5/2027"
+    },
+    {
+      "name": "Kiwi",
+      "slug": "kiwi-referral-code",
+      "category": "Fintech",
+      "benefit_user": "They’re running this offer for a limited time. Use my code *EV6F66* and grab your *₹100 reward* before it ends 👇",
+      "bonus_amount": "₹100",
+      "benefit_owner": "I get ₹1500 cashback directly to my bank account.",
+      "referral_code": "EV6F66",
+      "referral_link": "https://gokiwi.sng.link/E5owq/afdy/3m4a",
+      "expiry": "7/6/2027"
+    },
+    {
+      "name": "AJIO",
+      "slug": "ajio-invite-code",
+      "category": "Shopping",
+      "benefit_user": "Get ₹100 AJIO reward on your first eligible signup or order using the referral link and code.",
+      "bonus_amount": "₹100",
+      "benefit_owner": "I get ₹100 cashback directly to my ajio account.",
+      "referral_code": "HUS8X6AVO",
+      "referral_link": "ajioapps.onelink.me/2ic3/welcometoajio",
+      "expiry": "7/7/2027"
+    },
+    {
+      "name": "BuyHatke",
+      "slug": "buyhatke-referral-code",
+      "category": "Marketplace",
+      "benefit_user": "Get ₹250 on your first eligible signup or order using the referral link and code.",
+      "bonus_amount": "₹250",
+      "benefit_owner": "I get small % as cashback directly to my account.",
+      "referral_code": "2MCI1M",
+      "referral_link": "https://buyhatke.com/join/2MCI1M",
+      "expiry": "7/8/2027"
+    },
+    {
+      "name": "PhonePe",
+      "slug": "phonepe-referral-code",
+      "category": "Fintech",
+      "benefit_user": "Get Upto ₹500 on your first eligible signup or order using the referral link and code.",
+      "bonus_amount": "Upto ₹500",
+      "benefit_owner": "I get 250 cashback directly to my bank account.",
+      "referral_code": "ci230ezt",
+      "referral_link": "https://phon.pe/ci230ezt",
+      "expiry": "7/9/2027"
+    },
+    {
+      "name": "Niyo",
+      "slug": "niyo-referral-code",
+      "category": "Fintech",
+      "benefit_user": "With *zero forex markup*, smooth onboarding, and acceptance in *180+ countries*, *Niyo cards* and *forex currencies* by Niyo have helped me save big on forex charges 🌍💳.\n\nTry it for your next international trip. Use my code *HUSSA800* and grab *₹250 in Niyo Coins as a joining bonus* 💰.",
+      "bonus_amount": "₹250",
+      "benefit_owner": "I get 250 cashback directly to my account.",
+      "referral_code": "HUSSA800",
+      "referral_link": "https://goniyo.onelink.me/zKhp/w8zube2h",
+      "expiry": "7/10/2027"
+    },
+    {
+      "name": "EaseMyTrip",
+      "slug": "easemytrip-referral-code",
+      "category": "Travel",
+      "benefit_user": "Earn while your friends travel. Now get up to Rs. 2000 in your EaseMyTrip wallet. Refer your friends and earn on each booking that they do.  click this link to get referrer benefit: https://emt.bio/RFtUgnYU7Ed",
+      "bonus_amount": "₹2000",
+      "benefit_owner": "-",
+      "referral_code": "RFtUgnYU7Ed",
+      "referral_link": "https://emt.bio/RFtUgnYU7Ed",
+      "expiry": "7/11/2027"
+    },
+    {
+      "name": "RentPe",
+      "slug": "rentenpereferral-code",
+      "category": "Fintech",
+      "benefit_user": "Join me on Rentenpe!",
+      "bonus_amount": "₹250",
+      "benefit_owner": "-",
+      "referral_code": "OB8Y0e",
+      "referral_link": "https://rentenpe.onelink.me/xE5e/referralinapp",
+      "expiry": "7/12/2027"
+    },
+    {
+      "name": "Revolut",
+      "slug": "revolut-refer-and-earn",
+      "category": "Fintech",
+      "benefit_user": "Join me and 65M+ users who love Revolut.\n\nSign up with my link below: https://revolut.com/referral/itssaify17xkjp",
+      "bonus_amount": "₹250",
+      "benefit_owner": "I get ₹100 cashback directly to my account.",
+      "referral_code": "itssaify17xkjp",
+      "referral_link": "https://revolut.com/referral/itssaify17xkjp",
+      "expiry": "7/13/2027"
+    },
+    {
+      "name": "FirstClub",
+      "slug": "firstclub-referral",
+      "category": "Quick Commerce",
+      "benefit_user": "This app totally changed how I shop for groceries.\n\nFirstly, they send lovely, curated gifts to welcome you. Their groceries are superb in quality, free from anything shady, and taste incredible. Trust me, once you try FirstClub, no other app will feel good enough.",
+      "bonus_amount": "Upto ₹300",
+      "benefit_owner": "I get upto ₹300 cashback directly to my account.",
+      "referral_code": "EIDCNP",
+      "referral_link": "https://go.firstclub.co.in/yDS5qPr8V3b",
+      "expiry": "7/14/2027"
+    },
+    {
+      "name": "BHIM",
+      "slug": "bhim-referral-code",
+      "category": "Fintech",
+      "benefit_user": "Get cashback on your first transaction",
+      "bonus_amount": "₹25",
+      "benefit_owner": "Get ₹25 cashback when your friend completes their first UPI transaction.",
+      "referral_code": "PJpHap",
+      "referral_link": "https://bhimnpci.page.link/app",
+      "expiry": "6/29/2027"
+    },
+    {
+      "name": "Upstox",
+      "slug": "upstox-referral-code",
+      "category": "Fintech",
+      "benefit_user": "Get a signup bonus of Upto ₹200 upon successful account opening and first trade.",
+      "bonus_amount": "Upto ₹500",
+      "benefit_owner": "Earn Upto ₹200 when your friend successfully opens an Upstox account and completes their first trade.",
+      "referral_code": "5YCK7R",
+      "referral_link": "https://upstox.onelink.me/0H1s/5YCK7RR",
+      "expiry": "7/18/2027"
+    }
+  ]
+}
