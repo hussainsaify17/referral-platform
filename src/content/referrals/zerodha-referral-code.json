@@ -8,10 +8,10 @@
   "benefit_user": "Get a signup bonus of Upto 300 Reward Points upon successful account opening and first trade.",
   "benefit_owner": "Earn 300 reward points when your friend completes their first trade.",
   "bonus_amount": "Upto 300 RP",
-  "expiry": "2099-12-31T00:00:00.000Z",
+  "expiry": "7/12/2027",
   "status": "active",
   "is_featured": false,
-  "last_checked": "2026-07-12T13:26:05.751Z",
+  "last_checked": "2026-07-12T13:49:30.657Z",
   "last_verified": "July 2026",
   "verified_by": "Hussain",
   "pros": [
