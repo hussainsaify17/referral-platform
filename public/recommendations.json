@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-11T18:05:21.835Z",
-  "totalOffers": 20,
+  "lastUpdated": "2026-07-12T02:01:37.959Z",
+  "totalOffers": 19,
   "offers": [
     {
       "name": "CRED",
@@ -40,19 +40,6 @@
       "last_verified": "July 2026",
       "verified_by": "Hussain",
       "expiry": "6/29/2027"
-    },
-    {
-      "name": "Jupiter Money",
-      "slug": "jupiter-money-invite",
-      "category": "Fintech",
-      "benefit_user": "Get ₹300 when you open an account and complete KYC.",
-      "bonus_amount": "₹300",
-      "benefit_owner": "I get 300 Jewels (Jupiter rewards).",
-      "referral_code": "TjFC1E",
-      "referral_link": "http://jptr.onelink.me/TOMp/59f998d9b6",
-      "last_verified": "July 2026",
-      "verified_by": "Hussain",
-      "expiry": "7/12/2026"
     },
     {
       "name": "Google Pay",
