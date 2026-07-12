@@ -1,6 +1,19 @@
 {
-  "bonus_amount": "₹250",
+  "id": "rentpe-1",
+  "name": "RentPe",
+  "slug": "rentenpereferral-code",
+  "category": "Fintech",
+  "referral_link": "https://rentenpe.onelink.me/xE5e/referralinapp",
+  "referral_code": "OB8Y0e",
+  "benefit_user": "Join me on Rentenpe!",
   "benefit_owner": "-",
+  "bonus_amount": "₹250",
+  "expiry": "7/12/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.063Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Conveniently pay rent using various methods (credit card, UPI, debit card).",
     "Earn rewards and cashback on rent payments.",
@@ -13,7 +26,6 @@
     "Initial setup requires KYC verification.",
     "Bonus eligibility might have specific terms and conditions."
   ],
-  "detailed_review": "<h2>Rentenpe: Simplify Your Rent Payments & Earn Rewards!</h2><p>Tired of complicated rent payments or missing out on rewards? Rentenpe is here to revolutionize how you pay your rent. As a leading fintech platform, Rentenpe makes paying rent seamless, secure, and rewarding. Whether you're a tenant looking for convenience or a landlord seeking easy collection, Rentenpe offers a robust solution.</p><h3>Why Rentenpe is a Game-Changer for Tenants</h3><ul><li><strong>Effortless Payments:</strong> Pay your rent using credit cards, debit cards, UPI, or net banking, right from your smartphone.</li><li><strong>Earn Rewards:</strong> Unlock exciting cashback, discounts, or reward points on every rent payment, turning your biggest monthly expense into an earning opportunity.</li><li><strong>Automate & Never Miss a Due Date:</strong> Set up recurring payments and let Rentenpe handle your rent on time, every time, helping you avoid late fees and maintain a good financial record.</li><li><strong>Digital Receipts:</strong> Get instant digital rent receipts, simplifying tax filing and record-keeping.</li><li><strong>Credit Score Boost (Potential):</strong> Some rent payment platforms help report your on-time payments, potentially contributing positively to your credit score over time.</li></ul><h3>Unlock Your Welcome Bonus with Referral Code OB8Y0e!</h3><p>Joining Rentenpe is even more rewarding for new users! Use our exclusive referral code <strong>OB8Y0e</strong> when you sign up and make your first rent payment to claim an instant bonus of up to ₹100. It's the perfect way to kickstart your rewarding journey with Rentenpe.</p><h3>How to Maximize Your Rentenpe Experience</h3><ul><li><strong>Refer Friends:</strong> Once you're a user, share your own referral code with friends and family. You'll earn ₹50 cashback for every friend who makes their first successful rent payment.</li><li><strong>Explore Payment Options:</strong> Check for specific payment methods that offer higher cashback or lower transaction fees.</li><li><strong>Stay Updated:</strong> Keep an eye on Rentenpe's promotions and offers to maximize your savings and rewards.</li></ul><h3>Our Verdict</h3><p>Rentenpe stands out as an excellent fintech app for managing rent payments efficiently while offering tangible rewards. Its user-friendly interface, secure payment gateway, and attractive referral program make it a must-have for anyone looking to simplify their financial life and get more out of their rent.</p>",
   "steps": [
     "Click on the referral link: https://rentenpe.onelink.me/xE5e/referralinapp or download the Rentenpe app from your app store.",
     "Sign up for a new account using your mobile number or email.",
@@ -41,6 +53,5 @@
       "answer": "Unfortunately, referral codes typically need to be entered during the initial signup process. If you forget, you might not be eligible for the new user bonus. It's crucial to enter OB8Y0e at the designated step."
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>Rentenpe: Simplify Your Rent Payments & Earn Rewards!</h2><p>Tired of complicated rent payments or missing out on rewards? Rentenpe is here to revolutionize how you pay your rent. As a leading fintech platform, Rentenpe makes paying rent seamless, secure, and rewarding. Whether you're a tenant looking for convenience or a landlord seeking easy collection, Rentenpe offers a robust solution.</p><h3>Why Rentenpe is a Game-Changer for Tenants</h3><ul><li><strong>Effortless Payments:</strong> Pay your rent using credit cards, debit cards, UPI, or net banking, right from your smartphone.</li><li><strong>Earn Rewards:</strong> Unlock exciting cashback, discounts, or reward points on every rent payment, turning your biggest monthly expense into an earning opportunity.</li><li><strong>Automate & Never Miss a Due Date:</strong> Set up recurring payments and let Rentenpe handle your rent on time, every time, helping you avoid late fees and maintain a good financial record.</li><li><strong>Digital Receipts:</strong> Get instant digital rent receipts, simplifying tax filing and record-keeping.</li><li><strong>Credit Score Boost (Potential):</strong> Some rent payment platforms help report your on-time payments, potentially contributing positively to your credit score over time.</li></ul><h3>Unlock Your Welcome Bonus with Referral Code OB8Y0e!</h3><p>Joining Rentenpe is even more rewarding for new users! Use our exclusive referral code <strong>OB8Y0e</strong> when you sign up and make your first rent payment to claim an instant bonus of up to ₹100. It's the perfect way to kickstart your rewarding journey with Rentenpe.</p><h3>How to Maximize Your Rentenpe Experience</h3><ul><li><strong>Refer Friends:</strong> Once you're a user, share your own referral code with friends and family. You'll earn ₹50 cashback for every friend who makes their first successful rent payment.</li><li><strong>Explore Payment Options:</strong> Check for specific payment methods that offer higher cashback or lower transaction fees.</li><li><strong>Stay Updated:</strong> Keep an eye on Rentenpe's promotions and offers to maximize your savings and rewards.</li></ul><h3>Our Verdict</h3><p>Rentenpe stands out as an excellent fintech app for managing rent payments efficiently while offering tangible rewards. Its user-friendly interface, secure payment gateway, and attractive referral program make it a must-have for anyone looking to simplify their financial life and get more out of their rent.</p>"
 }

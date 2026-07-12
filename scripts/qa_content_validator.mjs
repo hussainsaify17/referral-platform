@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
-import Papa from 'papaparse';
 
 // Load environment variables
 dotenv.config({ path: '.env.local' });
@@ -52,40 +51,13 @@ function hasBalancedTags(html) {
   return stack.length === 0; // Stack should be empty if all tags are balanced
 }
 
-async function getSheetData() {
-  const rawUrl = process.env.GOOGLE_SHEET_CSV_URL || "";
-  const cleanedUrl = rawUrl.replace(/^["']|["']$/g, '').trim();
-
-  if (!cleanedUrl) {
-    console.warn("⚠️ GOOGLE_SHEET_CSV_URL is missing. Context verification against sheet values will be skipped.");
-    return [];
-  }
-
-  try {
-    const response = await fetch(`${cleanedUrl}&_t=${Date.now()}`);
-    if (!response.ok) {
-      console.warn(`⚠️ Failed to fetch sheet CSV: ${response.statusText}. Context validation skipped.`);
-      return [];
-    }
-    const csvText = await response.text();
-    const parsed = Papa.parse(csvText, {
-      header: true,
-      skipEmptyLines: true,
-    });
-    return parsed.data || [];
-  } catch (err) {
-    console.warn(`⚠️ Error fetching spreadsheet: ${err.message}. Context validation skipped.`);
-    return [];
-  }
-}
-
 async function main() {
   console.log("🔍 Running QA Content Validator on referral content...");
 
   let files;
   try {
     files = await fs.readdir(REFERRALS_DIR);
-    files = files.filter(f => f.endsWith('.json'));
+    files = files.filter(f => f.endsWith('.json') && f !== 'test.json');
   } catch (err) {
     console.error(`❌ Could not read referrals directory: ${err.message}`);
     process.exit(1);
@@ -96,12 +68,10 @@ async function main() {
     process.exit(0);
   }
 
-  const sheetRows = await getSheetData();
   let errorsFound = 0;
 
   for (const filename of files) {
     const filepath = path.join(REFERRALS_DIR, filename);
-    const slug = filename.replace('.json', '');
 
     try {
       const content = await fs.readFile(filepath, 'utf-8');
@@ -154,14 +124,9 @@ async function main() {
         }
       }
 
-      // 3. Context check against Google Sheet row
-      const matchedRow = sheetRows.find(row => {
-        const rowSlug = String(row.slug || '').trim();
-        return rowSlug === slug;
-      });
-
-      if (matchedRow) {
-        const refCode = String(matchedRow.referral_code || '').trim();
+      // 3. Local Context check for referral code presence
+      if (data.referral_code && data.status === 'active') {
+        const refCode = String(data.referral_code).trim();
         if (refCode) {
           const lowerCaseCode = refCode.toLowerCase();
           const hasCodeInReview = data.detailed_review.toLowerCase().includes(lowerCaseCode);
@@ -172,8 +137,6 @@ async function main() {
             errorsFound++;
           }
         }
-      } else {
-        console.warn(`  ⚠️ Warning: No matching row found in spreadsheet for slug: "${slug}"`);
       }
 
     } catch (err) {

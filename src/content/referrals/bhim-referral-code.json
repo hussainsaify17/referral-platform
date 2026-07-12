@@ -1,6 +1,19 @@
 {
-  "bonus_amount": "₹25",
+  "id": "bhim-referral-code",
+  "name": "BHIM",
+  "slug": "bhim-referral-code",
+  "category": "Fintech",
+  "referral_link": "https://bhimnpci.page.link/app",
+  "referral_code": "PJpHap",
+  "benefit_user": "Get cashback on your first transaction",
   "benefit_owner": "Get ₹25 cashback when your friend completes their first UPI transaction.",
+  "bonus_amount": "₹25",
+  "expiry": "6/29/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.065Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Government-backed and highly secure for all transactions.",
     "Supports all major Indian banks for seamless UPI payments.",
@@ -13,7 +26,6 @@
     "Lacks advanced features like bill splitting or credit card payments.",
     "Customer support might be slower than private fintech apps."
   ],
-  "detailed_review": "<h2>BHIM App: Your Gateway to Secure UPI Payments with a Welcome Bonus!</h2><p>The BHIM (Bharat Interface for Money) app is India's premier government-backed digital payment application, designed to facilitate fast, secure, and reliable transactions using the Unified Payments Interface (UPI). Developed by the National Payments Corporation of India (NPCI), BHIM has become a cornerstone of India's digital economy, empowering millions to transact directly from their bank accounts.</p><h3>Why Choose BHIM?</h3><p>BHIM stands out for several compelling reasons:</p><ul><li><strong>Unmatched Security:</strong> Being a government initiative, BHIM prioritizes security with robust encryption and multi-factor authentication, giving users peace of mind for every transaction.</li><li><strong>Universal Compatibility:</strong> It supports all major Indian banks, allowing you to link multiple bank accounts and manage your finances from a single app.</li><li><strong>Simplicity and Speed:</strong> The app boasts a clean, user-friendly interface that makes sending, receiving, or scanning to pay incredibly easy and quick.</li><li><strong>Reliability:</strong> Experience near-instantaneous money transfers, making it ideal for everything from paying merchants to sending money to family and friends.</li><li><strong>Zero Transaction Fees:</strong> Unlike some private apps that might have hidden charges for certain services, BHIM is completely free for all UPI transactions.</li></ul><h3>Unlock Your Welcome Bonus with Referral Code PJpHap!</h3><p>New to BHIM? You're in luck! When you sign up using a referral code, you can kickstart your digital payment journey with a fantastic bonus. Simply use our exclusive referral code <strong>PJpHap</strong> during registration and make your first UPI transaction to earn a welcome cashback.</p><h3>How to Maximize Your Sign-Up Bonus:</h3><p>Claiming your bonus is straightforward. After linking your bank account and setting up your UPI PIN, simply make any eligible UPI transaction – it could be paying a friend, scanning a QR code at a store, or making a bill payment. Ensure this is your <strong>very first transaction</strong> on BHIM to qualify for the cashback. The cashback amount is typically credited directly to your linked bank account within a few business days.</p><p>Join the millions of Indians who trust BHIM for their daily financial needs. It's secure, fast, and now, even more rewarding with our special referral offer!</p>",
   "steps": [
     "Download the BHIM app from the Google Play Store or Apple App Store.",
     "Open the app and select your preferred language.",
@@ -43,6 +55,5 @@
       "answer": "Typically, any successful UPI transaction made for the first time after signing up with a referral code is eligible. This includes sending money to contacts, paying merchants via QR code, or making bill payments. Always check the specific offer terms within the app for any exclusions."
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>BHIM App: Your Gateway to Secure UPI Payments with a Welcome Bonus!</h2><p>The BHIM (Bharat Interface for Money) app is India's premier government-backed digital payment application, designed to facilitate fast, secure, and reliable transactions using the Unified Payments Interface (UPI). Developed by the National Payments Corporation of India (NPCI), BHIM has become a cornerstone of India's digital economy, empowering millions to transact directly from their bank accounts.</p><h3>Why Choose BHIM?</h3><p>BHIM stands out for several compelling reasons:</p><ul><li><strong>Unmatched Security:</strong> Being a government initiative, BHIM prioritizes security with robust encryption and multi-factor authentication, giving users peace of mind for every transaction.</li><li><strong>Universal Compatibility:</strong> It supports all major Indian banks, allowing you to link multiple bank accounts and manage your finances from a single app.</li><li><strong>Simplicity and Speed:</strong> The app boasts a clean, user-friendly interface that makes sending, receiving, or scanning to pay incredibly easy and quick.</li><li><strong>Reliability:</strong> Experience near-instantaneous money transfers, making it ideal for everything from paying merchants to sending money to family and friends.</li><li><strong>Zero Transaction Fees:</strong> Unlike some private apps that might have hidden charges for certain services, BHIM is completely free for all UPI transactions.</li></ul><h3>Unlock Your Welcome Bonus with Referral Code PJpHap!</h3><p>New to BHIM? You're in luck! When you sign up using a referral code, you can kickstart your digital payment journey with a fantastic bonus. Simply use our exclusive referral code <strong>PJpHap</strong> during registration and make your first UPI transaction to earn a welcome cashback.</p><h3>How to Maximize Your Sign-Up Bonus:</h3><p>Claiming your bonus is straightforward. After linking your bank account and setting up your UPI PIN, simply make any eligible UPI transaction – it could be paying a friend, scanning a QR code at a store, or making a bill payment. Ensure this is your <strong>very first transaction</strong> on BHIM to qualify for the cashback. The cashback amount is typically credited directly to your linked bank account within a few business days.</p><p>Join the millions of Indians who trust BHIM for their daily financial needs. It's secure, fast, and now, even more rewarding with our special referral offer!</p>"
 }

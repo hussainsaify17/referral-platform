@@ -1,4 +1,19 @@
 {
+  "id": "phonepe-1",
+  "name": "PhonePe",
+  "slug": "phonepe-referral-code",
+  "category": "Fintech",
+  "referral_link": "https://phon.pe/ci230ezt",
+  "referral_code": "ci230ezt",
+  "benefit_user": "Get Upto ₹500 on your first eligible signup or order using the referral link and code.",
+  "benefit_owner": "I get 250 cashback directly to my bank account.",
+  "bonus_amount": "Upto ₹500",
+  "expiry": "7/9/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.061Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Seamless UPI payments for instant money transfers to any bank account.",
     "Comprehensive bill payments and recharges (mobile, DTH, electricity, gas, etc.) in one place.",
@@ -11,7 +26,6 @@
     "Some advanced financial features might offer fewer options compared to specialized platforms.",
     "Occasional app glitches or server issues, though generally rare."
   ],
-  "detailed_review": "<h2>PhonePe: Your All-in-One Digital Payment & Financial Hub</h2><p>PhonePe has revolutionized the way millions of Indians handle their money, transforming everyday transactions into a seamless digital experience. As one of India's leading UPI-based payment apps, PhonePe offers a comprehensive suite of financial services, making it an indispensable tool for everything from paying bills to investing in mutual funds.</p><h3>Why PhonePe is a Must-Have for Every Indian</h3><p>Users flock to PhonePe for its incredible convenience and vast array of features. Here's why it stands out:</p><ul>    <li><strong>Instant UPI Payments:</strong> Send and receive money instantly to any bank account or UPI ID with just a few taps, 24/7.</li>    <li><strong>Extensive Bill Payments:</strong> Pay electricity bills, gas bills, water bills, DTH, mobile recharges, broadband, and more – all from one app.</li>    <li><strong>Merchant Payments:</strong> Scan QR codes at millions of stores, petrol pumps, and online platforms to make quick and secure payments.</li>    <li><strong>Financial Services at Your Fingertips:</strong> Explore investment options like Mutual Funds, buy Digital Gold, purchase various insurance policies (health, bike, car, travel), and more.</li>    <li><strong>Gift Cards & Vouchers:</strong> Purchase gift cards for popular brands directly within the app.</li>    <li><strong>User-Friendly Interface:</strong> A clean, intuitive design makes navigating the app and performing transactions incredibly easy, even for first-time digital users.</li>    <li><strong>Robust Security:</strong> PhonePe employs multi-layered security protocols to ensure your transactions and data are always protected.</li></ul><h3>Unlock Your Welcome Bonus: Get Up to ₹500!</h3><p>Joining PhonePe through a referral link isn't just about convenience; it's also about getting rewarded! New users can get <strong>up to ₹500 cashback</strong> on their first eligible signup or order. This welcome bonus is a fantastic way to kickstart your PhonePe journey, giving you extra value right from the beginning.</p><h3>Maximizing Your Welcome Bonus</h3><p>To ensure you receive the full benefit, make sure to follow the referral steps carefully. Once you've signed up using the referral link and entered the code <strong>ci230ezt</strong>, make an eligible transaction. This could be your first mobile recharge, bill payment, or a payment to a merchant. The cashback amount can vary, but completing a transaction often triggers the reward. Don't miss out on this opportunity to save on your everyday expenses!</p>",
   "steps": [
     "Click on the referral link: https://phon.pe/ci230ezt to be redirected to the app download page.",
     "Download and install the PhonePe app from the App Store (iOS) or Google Play Store (Android).",
@@ -38,6 +52,5 @@
       "answer": "The referral bonus is usually credited instantly or within a few business days after your first eligible transaction is successfully completed. You will receive a notification within the PhonePe app once the cashback is credited."
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>PhonePe: Your All-in-One Digital Payment & Financial Hub</h2><p>PhonePe has revolutionized the way millions of Indians handle their money, transforming everyday transactions into a seamless digital experience. As one of India's leading UPI-based payment apps, PhonePe offers a comprehensive suite of financial services, making it an indispensable tool for everything from paying bills to investing in mutual funds.</p><h3>Why PhonePe is a Must-Have for Every Indian</h3><p>Users flock to PhonePe for its incredible convenience and vast array of features. Here's why it stands out:</p><ul>    <li><strong>Instant UPI Payments:</strong> Send and receive money instantly to any bank account or UPI ID with just a few taps, 24/7.</li>    <li><strong>Extensive Bill Payments:</strong> Pay electricity bills, gas bills, water bills, DTH, mobile recharges, broadband, and more – all from one app.</li>    <li><strong>Merchant Payments:</strong> Scan QR codes at millions of stores, petrol pumps, and online platforms to make quick and secure payments.</li>    <li><strong>Financial Services at Your Fingertips:</strong> Explore investment options like Mutual Funds, buy Digital Gold, purchase various insurance policies (health, bike, car, travel), and more.</li>    <li><strong>Gift Cards & Vouchers:</strong> Purchase gift cards for popular brands directly within the app.</li>    <li><strong>User-Friendly Interface:</strong> A clean, intuitive design makes navigating the app and performing transactions incredibly easy, even for first-time digital users.</li>    <li><strong>Robust Security:</strong> PhonePe employs multi-layered security protocols to ensure your transactions and data are always protected.</li></ul><h3>Unlock Your Welcome Bonus: Get Up to ₹500!</h3><p>Joining PhonePe through a referral link isn't just about convenience; it's also about getting rewarded! New users can get <strong>up to ₹500 cashback</strong> on their first eligible signup or order. This welcome bonus is a fantastic way to kickstart your PhonePe journey, giving you extra value right from the beginning.</p><h3>Maximizing Your Welcome Bonus</h3><p>To ensure you receive the full benefit, make sure to follow the referral steps carefully. Once you've signed up using the referral link and entered the code <strong>ci230ezt</strong>, make an eligible transaction. This could be your first mobile recharge, bill payment, or a payment to a merchant. The cashback amount can vary, but completing a transaction often triggers the reward. Don't miss out on this opportunity to save on your everyday expenses!</p>"
 }

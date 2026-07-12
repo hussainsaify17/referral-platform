@@ -1,4 +1,19 @@
 {
+  "id": "slice-1",
+  "name": "Slice",
+  "slug": "slice-invite",
+  "category": "Fintech",
+  "referral_link": "https://slice.bank.in/t?c=KK4BHI9&ic=HUSSAINSAIFY",
+  "referral_code": "&HUSSAINSAIFY",
+  "benefit_user": "Switched to slice for daily banking and honestly, it’s rewarding every spend. Get up to 3% cashback even on a ₹10 chai using their UPI credit card, plus earn daily interest at 100% of the RBI repo rate on your savings. Zero fees. No minimum balance. Sign up with the referral and grab ₹250 bonus instantly.",
+  "benefit_owner": "I get ₹500 cashback directly to my bank account.",
+  "bonus_amount": "₹500",
+  "expiry": "7/3/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.058Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Earn up to 3% cashback on UPI credit card spends.",
     "Attractive daily interest on savings, linked to RBI repo rate.",
@@ -11,7 +26,6 @@
     "Cashback rates and offers are subject to change by Slice.",
     "As a digital-only platform, physical branch support is unavailable."
   ],
-  "detailed_review": "<h2>Unlock Smart Banking with Slice: Your Path to Rewards and Savings!</h2><p>Tired of traditional banking that offers little in return? Slice is revolutionizing daily finance with a powerful combination of rewarding credit and high-interest savings, all wrapped up in a user-friendly app. It's designed for the modern Indian consumer who wants more from every transaction.</p><h3>Why Slice is a Game-Changer:</h3><ul><li><strong>Rewarding UPI Credit Card:</strong> Imagine getting up to 3% cashback on almost every spend, even on small transactions like your daily chai. Slice's UPI credit card makes your everyday purchases work harder for you, turning routine expenses into savings.</li><li><strong>High-Interest Savings:</strong> Your money deserves to grow. Slice offers daily interest on your savings, benchmarked at 100% of the RBI repo rate. This means competitive returns that keep pace with the market, helping you build wealth effortlessly.</li><li><strong>Zero Fees, Zero Hassle:</strong> Say goodbye to hidden charges and minimum balance worries. Slice champions transparency with absolutely no fees and no requirement to maintain a minimum balance, making it truly accessible for everyone.</li><li><strong>Instant Sign-Up Bonus:</strong> As a warm welcome, new users signing up with a referral can instantly grab a ₹250 bonus! It's the perfect head start to your rewarding journey with Slice.</li></ul><h3>Maximize Your Slice Experience & Bonus:</h3><p>Getting started with Slice is incredibly simple and rewarding. Beyond the sign-up bonus, you'll discover a platform built for convenience and financial growth. Here’s how to make the most of it:</p><ul><li><strong>Everyday Spends:</strong> Use your Slice UPI credit card for all your daily transactions, big or small, to maximize your cashback earnings.</li><li><strong>Smart Savings:</strong> Let your idle funds sit in your Slice savings account and watch them grow with daily interest.</li><li><strong>Refer & Earn:</strong> Once you're a Slice user, share your own referral code with friends and family to earn even more rewards.</li></ul><p>Slice isn't just an app; it's a smart financial companion that puts you in control, making banking rewarding, transparent, and effortlessly efficient.</p>",
   "steps": [
     "Click on the exclusive referral link: https://slice.bank.in/t?c=KK4BHI9&ic=HUSSAINSAIFY",
     "Download and install the Slice app from your app store.",
@@ -37,6 +51,5 @@
       "answer": "The Slice UPI credit card offers up to 3% cashback on daily spends, making every transaction rewarding. It integrates seamlessly with UPI for convenient payments while allowing you to earn on your purchases."
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>Unlock Smart Banking with Slice: Your Path to Rewards and Savings!</h2><p>Tired of traditional banking that offers little in return? Slice is revolutionizing daily finance with a powerful combination of rewarding credit and high-interest savings, all wrapped up in a user-friendly app. It's designed for the modern Indian consumer who wants more from every transaction.</p><h3>Why Slice is a Game-Changer:</h3><ul><li><strong>Rewarding UPI Credit Card:</strong> Imagine getting up to 3% cashback on almost every spend, even on small transactions like your daily chai. Slice's UPI credit card makes your everyday purchases work harder for you, turning routine expenses into savings.</li><li><strong>High-Interest Savings:</strong> Your money deserves to grow. Slice offers daily interest on your savings, benchmarked at 100% of the RBI repo rate. This means competitive returns that keep pace with the market, helping you build wealth effortlessly.</li><li><strong>Zero Fees, Zero Hassle:</strong> Say goodbye to hidden charges and minimum balance worries. Slice champions transparency with absolutely no fees and no requirement to maintain a minimum balance, making it truly accessible for everyone.</li><li><strong>Instant Sign-Up Bonus:</strong> As a warm welcome, new users signing up with a referral can instantly grab a ₹250 bonus! It's the perfect head start to your rewarding journey with Slice.</li></ul><h3>Maximize Your Slice Experience & Bonus:</h3><p>Getting started with Slice is incredibly simple and rewarding. Beyond the sign-up bonus, you'll discover a platform built for convenience and financial growth. Here’s how to make the most of it:</p><ul><li><strong>Everyday Spends:</strong> Use your Slice UPI credit card for all your daily transactions, big or small, to maximize your cashback earnings.</li><li><strong>Smart Savings:</strong> Let your idle funds sit in your Slice savings account and watch them grow with daily interest.</li><li><strong>Refer & Earn:</strong> Once you're a Slice user, share your own referral code with friends and family to earn even more rewards.</li></ul><p>Slice isn't just an app; it's a smart financial companion that puts you in control, making banking rewarding, transparent, and effortlessly efficient.</p>"
 }

@@ -31,153 +31,95 @@ function parseFaqs(faqString: string): FAQ[] {
  * Fetches referrals from either the published Google Sheet CSV or a local fallback.
  */
 export async function getAllReferrals(): Promise<Referral[]> {
+  const referralsDir = path.join(process.cwd(), "src/content/referrals");
   let data: Referral[] = [];
 
-  // Clean the URL in case of accidental quotes or spaces in the GitHub Secret
-  const rawUrl = process.env.GOOGLE_SHEET_CSV_URL || "";
-  const cleanedUrl = rawUrl.replace(/^["']|["']$/g, '').trim();
-
-  if (cleanedUrl) {
-    console.log("Fetching live data from Google Sheets...");
-    try {
-      const response = await fetch(cleanedUrl, { next: { revalidate: 3600 } });
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status} ${response.statusText}`);
-      }
-
-      const csvText = await response.text();
-      
-      // If the user accidentally pasted the "Web Page" link instead of CSV/TSV, the response will be HTML.
-      if (csvText.trim().startsWith("<!DOCTYPE html>") || csvText.trim().startsWith("<html")) {
-         throw new Error("The URL returned an HTML webpage instead of a CSV/TSV file. Make sure you published as Comma-separated values or Tab-separated values!");
-      }
-      
-      const parsed = Papa.parse<Record<string, string>>(csvText, {
-        header: true,
-        skipEmptyLines: true,
-      });
-
-      if (parsed.errors.length > 0) {
-         console.warn("CSV Parsing Warnings:", parsed.errors);
-      }
-
-      // Map rows to our strongly typed structure
-      data = [];
-      for (const row of parsed.data) {
-        if (!row.id && !row.slug) continue;
-        if (!row.name) continue;
-
-        const slug = row.slug || row.id;
+  try {
+    const files = await fs.readdir(referralsDir);
+    for (const file of files) {
+      // Exclude test or temporary files, read only json
+      if (file.endsWith(".json") && file !== "test.json") {
+        const filePath = path.join(referralsDir, file);
+        const fileContent = await fs.readFile(filePath, "utf8");
+        const referral = JSON.parse(fileContent) as Referral;
         
-        // Attempt to load AI-generated local data
-        let localData: any = {};
-        try {
-          const localPath = path.join(process.cwd(), 'src/content/referrals', `${slug}.json`);
-          const localContent = await fs.readFile(localPath, 'utf8');
-          localData = JSON.parse(localContent);
-        } catch (e) {
-          // No local file exists yet
-        }
-
-        const parseSheetArray = (val: any) => {
-          if (!val) return [];
-          const str = String(val).trim();
-          if (str.includes('|')) {
-            return str.split('|').map(s => s.trim()).filter(Boolean);
-          }
-          if (str.includes('\n')) {
-            return str.split('\n').map(s => s.trim()).filter(Boolean);
-          }
-          if (str.includes(',')) {
-            return str.split(',').map(s => s.trim()).filter(Boolean);
-          }
-          return [str];
-        };
-
-        const steps = parseSheetArray(row.steps);
-        const faq = parseFaqs(row.faq);
-        const pros = parseSheetArray(row.pros);
-        const cons = parseSheetArray(row.cons);
-        const detailed_review = row.detailed_review || "";
-
-        data.push({
-          id: row.id || row.slug,
-          name: row.name,
-          slug: slug,
-          category: row.category || "Uncategorized",
-          referral_link: row.referral_link,
-          referral_code: row.referral_code,
-          benefit_user: row.benefit_user,
-          benefit_owner: row.benefit_owner,
-          bonus_amount: row.bonus_amount,
-          // Merge logic: If CSV has data, use it. Otherwise, use local AI data.
-          steps: steps.length > 0 ? steps : (localData.steps || []),
-          faq: faq.length > 0 ? faq : (localData.faq || []),
-          pros: pros.length > 0 ? pros : (localData.pros || []),
-          cons: cons.length > 0 ? cons : (localData.cons || []),
-          detailed_review: detailed_review ? detailed_review : (localData.detailed_review || ""),
-          expiry: row.expiry || "2099-12-31T00:00:00.000Z",
-          last_checked: new Date().toISOString(),
-          last_verified: row.last_verified || localData.last_verified || undefined,
-          verified_by: row.verified_by || localData.verified_by || undefined,
-          status: (!row.status || String(row.status).trim().toLowerCase() === "active") ? "active" : "expired",
-          is_featured: String(row.is_featured).toLowerCase() === 'true',
-        });
+        // Populate slug and id if they somehow aren't in the JSON
+        const slug = referral.slug || file.replace(/\.json$/, "");
+        referral.slug = slug;
+        referral.id = referral.id || slug;
+        
+        data.push(referral);
       }
-
-      if (data.length === 0) {
-        throw new Error("Successfully fetched the document, but found 0 valid rows. Check your column headers (must be id, name, slug, etc).");
-      }
-
-    } catch (error) {
-      console.error("Live Data Fetch Error:", error);
-      const errorMessage = error instanceof Error ? error.message : String(error);
-      
-      // Instead of silently falling back to dummy data, display the exact error on the site!
-      return [{
-        id: "error-card-1",
-        name: "⚠️ Data Fetch Error",
-        slug: "error-card",
-        category: "Error",
-        referral_link: "#",
-        referral_code: "ERROR",
-        benefit_user: `There is a problem with the Google Sheet integration.`,
-        benefit_owner: errorMessage,
-        steps: [
-          "1. This means the GitHub Action tried to fetch your Google Sheet but failed.",
-          `2. The exact error is: ${errorMessage}`,
-          `3. The URL it tried to fetch was: ${cleanedUrl.substring(0, 50)}...`
-        ],
-        faq: [],
-        expiry: "2099-12-31T00:00:00.000Z",
-        status: "active",
-        last_checked: new Date().toISOString(),
-        is_featured: false
-      }];
+    }
+  } catch (error) {
+    console.error("Error reading local referrals directory:", error);
+    // Fallback to sample referrals if the directory cannot be read
+    try {
+      const filePath = path.join(process.cwd(), "src/data/sample_referrals.json");
+      const fileContents = await fs.readFile(filePath, "utf8");
+      data = JSON.parse(fileContents);
+    } catch (fallbackError) {
+      console.error("Failed to load sample fallback referrals:", fallbackError);
     }
   }
 
-  // Fallback to local data only if the URL is completely missing
-  if (data.length === 0) {
-    console.log("No URL provided. Using local fallback data...");
-    const filePath = path.join(process.cwd(), "src/data/sample_referrals.json");
-    const fileContents = await fs.readFile(filePath, "utf8");
-    data = JSON.parse(fileContents);
-  }
-  
-  // Filter out expired items in the ingestion layer
-  const now = new Date();
-  console.log(`[getAllReferrals] Before filtering: total=${data.length}, now=${now.toISOString()}`);
-  const bhimRaw = data.find(item => item.slug === "bhim-referral-code");
-  if (bhimRaw) {
-    const expiryDate = new Date(bhimRaw.expiry);
-    console.log(`[getAllReferrals] Found bhimRaw: status=${bhimRaw.status}, expiry="${bhimRaw.expiry}", expiry > now? ${expiryDate > now}`);
-  } else {
-    console.log("[getAllReferrals] bhim-referral-code not found in raw data");
+  // Sort referrals: featured first, active before expired, then by analytics if present
+  try {
+    const rankingPath = path.join(process.cwd(), "src/data/analytics_ranking.json");
+    const rankingContent = await fs.readFile(rankingPath, "utf8");
+    const rankingData = JSON.parse(rankingContent);
+    const topOffers = rankingData.topOffers || [];
+
+    data.sort((a, b) => {
+      // 1. Sort by status: active first, then expired
+      const isExpiredA = a.status === 'expired' || (a.expiry && new Date(a.expiry) < new Date());
+      const isExpiredB = b.status === 'expired' || (b.expiry && new Date(b.expiry) < new Date());
+      if (isExpiredA !== isExpiredB) {
+        return isExpiredA ? 1 : -1;
+      }
+
+      // 2. Sort by analytics ranking
+      const indexA = topOffers.indexOf(a.slug);
+      const indexB = topOffers.indexOf(b.slug);
+      if (indexA !== -1 && indexB !== -1) {
+        return indexA - indexB;
+      }
+      if (indexA !== -1) return -1;
+      if (indexB !== -1) return 1;
+
+      // 3. Sort by featured flag
+      if (a.is_featured && !b.is_featured) return -1;
+      if (!a.is_featured && b.is_featured) return 1;
+      return 0;
+    });
+
+    // Dynamically set the top active item as featured
+    const firstActive = data.find(r => !(r.status === 'expired' || (r.expiry && new Date(r.expiry) < new Date())));
+    if (firstActive && topOffers.includes(firstActive.slug)) {
+      data.forEach(ref => {
+        ref.is_featured = ref.slug === firstActive.slug;
+      });
+    }
+  } catch (error) {
+    data.sort((a, b) => {
+      const isExpiredA = a.status === 'expired' || (a.expiry && new Date(a.expiry) < new Date());
+      const isExpiredB = b.status === 'expired' || (b.expiry && new Date(b.expiry) < new Date());
+      if (isExpiredA !== isExpiredB) {
+        return isExpiredA ? 1 : -1;
+      }
+      if (a.is_featured && !b.is_featured) return -1;
+      if (!a.is_featured && b.is_featured) return 1;
+      return 0;
+    });
   }
 
-  const activeReferrals = data.filter(item => {
+  return data;
+}
+
+export async function getActiveReferrals(): Promise<Referral[]> {
+  const all = await getAllReferrals();
+  const now = new Date();
+  return all.filter(item => {
     if (item.status !== "active") return false;
     if (!item.expiry) return true; // active by default if no expiry is set
     try {
@@ -188,51 +130,6 @@ export async function getAllReferrals(): Promise<Referral[]> {
       return true;
     }
   });
-
-  // Apply Google Analytics ranking overrides if present
-  try {
-    const rankingPath = path.join(process.cwd(), "src/data/analytics_ranking.json");
-    const rankingContent = await fs.readFile(rankingPath, "utf8");
-    const rankingData = JSON.parse(rankingContent);
-    const topOffers = rankingData.topOffers || [];
-
-    if (topOffers.length > 0) {
-      activeReferrals.sort((a, b) => {
-        const indexA = topOffers.indexOf(a.slug);
-        const indexB = topOffers.indexOf(b.slug);
-
-        // If both are in the top ranking, sort by ranking index
-        if (indexA !== -1 && indexB !== -1) {
-          return indexA - indexB;
-        }
-        // If only A is in the top ranking, A comes first
-        if (indexA !== -1) return -1;
-        // If only B is in the top ranking, B comes first
-        if (indexB !== -1) return 1;
-
-        // Fallback to spreadsheet featured flag
-        if (a.is_featured && !b.is_featured) return -1;
-        if (!a.is_featured && b.is_featured) return 1;
-        return 0;
-      });
-
-      // Dynamically set the top ranked item as the featured offer
-      if (activeReferrals.length > 0 && topOffers.includes(activeReferrals[0].slug)) {
-        activeReferrals.forEach(ref => {
-          ref.is_featured = ref.slug === activeReferrals[0].slug;
-        });
-      }
-    }
-  } catch (error) {
-    // Fallback sorting: is_featured first
-    activeReferrals.sort((a, b) => {
-      if (a.is_featured && !b.is_featured) return -1;
-      if (!a.is_featured && b.is_featured) return 1;
-      return 0;
-    });
-  }
-
-  return activeReferrals;
 }
 
 export async function getReferralBySlug(slug: string): Promise<Referral | null> {
@@ -241,13 +138,13 @@ export async function getReferralBySlug(slug: string): Promise<Referral | null> 
 }
 
 export async function getCategories(): Promise<string[]> {
-  const all = await getAllReferrals();
+  const all = await getActiveReferrals();
   const categories = new Set(all.map(r => r.category));
   return Array.from(categories);
 }
 
 export async function getReferralsByCategory(categorySlug: string): Promise<Referral[]> {
-  const all = await getAllReferrals();
+  const all = await getActiveReferrals();
   return all.filter(r => r.category.toLowerCase().replace(/\s+/g, '-') === categorySlug.toLowerCase());
 }
 

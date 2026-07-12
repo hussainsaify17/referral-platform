@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { getAllReferrals } from "@/lib/cms";
+import { getActiveReferrals } from "@/lib/cms";
 import styles from "./RelatedLinks.module.css";
 
 export async function RelatedLinks({ currentSlug, category }: { currentSlug: string; category: string }) {
-  const allReferrals = await getAllReferrals();
+  const allReferrals = await getActiveReferrals();
   
   // Find 3 related referrals (same category, not current one)
   const related = allReferrals

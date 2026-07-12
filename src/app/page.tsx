@@ -1,4 +1,4 @@
-import { getAllReferrals, getCategories } from "@/lib/cms";
+import { getActiveReferrals, getCategories } from "@/lib/cms";
 import { ReferralCard } from "@/components/ReferralCard";
 import { CategoryNav } from "@/components/CategoryNav";
 import { OfferExplorer } from "@/components/OfferExplorer";
@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const referrals = await getAllReferrals();
+  const referrals = await getActiveReferrals();
   const categories = await getCategories();
 
   const sortedReferrals = [...referrals].sort((a, b) => {

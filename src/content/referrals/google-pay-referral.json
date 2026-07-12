@@ -1,4 +1,19 @@
 {
+  "id": "gpay-1",
+  "name": "Google Pay",
+  "slug": "google-pay-referral",
+  "category": "Fintech",
+  "referral_link": "https://gpay.app.goo.gl/invite-lJ36U",
+  "referral_code": "lJ36U",
+  "benefit_user": "Earn ₹21 on your first payment, if you're new or have not used Google Pay for the last 180 days.",
+  "benefit_owner": "I get ₹21 cashback directly to my bank account.",
+  "bonus_amount": "₹21",
+  "expiry": "7/1/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.057Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Seamless UPI payments for instant money transfers.",
     "Robust security features backed by Google's infrastructure.",
@@ -11,7 +26,6 @@
     "Requires linking a bank account, which some users might find intrusive.",
     "Occasional UI updates can take a short time to get accustomed to."
   ],
-  "detailed_review": "<h2>Discover Google Pay: Your Ultimate Digital Wallet</h2><p>Google Pay, often simply called GPay, has revolutionized digital payments in India, making transactions faster, safer, and incredibly convenient. Developed by Google, this fintech powerhouse leverages the Unified Payments Interface (UPI) to allow users to send and receive money directly from their bank accounts, pay bills, recharge phones, and make purchases both online and offline.</p><h3>Why Google Pay Stands Out</h3><ul><li><strong>Instant UPI Payments:</strong> Send money to friends, family, or merchants in seconds, directly from your bank account, without sharing account details.</li><li><strong>Top-Tier Security:</strong> Backed by Google's multi-layered security and fraud prevention systems, your transactions and personal data are protected with bank-grade security.</li><li><strong>All-in-One Payment Hub:</strong> From paying electricity bills and gas bills to recharging your mobile or DTH, Google Pay handles all your utility payments effortlessly.</li><li><strong>Rewarding Experience:</strong> Users frequently receive scratch cards, cashback offers, and discounts on various transactions, adding value to every payment.</li><li><strong>Wide Acceptance:</strong> Accepted at millions of stores, websites, and apps across India, Google Pay ensures you're always ready to pay.</li></ul><h3>Maximize Your Welcome Bonus</h3><p>Google Pay offers an attractive incentive for new users or those who haven't used the app for a significant period. By using a referral code, you can earn a bonus of ₹21 on your very first qualifying payment. This is a fantastic way to kickstart your digital payment journey and get a little extra cash in your bank account.</p><p>Don't miss out on this opportunity to experience the convenience and rewards of Google Pay. Sign up today and simplify your financial life!</p>",
   "steps": [
     "Click on the referral link: https://gpay.app.goo.gl/invite-lJ36U or download the Google Pay app from your device's app store.",
     "Open the Google Pay app and register using your mobile number, ensuring it's the one linked to your bank account.",
@@ -39,6 +53,5 @@
       "answer": "You can make peer-to-peer payments, pay merchants (both online and at physical stores via QR code or phone number), pay utility bills (electricity, water, gas), recharge mobile phones and DTH, and even book various services directly within the app."
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>Discover Google Pay: Your Ultimate Digital Wallet</h2><p>Google Pay, often simply called GPay, has revolutionized digital payments in India, making transactions faster, safer, and incredibly convenient. Developed by Google, this fintech powerhouse leverages the Unified Payments Interface (UPI) to allow users to send and receive money directly from their bank accounts, pay bills, recharge phones, and make purchases both online and offline.</p><h3>Why Google Pay Stands Out</h3><ul><li><strong>Instant UPI Payments:</strong> Send money to friends, family, or merchants in seconds, directly from your bank account, without sharing account details.</li><li><strong>Top-Tier Security:</strong> Backed by Google's multi-layered security and fraud prevention systems, your transactions and personal data are protected with bank-grade security.</li><li><strong>All-in-One Payment Hub:</strong> From paying electricity bills and gas bills to recharging your mobile or DTH, Google Pay handles all your utility payments effortlessly.</li><li><strong>Rewarding Experience:</strong> Users frequently receive scratch cards, cashback offers, and discounts on various transactions, adding value to every payment.</li><li><strong>Wide Acceptance:</strong> Accepted at millions of stores, websites, and apps across India, Google Pay ensures you're always ready to pay.</li></ul><h3>Maximize Your Welcome Bonus</h3><p>Google Pay offers an attractive incentive for new users or those who haven't used the app for a significant period. By using a referral code, you can earn a bonus of ₹21 on your very first qualifying payment. This is a fantastic way to kickstart your digital payment journey and get a little extra cash in your bank account.</p><p>Don't miss out on this opportunity to experience the convenience and rewards of Google Pay. Sign up today and simplify your financial life!</p>"
 }

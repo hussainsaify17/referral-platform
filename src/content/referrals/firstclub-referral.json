@@ -1,4 +1,19 @@
 {
+  "id": "firstclub-1",
+  "name": "FirstClub",
+  "slug": "firstclub-referral",
+  "category": "Quick Commerce",
+  "referral_link": "https://go.firstclub.co.in/yDS5qPr8V3b",
+  "referral_code": "EIDCNP",
+  "benefit_user": "This app totally changed how I shop for groceries.\n\nFirstly, they send lovely, curated gifts to welcome you. Their groceries are superb in quality, free from anything shady, and taste incredible. Trust me, once you try FirstClub, no other app will feel good enough.",
+  "benefit_owner": "I get upto ₹300 cashback directly to my account.",
+  "bonus_amount": "Upto ₹300",
+  "expiry": "7/14/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.065Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Receive curated welcome gifts upon joining.",
     "Exceptional quality groceries, free from harmful additives.",
@@ -11,7 +26,6 @@
     "Premium quality may reflect in pricing compared to budget alternatives.",
     "Product range might be curated rather than exhaustive."
   ],
-  "detailed_review": "<h2>Discover FirstClub: Redefining Your Grocery Experience</h2><p>Tired of the same old grocery apps and questionable quality? FirstClub is here to completely transform how you shop for essentials. More than just a quick commerce platform, FirstClub is a commitment to quality, freshness, and an unparalleled customer experience.</p><h3>Unmatched Quality and Taste</h3><p>What truly sets FirstClub apart is its unwavering dedication to quality. Say goodbye to mass-produced, bland groceries. FirstClub sources products that are <strong>superb in quality, free from anything shady, and taste incredible</strong>. Every item, from fresh produce to daily necessities, is meticulously curated to ensure you get nothing but the best. Once you experience the difference, you'll understand why it's hard to go back to any other app.</p><h3>A Warm Welcome with Curated Gifts</h3><p>As a new member, FirstClub rolls out the red carpet for you. They send <strong>lovely, curated gifts to welcome you</strong>, making your initial experience feel truly special and appreciated. It's a delightful touch that embodies their premium service.</p><h3>Why FirstClub Will Be Your Go-To</h3><ul><li><strong>Premium Selection:</strong> Hand-picked items ensuring top-tier quality and freshness.</li><li><strong>Transparency:</strong> Groceries you can trust, free from hidden additives.</li><li><strong>Exceptional Taste:</strong> Rediscover the true flavor of fresh ingredients.</li><li><strong>Quick & Convenient:</strong> Get your essentials delivered swiftly, without compromising on quality.</li><li><strong>Exclusive Welcome:</strong> Enjoy special curated gifts as a new user.</li></ul><h3>Maximizing Your FirstClub Experience</h3><p>To fully immerse yourself in the FirstClub world and claim your exclusive welcome gift, simply use our referral link and code when you sign up. This ensures you kickstart your journey with the promised benefits and immediately gain access to their premium selection. Prepare for a grocery shopping experience that truly feels good.</p>",
   "steps": [
     "Click on the referral link: https://go.firstclub.co.in/yDS5qPr8V3b",
     "You will be redirected to download the FirstClub app from your app store.",
@@ -39,6 +53,5 @@
       "answer": "FirstClub is rapidly expanding its service areas. To check if FirstClub delivers to your location, please download the app and enter your address during the sign-up process. The app will confirm service availability."
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>Discover FirstClub: Redefining Your Grocery Experience</h2><p>Tired of the same old grocery apps and questionable quality? FirstClub is here to completely transform how you shop for essentials. More than just a quick commerce platform, FirstClub is a commitment to quality, freshness, and an unparalleled customer experience.</p><h3>Unmatched Quality and Taste</h3><p>What truly sets FirstClub apart is its unwavering dedication to quality. Say goodbye to mass-produced, bland groceries. FirstClub sources products that are <strong>superb in quality, free from anything shady, and taste incredible</strong>. Every item, from fresh produce to daily necessities, is meticulously curated to ensure you get nothing but the best. Once you experience the difference, you'll understand why it's hard to go back to any other app.</p><h3>A Warm Welcome with Curated Gifts</h3><p>As a new member, FirstClub rolls out the red carpet for you. They send <strong>lovely, curated gifts to welcome you</strong>, making your initial experience feel truly special and appreciated. It's a delightful touch that embodies their premium service.</p><h3>Why FirstClub Will Be Your Go-To</h3><ul><li><strong>Premium Selection:</strong> Hand-picked items ensuring top-tier quality and freshness.</li><li><strong>Transparency:</strong> Groceries you can trust, free from hidden additives.</li><li><strong>Exceptional Taste:</strong> Rediscover the true flavor of fresh ingredients.</li><li><strong>Quick & Convenient:</strong> Get your essentials delivered swiftly, without compromising on quality.</li><li><strong>Exclusive Welcome:</strong> Enjoy special curated gifts as a new user.</li></ul><h3>Maximizing Your FirstClub Experience</h3><p>To fully immerse yourself in the FirstClub world and claim your exclusive welcome gift, simply use our referral link and code when you sign up. This ensures you kickstart your journey with the promised benefits and immediately gain access to their premium selection. Prepare for a grocery shopping experience that truly feels good.</p>"
 }

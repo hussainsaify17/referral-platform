@@ -1,4 +1,19 @@
 {
+  "id": "cred-1",
+  "name": "CRED",
+  "slug": "cred-referral-code",
+  "category": "Fintech",
+  "referral_link": "https://app.cred.club/spQx/v5cct4l9",
+  "referral_code": "-",
+  "benefit_user": "Get up to ₹250 cashback on your first credit card bill payment.",
+  "benefit_owner": "I get ₹500 in CRED balances.",
+  "bonus_amount": "₹250",
+  "expiry": "7/3/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.053Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Seamless and instant credit card bill payments with real-time settlement tracking.",
     "Comprehensive credit health monitoring with free monthly credit score updates.",
@@ -11,7 +26,6 @@
     "Requires read-access permission to your email for automated statement analysis, which may raise privacy concerns for some.",
     "The utility and redemption value of CRED coins have reduced compared to the app's initial launch phase."
   ],
-  "detailed_review": "<h2>Introduction to CRED: The Premium Fintech Experience</h2><p>CRED has revolutionized the way credit card holders in India manage and pay their bills. Positioned as an exclusive club for high-trust individuals, CRED rewards users for making timely credit card payments. By bringing all your credit cards onto a single dashboard, the app eliminates the hassle of tracking multiple due dates and statement cycles, ensuring you never miss a payment deadline again.</p><h3>Why Users Love CRED</h3><p>At its core, CRED is more than just a payment utility; it is a comprehensive financial management ecosystem. Here is why millions of credit card users rely on it daily:</p><ul><li><strong>Unified Credit Card Dashboard:</strong> View outstanding balances, due dates, and utilization limits across all your credit cards in one place.</li><li><strong>Smart Alerts &amp; Hidden Fee Detection:</strong> CRED scans your statements to flag suspicious charges, interest rate spikes, and recurring fees that often go unnoticed.</li><li><strong>CRED Protect:</strong> An automated system that sends WhatsApp and SMS reminders, shielding you from late payment penalties.</li><li><strong>Curated Rewards:</strong> Every bill payment earns you CRED coins, which can be redeemed for cashback, entry into jackpot draws, or deep discounts on premium partner brands.</li></ul><h3>Maximizing Your ₹250 Sign-Up Bonus</h3><p>To welcome new members, CRED offers a lucrative sign-up bonus of up to ₹250 cashback on your very first credit card bill payment. To maximize this benefit, ensure you sign up using a valid referral link. Once your credit score is verified and your first card is linked, make a bill payment of at least ₹100. The cashback is instantly credited to your CRED balance, which you can use to pay your next credit card bill or make purchases within the app.</p><h3>Is CRED Safe and Secure?</h3><p>Security is a paramount concern when dealing with financial data. CRED uses bank-grade 256-bit encryption to protect your personal and payment details. It is fully compliant with PCI-DSS standards, ensuring that your card information is stored securely. While the app requests access to your email to fetch statement details, this feature is completely optional, and users can choose to manually input their billing details if they prefer absolute privacy.</p>",
   "steps": [
     "Download the CRED app using a valid referral link to ensure you qualify for the sign-up bonus.",
     "Enter your mobile number (ensure it is the same number registered with your credit cards) and verify it via OTP.",
@@ -39,6 +53,5 @@
       "answer": "Yes, CRED uses secure APIs with read-only permissions to scan your credit card statements for bill generation and hidden charges. If you are uncomfortable sharing email access, you can opt-out and manage your statements manually."
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>Introduction to CRED: The Premium Fintech Experience</h2><p>CRED has revolutionized the way credit card holders in India manage and pay their bills. Positioned as an exclusive club for high-trust individuals, CRED rewards users for making timely credit card payments. By bringing all your credit cards onto a single dashboard, the app eliminates the hassle of tracking multiple due dates and statement cycles, ensuring you never miss a payment deadline again.</p><h3>Why Users Love CRED</h3><p>At its core, CRED is more than just a payment utility; it is a comprehensive financial management ecosystem. Here is why millions of credit card users rely on it daily:</p><ul><li><strong>Unified Credit Card Dashboard:</strong> View outstanding balances, due dates, and utilization limits across all your credit cards in one place.</li><li><strong>Smart Alerts &amp; Hidden Fee Detection:</strong> CRED scans your statements to flag suspicious charges, interest rate spikes, and recurring fees that often go unnoticed.</li><li><strong>CRED Protect:</strong> An automated system that sends WhatsApp and SMS reminders, shielding you from late payment penalties.</li><li><strong>Curated Rewards:</strong> Every bill payment earns you CRED coins, which can be redeemed for cashback, entry into jackpot draws, or deep discounts on premium partner brands.</li></ul><h3>Maximizing Your ₹250 Sign-Up Bonus</h3><p>To welcome new members, CRED offers a lucrative sign-up bonus of up to ₹250 cashback on your very first credit card bill payment. To maximize this benefit, ensure you sign up using a valid referral link. Once your credit score is verified and your first card is linked, make a bill payment of at least ₹100. The cashback is instantly credited to your CRED balance, which you can use to pay your next credit card bill or make purchases within the app.</p><h3>Is CRED Safe and Secure?</h3><p>Security is a paramount concern when dealing with financial data. CRED uses bank-grade 256-bit encryption to protect your personal and payment details. It is fully compliant with PCI-DSS standards, ensuring that your card information is stored securely. While the app requests access to your email to fetch statement details, this feature is completely optional, and users can choose to manually input their billing details if they prefer absolute privacy.</p>"
 }

@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-12T12:22:04.147Z",
-  "totalOffers": 19,
+  "lastUpdated": "2026-07-12T13:26:14.929Z",
+  "totalOffers": 21,
   "offers": [
     {
       "name": "CRED",
@@ -40,6 +40,19 @@
       "last_verified": "July 2026",
       "verified_by": "Hussain",
       "expiry": "6/29/2027"
+    },
+    {
+      "name": "Jupiter Money",
+      "slug": "jupiter-money-invite",
+      "category": "Fintech",
+      "benefit_user": "Get ₹300 when you open an account and complete KYC.",
+      "bonus_amount": "₹300",
+      "benefit_owner": "I get 300 Jewels (Jupiter rewards).",
+      "referral_code": "TjFC1E",
+      "referral_link": "http://jptr.onelink.me/TOMp/59f998d9b6",
+      "last_verified": "July 2026",
+      "verified_by": "Hussain",
+      "expiry": "7/18/2026"
     },
     {
       "name": "Google Pay",
@@ -239,7 +252,7 @@
     {
       "name": "Upstox",
       "slug": "upstox-referral-code",
-      "category": "Fintech",
+      "category": "Trading",
       "benefit_user": "Get a signup bonus of Upto ₹200 upon successful account opening and first trade.",
       "bonus_amount": "Upto ₹500",
       "benefit_owner": "Earn Upto ₹200 when your friend successfully opens an Upstox account and completes their first trade.",
@@ -248,6 +261,19 @@
       "last_verified": "July 2026",
       "verified_by": "Hussain",
       "expiry": "7/18/2027"
+    },
+    {
+      "name": "Zerodha",
+      "slug": "zerodha-referral-code",
+      "category": "Trading",
+      "benefit_user": "Get a signup bonus of Upto 300 Reward Points upon successful account opening and first trade.",
+      "bonus_amount": "Upto 300 RP",
+      "benefit_owner": "Earn 300 reward points when your friend completes their first trade.",
+      "referral_code": "LZR069",
+      "referral_link": "https://zerodha.com/open-account?c=LZR069",
+      "last_verified": "July 2026",
+      "verified_by": "Hussain",
+      "expiry": ""
     }
   ]
 }

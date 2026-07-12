@@ -88,7 +88,7 @@ export default async function CategoryPage({ params }: Props) {
       </div>
 
       <OfferExplorer 
-        allReferrals={await import('@/lib/cms').then(m => m.getAllReferrals())} 
+        allReferrals={await import('@/lib/cms').then(m => m.getActiveReferrals())} 
         initialReferrals={referrals} 
         categories={categories}
       />

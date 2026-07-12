@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
-import { getCategories, getAllReferrals } from "@/lib/cms";
+import { getCategories, getActiveReferrals } from "@/lib/cms";
 import { NewsletterForm } from "./NewsletterForm";
 import { FeedbackForm } from "./FeedbackForm";
 
 export async function Footer() {
   const categories = await getCategories();
-  const allReferrals = await getAllReferrals();
+  const allReferrals = await getActiveReferrals();
   const topOffers = allReferrals.slice(0, 5);
 
   return (

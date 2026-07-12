@@ -246,6 +246,16 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
         <div className={styles.mainContent}>
           <Breadcrumbs items={breadcrumbItems} />
           
+          {isExpired && (
+            <div className={styles.expiredAlertBanner}>
+              <AlertCircle size={20} className={styles.expiredAlertIcon} />
+              <div className={styles.expiredAlertText}>
+                <strong>Notice: This offer has expired</strong>
+                This referral code or invite link has expired and may no longer award the signup bonus. We maintain this page for reference, but highly recommend trying the active related offers listed below or in the sidebar!
+              </div>
+            </div>
+          )}
+          
           <header className={styles.header}>
             <div className={styles.brandMeta}>
               <span className={styles.category}>{referral.category}</span>

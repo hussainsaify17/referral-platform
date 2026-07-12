@@ -1,6 +1,19 @@
 {
-  "bonus_amount": "₹100",
+  "id": "ajio-1",
+  "name": "AJIO",
+  "slug": "ajio-invite-code",
+  "category": "Shopping",
+  "referral_link": "ajioapps.onelink.me/2ic3/welcometoajio",
+  "referral_code": "HUS8X6AVO",
+  "benefit_user": "Get ₹100 AJIO reward on your first eligible signup or order using the referral link and code.",
   "benefit_owner": "I get ₹100 cashback directly to my ajio account.",
+  "bonus_amount": "₹100",
+  "expiry": "7/7/2027",
+  "status": "active",
+  "is_featured": false,
+  "last_checked": "2026-07-12T13:25:19.060Z",
+  "last_verified": "July 2026",
+  "verified_by": "Hussain",
   "pros": [
     "Wide selection of fashion brands for men, women, and kids.",
     "Frequent sales, discounts, and exclusive app-only offers.",
@@ -13,7 +26,6 @@
     "Return/exchange process might occasionally experience minor delays.",
     "Pricing for some premium brands can be higher without ongoing sales."
   ],
-  "detailed_review": "<h2>Discover Style &amp; Savings with AJIO!</h2><p>AJIO has rapidly become a go-to destination for fashion enthusiasts across India. As Reliance Retail's flagship digital fashion platform, AJIO offers an unparalleled selection of clothing, accessories, and footwear from a vast array of national and international brands. Whether you're looking for the latest trends, ethnic wear, activewear, or timeless classics, AJIO caters to every style and occasion.</p><h3>Your Welcome Gift: ₹100 AJIO Reward!</h3><p>New to AJIO? You're in for a treat! Sign up today using our exclusive referral link and code <strong>HUS8X6AVO</strong> and receive a fantastic <strong>₹100 AJIO Reward</strong> on your first eligible signup or order. It's the perfect way to kickstart your fashion journey and save on your initial purchase.</p><h3>Why Shoppers Love AJIO:</h3><ul><li><strong>Vast Brand Portfolio:</strong> Explore thousands of styles from top brands like Levi's, ONLY, Vero Moda, US Polo Assn., W, Aurelia, and AJIO's own private labels.</li><li><strong>Unbeatable Deals:</strong> AJIO is renowned for its frequent sales events, flash deals, and festive discounts, ensuring you always get the best value for your money.</li><li><strong>Seamless Shopping Experience:</strong> The AJIO app and website boast an intuitive design, making it easy to browse, filter, and find exactly what you're looking for.</li><li><strong>Reliable Delivery &amp; Returns:</strong> Enjoy hassle-free doorstep delivery and a straightforward return policy, ensuring peace of mind with every purchase.</li><li><strong>Trend-Forward Fashion:</strong> Stay ahead of the curve with curated collections and new arrivals that reflect the latest global fashion trends.</li></ul><h3>Maximizing Your AJIO Experience:</h3><p>Beyond the signup bonus, AJIO offers numerous ways to save. Keep an eye out for their daily deals section, weekend sales, and special promotions tied to payment methods. Joining their loyalty programs (if available) can also unlock exclusive perks and early access to sales. Always check product reviews and sizing guides to ensure a perfect fit and a satisfying shopping spree.</p><p>Ready to upgrade your wardrobe? Download the AJIO app, use code <strong>HUS8X6AVO</strong>, and step into a world of fashion and savings!</p>",
   "steps": [
     "Click on the exclusive referral link: ajioapps.onelink.me/2ic3/welcometoajio",
     "Download the AJIO app from your app store if prompted, or proceed to the website.",
@@ -41,6 +53,5 @@
       "answer": "The AJIO Reward can typically be used as a discount on future purchases on the AJIO platform, subject to their specific terms and conditions regarding redemption, validity, and applicability to products. These rewards often have an expiry date, so make sure to use them in time!"
     }
   ],
-  "last_verified": "July 2026",
-  "verified_by": "Hussain"
+  "detailed_review": "<h2>Discover Style &amp; Savings with AJIO!</h2><p>AJIO has rapidly become a go-to destination for fashion enthusiasts across India. As Reliance Retail's flagship digital fashion platform, AJIO offers an unparalleled selection of clothing, accessories, and footwear from a vast array of national and international brands. Whether you're looking for the latest trends, ethnic wear, activewear, or timeless classics, AJIO caters to every style and occasion.</p><h3>Your Welcome Gift: ₹100 AJIO Reward!</h3><p>New to AJIO? You're in for a treat! Sign up today using our exclusive referral link and code <strong>HUS8X6AVO</strong> and receive a fantastic <strong>₹100 AJIO Reward</strong> on your first eligible signup or order. It's the perfect way to kickstart your fashion journey and save on your initial purchase.</p><h3>Why Shoppers Love AJIO:</h3><ul><li><strong>Vast Brand Portfolio:</strong> Explore thousands of styles from top brands like Levi's, ONLY, Vero Moda, US Polo Assn., W, Aurelia, and AJIO's own private labels.</li><li><strong>Unbeatable Deals:</strong> AJIO is renowned for its frequent sales events, flash deals, and festive discounts, ensuring you always get the best value for your money.</li><li><strong>Seamless Shopping Experience:</strong> The AJIO app and website boast an intuitive design, making it easy to browse, filter, and find exactly what you're looking for.</li><li><strong>Reliable Delivery &amp; Returns:</strong> Enjoy hassle-free doorstep delivery and a straightforward return policy, ensuring peace of mind with every purchase.</li><li><strong>Trend-Forward Fashion:</strong> Stay ahead of the curve with curated collections and new arrivals that reflect the latest global fashion trends.</li></ul><h3>Maximizing Your AJIO Experience:</h3><p>Beyond the signup bonus, AJIO offers numerous ways to save. Keep an eye out for their daily deals section, weekend sales, and special promotions tied to payment methods. Joining their loyalty programs (if available) can also unlock exclusive perks and early access to sales. Always check product reviews and sizing guides to ensure a perfect fit and a satisfying shopping spree.</p><p>Ready to upgrade your wardrobe? Download the AJIO app, use code <strong>HUS8X6AVO</strong>, and step into a world of fashion and savings!</p>"
 }
