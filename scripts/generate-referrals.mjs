@@ -39,8 +39,8 @@ async function generateDataWithGemini(referral) {
   }
 
   const prompt = `
-You are an expert SEO copywriter and personal finance/rewards analyst.
-Your task is to generate comprehensive, highly-informative structured data for a referral offer.
+You are the world's absolute best personal finance editor, rewards strategist, and conversion copywriter. You write with the authority of a senior editor at Forbes Advisor, Wirecutter, or NerdWallet.
+Your task is to generate highly informative, completely original, and deeply engaging content for a referral offer. Avoid all robotic AI buzzwords (e.g., "seamless," "intuitive dashboard," "revolutionized the way," "unlock," "welcome bonus," "elevate," "delve"). Write in a natural, professional, yet conversational human voice that provides maximum information gain.
 
 Here is the raw data we have:
 - Referral Link: ${referral.referral_link || ''}
@@ -55,11 +55,11 @@ Please provide a JSON object containing EXACTLY these keys:
 3. "benefit_user": A short, catchy, action-oriented sentence of what the new user gets upon signing up (e.g., "Get ₹100 cashback on your first payment"). If not provided above, estimate/derive a standard reward.
 4. "bonus_amount": A short string representing the maximum or standard signup bonus amount (e.g., "₹100", "₹50", "Upto ₹300"). Derive this from the benefit details or use standard industry amounts if unknown.
 5. "benefit_owner": A short sentence of what the person sharing the code gets (e.g., "Get ₹50 cashback when your friend completes their first payment"). Use a standard reward if unknown.
-6. "pros": An array of 3 to 5 strings listing the biggest advantages of this app.
-7. "cons": An array of 2 to 3 strings listing minor drawbacks or things to watch out for.
-8. "detailed_review": A comprehensive, well-formatted HTML string containing a full review of the app, why people love it, and how to maximize the sign-up bonus. Use <h2>, <h3>, <p>, <ul> tags.
-9. "steps": An array of strings detailing a foolproof guide on how to claim the bonus. Must include mentioning where to enter the referral code "${referral.referral_code}".
-10. "faq": An array of objects, each with "question" and "answer" string properties. Provide 3-4 frequently asked questions about this app and its bonus.
+6. "pros": An array of 3 to 5 strings listing the biggest advantages of this app. Avoid generic pros; make them highly specific to the service (e.g., instead of "Fast transactions", use "Instant bank settlements via UPI with zero transaction fees").
+7. "cons": An array of 2 to 3 strings listing minor drawbacks or things to watch out for (e.g., KYC wait times, account maintenance fees, or high minimum redemption limits).
+8. "detailed_review": A comprehensive, well-formatted HTML string containing a full review of the app (aim for 400-600 words of rich content). Write a real, objective critique. Discuss who the app is perfect for, transaction fees/charges (if Demat or banking), features, and tips on how to maximize the reward. Use <h2>, <h3>, <p>, <ul> tags. Do NOT use boilerplate layouts or starting statements like "New to X? You're in for a treat!" or "X: Your Gateway to...". Start directly with an engaging, original intro hook.
+9. "steps": An array of strings detailing a foolproof guide on how to claim the bonus. Must include mentioning where to enter the referral code "${referral.referral_code}". Keep the language direct and clear.
+10. "faq": An array of objects, each with "question" and "answer" string properties. Provide 3-4 frequently asked questions about this app, its fees, and its bonus.
 
 Respond ONLY with valid JSON. Do not use markdown code blocks like \`\`\`json. Just the raw JSON object.
 `;
