@@ -260,7 +260,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             <div className={styles.brandMeta}>
               <span className={styles.category}>{referral.category}</span>
               <span className={styles.verified}>
-                <CheckCircle2 size={14} /> {referral.last_verified ? `Manually verified: ${referral.last_verified} by ${referral.verified_by || 'Staff'}` : `Verified for ${currentMonth}`}
+                <CheckCircle2 size={14} /> {referral.last_verified ? `Manually verified: ${referral.last_verified} by ${(!referral.verified_by || referral.verified_by === "Hussain") ? "ReferBenefits Team" : referral.verified_by}` : `Verified for ${currentMonth}`}
               </span>
             </div>
             <h1 className={styles.title}>{referral.name} Referral Code & Sign Up Bonus</h1>
