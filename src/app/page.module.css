@@ -241,6 +241,7 @@
 
 .featuredCard:hover .featuredCta {
   background: var(--foreground);
+  color: var(--background);
 }
 
 @media (max-width: 640px) {
