@@ -234,8 +234,8 @@ async function main() {
       }
     }
 
-    const needsGemini = isMissingName || isMissingCategory || isMissingBenefit || isMissingBonus || isMissingBenefitOwner || (!hasPros && !hasReview && (!localHasData || !localHasCorrectCode));
-    const needsSheetUpdate = isMissingName || isMissingCategory || isMissingBenefit || isMissingBonus || isMissingBenefitOwner || !hasPros || !hasReview;
+    const needsGemini = isMissingName || isMissingCategory || isMissingBenefit || isMissingBonus || isMissingBenefitOwner || (!hasPros && !hasReview && (!localHasData || !localHasCorrectCode)) || !localHasCorrectCode;
+    const needsSheetUpdate = isMissingName || isMissingCategory || isMissingBenefit || isMissingBonus || isMissingBenefitOwner || !hasPros || !hasReview || !localHasCorrectCode;
 
     let generated = null;
     let finalName = ref.name;
