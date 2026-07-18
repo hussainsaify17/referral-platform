@@ -56,11 +56,40 @@ function parseFaqs(faqString) {
   }
 }
 
+const HEADING_VARIATIONS = [
+  {
+    intro: "An Objective Editorial Review of [Name]",
+    whyLove: "Key Features & Why It Stands Out",
+    maximize: "How to Maximize Your [Name] Signup Rewards"
+  },
+  {
+    intro: "Our Hands-On Analysis of [Name]",
+    whyLove: "Core Benefits & User Experience Highlights",
+    maximize: "Tips to Secure the Maximum Referral Bonus"
+  },
+  {
+    intro: "Is [Name] Worth It? Comprehensive Review",
+    whyLove: "What Makes [Name] Worth Your Time",
+    maximize: "Step-by-Step Strategies for the Signup Reward"
+  },
+  {
+    intro: "An Insider's Guide to [Name]",
+    whyLove: "Top App Features & Functionality",
+    maximize: "Getting the Most Value from the Referral Bonus"
+  }
+];
+
 async function generateDataWithGemini(referral) {
   const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
   if (!GEMINI_API_KEY) {
     throw new Error("GEMINI_API_KEY is missing from environment variables.");
   }
+
+  const name = referral.name || "this app";
+  const chosenVariant = HEADING_VARIATIONS[Math.floor(Math.random() * HEADING_VARIATIONS.length)];
+  const h2Text = chosenVariant.intro.replace('[Name]', name);
+  const h3Text1 = chosenVariant.whyLove.replace('[Name]', name);
+  const h3Text2 = chosenVariant.maximize.replace('[Name]', name);
 
   const prompt = `
 You are the world's absolute best personal finance editor, rewards strategist, and conversion copywriter. You write with the authority of a senior editor at Forbes Advisor, Wirecutter, or NerdWallet.
@@ -82,6 +111,10 @@ Please provide a JSON object containing EXACTLY these keys:
 6. "pros": An array of 3 to 5 strings listing the biggest advantages of this app. Avoid generic pros; make them highly specific to the service (e.g., instead of "Fast transactions", use "Instant bank settlements via UPI with zero transaction fees").
 7. "cons": An array of 2 to 3 strings listing minor drawbacks or things to watch out for (e.g., KYC wait times, account maintenance fees, or high minimum redemption limits).
 8. "detailed_review": A comprehensive, well-formatted HTML string containing a full review of the app (aim for 400-600 words of rich content). Write a real, objective critique. Discuss who the app is perfect for, transaction fees/charges (if Demat or banking), features, and tips on how to maximize the reward. Use <h2>, <h3>, <p>, <ul> tags. Do NOT use boilerplate layouts or starting statements like "New to X? You're in for a treat!" or "X: Your Gateway to...". Start directly with an engaging, original intro hook.
+You MUST structure your review with the following exact heading tag texts (incorporating the brand name where appropriate):
+- One <h2> tag containing: "${h2Text}"
+- One <h3> tag containing: "${h3Text1}"
+- One <h3> tag containing: "${h3Text2}"
 9. "steps": An array of strings detailing a foolproof guide on how to claim the bonus. Must include mentioning where to enter the referral code "${referral.referral_code}". Keep the language direct and clear.
 10. "faq": An array of objects, each with "question" and "answer" string properties. Provide 3-4 frequently asked questions about this app, its fees, and its bonus.
 

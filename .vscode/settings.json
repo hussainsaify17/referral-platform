@@ -1,0 +1,11 @@
+{
+  "git.ignoredRepositories": [
+    "/Users/hussainsaify/.gemini",
+    "/Users/hussainsaify/.gemini/antigravity/brain/12f96691-bd7e-463f-b637-935178b633aa/.system_generated/worktrees/subagent-Content-Auditor-research-a1c99f75",
+    "/Users/hussainsaify/.gemini/antigravity/brain/12f96691-bd7e-463f-b637-935178b633aa/.system_generated/worktrees/subagent-Crawlability-Auditor-research-7c0b2a4b",
+    "/Users/hussainsaify/.gemini/antigravity/brain/12f96691-bd7e-463f-b637-935178b633aa/.system_generated/worktrees/subagent-Lighthouse-Auditor-self-dcdc9d91",
+    "/Users/hussainsaify/.gemini/antigravity/brain/12f96691-bd7e-463f-b637-935178b633aa/.system_generated/worktrees/subagent-Search-Engine-Specialist-research-3de2ec6a",
+    "/Users/hussainsaify/.gemini/antigravity/brain/12f96691-bd7e-463f-b637-935178b633aa/.system_generated/worktrees/subagent-SEO-Metadata-Auditor-research-5c553298"
+  ],
+  "git.autoRepositoryDetection": "subFolders"
+}
