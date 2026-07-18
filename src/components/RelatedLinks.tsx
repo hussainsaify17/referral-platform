@@ -23,7 +23,7 @@ export async function RelatedLinks({ currentSlug, category }: { currentSlug: str
       <h3 className={styles.title}>Related Offers You Might Like</h3>
       <div className={styles.links}>
         {related.map(r => (
-          <Link key={r.id} href={`/${r.slug}`} className={styles.link}>
+          <Link key={r.id} href={`/${r.slug}/`} className={styles.link}>
             {r.name} Referral Bonus
           </Link>
         ))}

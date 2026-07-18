@@ -20,6 +20,8 @@ export default async function Home() {
   const referrals = await getActiveReferrals();
   const categories = await getCategories();
 
+  const firstCategorySlug = categories[0]?.toLowerCase().replace(/\s+/g, '-');
+
   const sortedReferrals = [...referrals].sort((a, b) => {
     if (a.is_featured && !b.is_featured) return -1;
     if (!a.is_featured && b.is_featured) return 1;
@@ -78,7 +80,7 @@ export default async function Home() {
                   <Sparkles size={14} />
                   Featured Offer
                 </div>
-                <Link href={`/${featured.slug}`} className={styles.featuredCard}>
+                <Link href={`/${featured.slug}/`} className={styles.featuredCard}>
                   <div className={styles.featuredLeft}>
                     <span className={styles.featuredCategory}>{featured.category}</span>
                     <h2 className={styles.featuredName}>{featured.name}</h2>
@@ -97,7 +99,7 @@ export default async function Home() {
         
         {lightweightReferrals.length > 7 && (
           <div className={styles.viewAllWrapper}>
-            <Link href="/category/fintech/" className={styles.viewAll}>
+            <Link href={firstCategorySlug ? `/category/${firstCategorySlug}/` : "/#offers"} className={styles.viewAll}>
               View all {lightweightReferrals.length} offers →
             </Link>
           </div>

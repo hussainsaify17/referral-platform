@@ -68,12 +68,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       "name": post.author,
     },
     "publisher": {
-      "@type": "Organization",
-      "name": "ReferBenefits",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://referbenefits.co.in/logo.png",
-      },
+      "@id": "https://referbenefits.co.in/#organization"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -135,7 +130,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </div>
 
       <div style={{ marginTop: "4rem", paddingTop: "2rem", borderTop: "1px solid var(--card-border)" }}>
-        <Link href="/blog" style={{ color: "var(--accent)", fontWeight: "600", textDecoration: "none" }}>
+        <Link href="/blog/" style={{ color: "var(--accent)", fontWeight: "600", textDecoration: "none" }}>
           ← Back to Blog
         </Link>
       </div>

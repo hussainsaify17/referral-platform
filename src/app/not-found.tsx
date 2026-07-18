@@ -18,7 +18,7 @@ export default function NotFound() {
           <Home size={18} />
           Back to Homepage
         </Link>
-        <Link href="/category/fintech/" className={styles.secondaryButton}>
+        <Link href="/#offers" className={styles.secondaryButton}>
           <Compass size={18} />
           Explore Top Offers
         </Link>

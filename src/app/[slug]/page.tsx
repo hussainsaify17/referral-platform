@@ -316,7 +316,7 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
             )}
 
             <ClaimOfferButton
-              href={`/go/${referral.slug}`}
+              href={`/go/${referral.slug}/`}
               brandName={referral.name}
               slug={referral.slug}
               category={referral.category}
