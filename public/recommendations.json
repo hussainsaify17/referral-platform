@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-18T07:31:42.494Z",
-  "totalOffers": 21,
+  "lastUpdated": "2026-07-18T07:47:12.898Z",
+  "totalOffers": 22,
   "offers": [
     {
       "name": "CRED",
@@ -274,6 +274,19 @@
       "last_verified": "July 2026",
       "verified_by": "ReferBenefits Team",
       "expiry": "7/12/2027"
+    },
+    {
+      "name": "Scapia",
+      "slug": "scapia-referral-code",
+      "category": "Fintech",
+      "benefit_user": "Claim signup bonus",
+      "bonus_amount": "You'll get ₹1,000 off your first flight",
+      "benefit_owner": "Earn ₹250 cashback when your friend makes their first transaction.",
+      "referral_code": "gw2mcr",
+      "referral_link": "https://apply.scapia.cards/landing_page?referral_code=gw2mcr",
+      "last_verified": "July 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": ""
     }
   ]
 }

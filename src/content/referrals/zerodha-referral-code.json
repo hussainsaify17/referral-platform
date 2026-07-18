@@ -1,5 +1,5 @@
 {
-  "id": "zerodha",
+  "id": "zerodha-1",
   "name": "Zerodha",
   "slug": "zerodha-referral-code",
   "category": "Trading",
@@ -11,7 +11,7 @@
   "expiry": "7/12/2027",
   "status": "active",
   "is_featured": false,
-  "last_checked": "2026-07-18T07:31:42.488Z",
+  "last_checked": "2026-07-18T07:46:48.763Z",
   "last_verified": "July 2026",
   "verified_by": "ReferBenefits Team",
   "pros": [
