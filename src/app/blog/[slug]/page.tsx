@@ -124,7 +124,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </div>
 
       <div className={styles.markdownWrapper}>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            h3: ({ ...props }) => <h2 {...props} />,
+            h4: ({ ...props }) => <h3 {...props} />,
+          }}
+        >
           {post.content}
         </ReactMarkdown>
       </div>
