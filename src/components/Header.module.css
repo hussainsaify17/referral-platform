@@ -107,3 +107,12 @@
   background-color: var(--foreground);
   color: var(--background);
 }
+
+@media (max-width: 480px) {
+  .header {
+    margin: 0.5rem 0.5rem;
+  }
+  .headerContainer {
+    padding: 0 1rem;
+  }
+}

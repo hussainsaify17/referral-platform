@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { getAllReferrals, getReferralBySlug } from "@/lib/cms";
+import { getAllReferrals, getReferralBySlug, getActiveReferrals } from "@/lib/cms";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { CopyCodeButton } from "@/components/CopyCodeButton";
 import { ClaimOfferButton } from "@/components/ClaimOfferButton";
@@ -189,58 +189,81 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
   const isExpired = new Date(referral.expiry) < new Date();
   const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
 
+  const activeReferrals = await getActiveReferrals();
+  const activeCategories = new Set(activeReferrals.map(r => r.category.toLowerCase()));
+  const isCategoryActive = activeCategories.has(referral.category.toLowerCase());
+
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: referral.category, href: `/category/${referral.category.toLowerCase().replace(/\s+/g, '-')}/` },
+    { 
+      label: referral.category, 
+      href: isCategoryActive ? `/category/${referral.category.toLowerCase().replace(/\s+/g, '-')}/` : undefined 
+    },
     { label: referral.name, href: `/${referral.slug}/` },
   ];
 
-  const faqSchema = referral.faq && referral.faq.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: referral.faq.map(item => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer
+  const graphEntities: any[] = [
+    {
+      "@type": "WebPage",
+      "@id": `https://referbenefits.co.in/${referral.slug}/#webpage`,
+      "url": `https://referbenefits.co.in/${referral.slug}/`,
+      "name": `${referral.name} Referral Code, Verified Sign Up Bonus & Invite Link`,
+      "description": `Get the latest verified ${referral.name} referral code, invite link and sign up bonus benefits.`,
+      "isPartOf": {
+        "@id": "https://referbenefits.co.in/#website"
+      },
+      "publisher": {
+        "@id": "https://referbenefits.co.in/#organization"
+      },
+      "mainEntity": {
+        "@id": `https://referbenefits.co.in/${referral.slug}/#offer`
       }
-    }))
-  } : null;
+    },
+    {
+      "@type": "Offer",
+      "@id": `https://referbenefits.co.in/${referral.slug}/#offer`,
+      "name": `${referral.name} Sign Up Bonus & Referral Promo`,
+      "description": referral.benefit_user,
+      "url": `https://referbenefits.co.in/${referral.slug}/`,
+      "price": "0",
+      "priceCurrency": "INR",
+      "availability": isExpired ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+      "validThrough": referral.expiry,
+      "seller": {
+        "@type": "Organization",
+        "name": referral.name
+      }
+    }
+  ];
 
-  const offerSchema = {
-    "@context": "https://schema.org",
-    "@type": "Offer",
-    name: `${referral.name} Sign Up Bonus`,
-    description: referral.benefit_user,
-    url: `https://referbenefits.co.in/${referral.slug}/`,
-    price: "0",
-    priceCurrency: "INR",
-    availability: isExpired ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
-    validThrough: referral.expiry
-  };
+  if (referral.faq && referral.faq.length > 0) {
+    graphEntities.push({
+      "@type": "FAQPage",
+      "@id": `https://referbenefits.co.in/${referral.slug}/#faq`,
+      "isPartOf": {
+        "@id": `https://referbenefits.co.in/${referral.slug}/#webpage`
+      },
+      "mainEntity": referral.faq.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    });
+  }
 
-  const softwareSchema = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: referral.name,
-    applicationCategory: "WebApplication",
-    operatingSystem: "Any",
-    image: "https://referbenefits.co.in/favicon.ico",
-    offers: offerSchema
+    "@graph": graphEntities
   };
 
   return (
     <div className={`container ${styles.pageContainer}`}>
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className={styles.contentWrapper}>
         <div className={styles.mainContent}>

@@ -41,7 +41,7 @@ export default async function Home() {
 
   // Featured = first item (now properly sorted to favor is_featured: true)
   const featured = lightweightReferrals[0];
-  const restReferrals = lightweightReferrals.slice(1, 7);
+  const restReferrals = lightweightReferrals.slice(1);
 
 
   return (
