@@ -216,22 +216,29 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
         "@id": "https://referbenefits.co.in/#organization"
       },
       "mainEntity": {
-        "@id": `https://referbenefits.co.in/${referral.slug}/#offer`
+        "@id": `https://referbenefits.co.in/${referral.slug}/#software`
       }
     },
     {
-      "@type": "Offer",
-      "@id": `https://referbenefits.co.in/${referral.slug}/#offer`,
-      "name": `${referral.name} Sign Up Bonus & Referral Promo`,
-      "description": referral.benefit_user,
-      "url": `https://referbenefits.co.in/${referral.slug}/`,
-      "price": "0",
-      "priceCurrency": "INR",
-      "availability": isExpired ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
-      "validThrough": referral.expiry,
-      "seller": {
-        "@type": "Organization",
-        "name": referral.name
+      "@type": "SoftwareApplication",
+      "@id": `https://referbenefits.co.in/${referral.slug}/#software`,
+      "name": referral.name,
+      "operatingSystem": "Android, iOS",
+      "applicationCategory": referral.category === "Fintech" ? "FinanceApplication" : "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "@id": `https://referbenefits.co.in/${referral.slug}/#offer`,
+        "name": `${referral.name} Sign Up Bonus & Referral Promo`,
+        "description": referral.benefit_user,
+        "url": `https://referbenefits.co.in/${referral.slug}/`,
+        "price": "0",
+        "priceCurrency": "INR",
+        "availability": isExpired ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
+        "validThrough": referral.expiry,
+        "seller": {
+          "@type": "Organization",
+          "name": referral.name
+        }
       }
     }
   ];

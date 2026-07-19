@@ -5,47 +5,80 @@ import Papa from 'papaparse';
 
 dotenv.config({ path: '.env.local' });
 
-const BLOGS_DIR = path.join(process.cwd(), 'src/content/blogs');
+const REFERRALS_DIR = path.join(process.cwd(), 'src/content/referrals');
 
 async function getLiveReferrals() {
   const rawUrl = process.env.GOOGLE_SHEET_CSV_URL || "";
   const cleanedUrl = rawUrl.replace(/^["']|["']$/g, '').trim();
 
-  if (!cleanedUrl) return [];
+  if (!cleanedUrl) {
+    console.warn("⚠️ GOOGLE_SHEET_CSV_URL not set in .env.local");
+    return [];
+  }
 
-  const response = await fetch(`${cleanedUrl}&_t=${Date.now()}`);
-  if (!response.ok) return [];
+  try {
+    const response = await fetch(`${cleanedUrl}&_t=${Date.now()}`);
+    if (!response.ok) {
+      console.warn(`⚠️ Failed to fetch CSV from Google Sheet (HTTP Status: ${response.status})`);
+      return [];
+    }
 
-  const csvText = await response.text();
-  const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
-  return parsed.data.filter(row => row.id && row.name && row.status !== 'expired');
+    const csvText = await response.text();
+    const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });
+    return parsed.data.filter(row => row.id && row.name && row.status !== 'expired');
+  } catch (error) {
+    console.warn("⚠️ Could not fetch live referrals from Google Sheets (No internet connection / DNS failure).");
+    console.warn(`  Detail: ${error.message}`);
+    return [];
+  }
 }
 
 async function main() {
   const referrals = await getLiveReferrals();
   
+  if (referrals.length === 0) {
+    console.log("ℹ️ No active referrals loaded from Google Sheet. Check environment variables.");
+    return;
+  }
+  
+  console.log(`🔍 Sync-Checking ${referrals.length} active offers from Google Sheet against local JSON content...`);
+
+  let mismatchCount = 0;
+  let missingCount = 0;
+
   for (const ref of referrals) {
     if (!ref.slug) continue;
-    const filePath = path.join(BLOGS_DIR, `${ref.slug}.md`);
+    const filePath = path.join(REFERRALS_DIR, `${ref.slug}.json`);
     
     try {
       const content = await fs.readFile(filePath, 'utf-8');
-      const code = ref.referral_code;
-      const link = ref.referral_link;
+      const data = JSON.parse(content);
+      const code = String(ref.referral_code || "").trim();
+      const localCode = String(data.referral_code || "").trim();
       
-      console.log(`\nBlog: ${ref.name} (${ref.slug})`);
-      if (code && content.includes(code)) {
-        console.log(`✅ Contains Referral Code: ${code}`);
-      } else if (code) {
-        console.log(`❌ MISSING Referral Code: ${code}`);
+      console.log(`\nReferral: ${ref.name} (${ref.slug})`);
+      if (code && code !== '-') {
+        if (localCode === code) {
+          console.log(`  ✅ Code Matches Sheet: ${code}`);
+        } else {
+          console.log(`  ❌ MISMATCH: CSV has "${code}" but local JSON has "${localCode}"`);
+          mismatchCount++;
+        }
       } else {
-        console.log(`⚠️ No Referral Code in CSV`);
+        console.log(`  ⚠️ No Referral Code required (Link-Only)`);
       }
 
     } catch (e) {
-      console.log(`❌ File not found: ${filePath}`);
+      console.log(`  ❌ File not found: ${filePath}`);
+      missingCount++;
     }
   }
+
+  console.log('\n======================================');
+  console.log(`🎉 Validation Complete:`);
+  console.log(`❌ Mismatched Codes: ${mismatchCount}`);
+  console.log(`❌ Missing JSON Files: ${missingCount}`);
+  console.log('======================================\n');
 }
 
 main().catch(console.error);

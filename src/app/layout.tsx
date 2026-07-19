@@ -106,8 +106,8 @@ export default function RootLayout({
       <body>
         {process.env.NODE_ENV === 'production' && (
           <>
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-5EV07XX9Y4" strategy="lazyOnload" />
-            <Script id="google-analytics" strategy="lazyOnload">
+            <Script src="https://www.googletagmanager.com/gtag/js?id=G-5EV07XX9Y4" strategy="afterInteractive" />
+            <Script id="google-analytics" strategy="afterInteractive">
               {`
                 if (window.localStorage && window.localStorage.getItem('disable_ga') === 'true') {
                   window['ga-disable-G-5EV07XX9Y4'] = true;
