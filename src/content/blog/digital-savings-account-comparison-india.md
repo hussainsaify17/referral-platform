@@ -45,7 +45,7 @@ Jupiter has carved out a strong reputation as the go-to neobank for millennials 
 Your regular savings account earns **2.75% p.a.**, which is standard for Federal Bank accounts. The real draw is **Jupiter Pots** — think of them as goal-based savings jars that earn up to **7% p.a.** through auto-sweep into fixed deposits. You can create multiple Pots for different goals (emergency fund, vacation, gadget fund), and the money stays liquid with instant withdrawal.
 
 **Signup Bonus:**
-New users get up to **₹250 worth of Jupiter Jewels** (their in-app reward currency) when they open an account using a referral link and complete their first transaction. These Jewels can be converted to real cashback in your Jupiter account. Some promotional campaigns push this to ₹500, so keep an eye on seasonal offers.
+Jupiter offers up to **₹250 cashback** or Jupiter Jewel points when you sign up using our verified **[Jupiter Money Invite Code](/jupiter-money-invite/)**, complete video KYC, and make your first transaction.
 
 **Debit Card:**
 Jupiter issues a **free Visa debit card** with 1% cashback on select merchant categories. The physical card ships within 5–7 days of account opening. There are no annual fees or hidden charges. ATM withdrawals are free at all banks (up to 5 per month), which is better than what many traditional banks offer.
@@ -91,13 +91,13 @@ Aadhaar-based video KYC, completed entirely in-app. You'll need PAN and Aadhaar.
 
 **Banking Partners:** Equitas Small Finance Bank (Niyo SBP), IDFC FIRST Bank, and DCB Bank (Niyo Global)
 
-Niyo actually offers multiple account types, and this is where it gets interesting. **Niyo SBP** (with Equitas) is a high-interest savings account, while **Niyo Global** (with DCB/IDFC FIRST) is aimed at international travellers with zero forex markup.
+Niyo actually offers multiple account types, and this is where it gets interesting. **Niyo SBP** (with Equitas) is a high-interest savings account, while **Niyo Global** (with DCB/IDFC FIRST) is aimed at international travellers with zero forex markup. Check out the verified **[Niyo Referral Code](/niyo-referral-code/)** to activate your zero-forex benefits.
 
 **Interest Rates:**
 This is Niyo's biggest selling point. The Equitas-backed Niyo SBP account offers **up to 6% p.a.** on your savings balance — more than double what most neobanks pay. The Niyo Global account offers standard savings rates but compensates with zero forex charges on international transactions.
 
 **Signup Bonus:**
-New users can claim up to **₹500 in rewards** when signing up through a referral link and completing KYC. The bonus varies based on which Niyo product you choose — Niyo Global typically offers higher initial rewards to attract the travel-focused audience.
+New users can claim up to **₹500 in rewards** when signing up through our **[Niyo Invite Link](/niyo-referral-code/)** and completing KYC. The bonus varies based on which Niyo product you choose — Niyo Global typically offers higher initial rewards to attract the travel-focused audience.
 
 **Debit Card:**
 Niyo Global issues a **free Visa debit card with zero forex markup** — this is genuinely rare and valuable. Most banks charge 1.5–3.5% on international transactions. If you shop from international websites or travel abroad even once a year, this card alone can save you thousands. The Niyo SBP card is a standard domestic Visa debit card.

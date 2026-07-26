@@ -147,8 +147,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!referral) return { title: "Not Found" };
 
   const currentMonth = new Date().toLocaleString('default', { month: 'long', year: 'numeric' });
-  const title = `${referral.name} Referral Code | Free Bonus (${currentMonth})`;
-  const description = `Get the verified ${referral.name} referral code to claim your ${referral.benefit_user} sign-up bonus. Working and updated daily for ${currentMonth}.`;
+  const currentYear = new Date().getFullYear();
+  
+  let title = `${referral.name} Referral Code ${currentYear}: Sign Up Bonus [Verified]`;
+  if (referral.bonus_amount) {
+    title = `${referral.name} Referral Code & Invite Bonus ${currentYear}: Get ${referral.bonus_amount} [Verified]`;
+  } else if (slug.includes('promo')) {
+    title = `${referral.name} Promo Code & Referral Code ${currentYear}: Claim Bonus [Verified]`;
+  }
+
+  const cleanBenefit = referral.benefit_user ? referral.benefit_user.replace(/<[^>]*>?/gm, '').trim().slice(0, 120) : "Sign up bonus";
+  const description = `Verified ${referral.name} referral code & invite link for ${currentMonth}. ${cleanBenefit}. 100% working code updated daily!`;
   const url = `https://referbenefits.co.in/${slug}/`;
 
   return {

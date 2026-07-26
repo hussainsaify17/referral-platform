@@ -29,6 +29,7 @@ Here's how each app's reward structure works right now. We update this regularly
 #### **Google Pay (GPay)**
 
 - **Scratch cards** on peer-to-peer (P2P) and merchant payments — rewards range from ₹1 to ₹1,000, though most cards land between ₹5 and ₹30
+- **Verified Offer:** Get your instant sign-up reward using the **[Google Pay Referral Code](/google-pay-referral/)**.
 - **Weekly rewards** for completing transaction milestones (e.g., 5 transactions in a week)
 - **Merchant-specific offers** — GPay often runs targeted deals with Swiggy, BigBasket, and Ola that give flat ₹20-₹50 cashback on first transactions through their in-app links
 - **Bill payment rewards** — electricity, gas, and broadband bills often trigger bonus scratch cards worth ₹10-₹30
@@ -39,12 +40,14 @@ Here's how each app's reward structure works right now. We update this regularly
 - **Cashback on first transaction of the day** with select merchants — this is their headline feature, and it typically ranges from ₹5 to ₹25
 - **PhonePe Switch** offers in-app access to partner platforms, often with exclusive first-order discounts
 - **Insurance and mutual fund purchases** through PhonePe Wealth earn additional reward points
+- **Verified Offer:** Claim your sign-up bonus with the **[PhonePe Referral Code](/phonepe-referral-code/)**.
 - **Autopay cashback** — setting up recurring payments (subscriptions, SIPs) sometimes triggers one-time ₹15-₹50 bonus rewards
 - **Best used for:** Daily merchant payments, insurance, and first-transaction-of-the-day offers
 
 #### **Paytm**
 
 - **Paytm Cashback Points** — earned on most transactions and redeemable at a rate of roughly 1 point = ₹0.25
+- **Verified Offer:** Get your sign-up reward using the **[Paytm Referral Code](/paytm-upi-referral/)**.
 - **Postpaid cashback** — Paytm Postpaid users get additional 1-3% cashback on select categories
 - **Bill payment flat cashbacks** — Paytm regularly runs ₹10-₹20 flat cashback on recharges and utility bills, usually capped at once per billing cycle
 - **Paytm First (membership)** — if you shop on Paytm Mall even occasionally, the ₹299/year membership offers extra cashback that can pay for itself in 2-3 months
@@ -53,6 +56,7 @@ Here's how each app's reward structure works right now. We update this regularly
 #### **CRED**
 
 - **CRED coins** for every credit card bill payment — typically 1 coin per ₹1 paid, redeemable for brand vouchers and product discounts
+- **Verified Offer:** Access the **[CRED Referral Code](/cred-referral-code/)** for ₹250 instant cashback.
 - **CRED Pay cashback** — paying merchants via CRED's UPI often earns 2x-5x coin multipliers during promotional periods
 - **Jackpot and spin rewards** — CRED runs daily spin-the-wheel and jackpot games where coins can be converted into real cashback or vouchers worth ₹50-₹500
 - **CRED Flash sales** — exclusive product drops at steep discounts for members with high CRED scores
@@ -61,6 +65,7 @@ Here's how each app's reward structure works right now. We update this regularly
 #### **Kiwi**
 
 - **Credit card-on-UPI rewards** — Kiwi's core pitch is letting you pay via UPI using your credit card, so you earn credit card reward points on every UPI transaction
+- **Verified Offer:** Use our **[Kiwi Referral Code](/kiwi-referral-code/)** to claim 250 Kiwi Koins upon approval.
 - **Kiwi Points** — additional loyalty points on top of credit card rewards, effectively giving you double-dip earnings
 - **No MDR on small transactions** — under the current RBI framework, Kiwi doesn't charge merchants extra, making it accepted almost everywhere regular UPI works
 - **Partner brand offers** — Kiwi occasionally runs category-specific promotions (dining, fuel, grocery) with bonus reward multipliers

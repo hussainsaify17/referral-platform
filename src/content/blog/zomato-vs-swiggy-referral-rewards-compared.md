@@ -23,8 +23,9 @@ Both apps follow a similar referral model: you share a code, your friend signs u
 - **Credit validity**: 30 days from the date of credit
 - **Referral cap**: Up to 20 successful referrals per month
 - **Payout method**: Zomato credits applied automatically at checkout
+- **Verified Offer**: Get the latest working **[Zomato Promo Code & Referral Code](/zomato-promo-code/)** to claim your first order discount.
 
-Zomato has been fairly consistent with its referral payouts in 2026. The credits land in your wallet within 24–48 hours of your friend completing their first order. One thing we like — Zomato doesn't require the referred user to place a high-value order to trigger the reward.
+Zomato has been fairly consistent with its referral payouts in 2026. The credits land in your wallet within 24–48 hours of your friend completing their first order. Check out our verified **[Zomato Referral Link](/zomato-promo-code/)** to unlock instant savings.
 
 **Swiggy Referral Program (2026)**
 

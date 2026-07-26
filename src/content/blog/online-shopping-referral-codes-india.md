@@ -54,11 +54,11 @@ Myntra is India's largest fashion-first marketplace, and its referral rewards ar
 
 ### 5. Ajio
 
-Ajio, Reliance's fashion and lifestyle platform, is known for deep discounts on premium brands and its own private labels.
+Ajio, Reliance's fashion and lifestyle platform, is known for deep discounts on premium brands and its own private labels. Use the verified **[AJIO Invite Code](/ajio-invite-code/)** to unlock instant savings on your first purchase.
 
-*   **New User Bonus:** Ajio offers a flat 50% off (up to ₹500) on a first order using designated new-user coupon codes. These codes rotate frequently, so always check the ReferBenefits listing for the latest one.
+*   **New User Bonus:** Ajio offers a flat 50% off (up to ₹500) on a first order using designated new-user coupon codes. Get our **[AJIO Referral Link & Coupon Code](/ajio-invite-code/)** for the highest welcome discount.
 *   **Ajio Points:** Every purchase earns Ajio Points that can be redeemed on future orders (1 point = ₹1).
-*   **Referral Benefit:** Ajio's referral campaigns are less frequent than Myntra's, but when active, they typically offer ₹100–₹200 for both parties.
+*   **Referral Benefit:** Ajio's referral campaigns offer ₹100–₹500 rewards for both parties.
 *   **Pro Tip:** Ajio stocks international brands like GAP, Under Armour, and Superdry at prices significantly lower than their own brand stores. During Ajio Big Bold Sale, discounts can cross 70%.
 
 ---
