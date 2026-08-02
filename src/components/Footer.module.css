@@ -141,31 +141,33 @@
 
 .footerMain {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  padding: 4rem 1.5rem 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  padding: 3rem 1rem 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-@media (min-width: 640px) {
-  .footerMain {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .footerMain {
     grid-template-columns: 2.2fr 1fr 1fr 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+    padding: 4rem 1.5rem 3rem;
   }
 }
 
 /* ── Brand Column ────────────────────────────────────────────────────── */
 .brand {
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .brand {
+    grid-column: span 1;
+  }
 }
 
 .logo {
@@ -243,6 +245,24 @@
 
 /* ── Link Columns ────────────────────────────────────────────────────── */
 .linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.companyGroup {
+  grid-column: span 2;
+}
+
+@media (min-width: 768px) {
+  .companyGroup {
+    grid-column: span 1;
+  }
+}
+
+.categoryLinks,
+.topOfferLinks,
+.companyLinks {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -327,4 +347,60 @@
   color: var(--secondary-foreground);
   max-width: 480px;
   line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .footerMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .brand {
+    align-items: center;
+    text-align: center;
+  }
+
+  .tagline {
+    margin: 0 auto;
+  }
+
+  .trustBadges {
+    justify-content: center;
+  }
+
+  .socialRow {
+    justify-content: center;
+  }
+
+  .linkGroup {
+    align-items: center;
+    text-align: center;
+  }
+
+  .linkTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .link {
+    justify-content: center;
+  }
+
+  .link:hover {
+    transform: translateY(-2px);
+  }
+
+  .categoryLinks,
+  .topOfferLinks,
+  .companyLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem 1.5rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }

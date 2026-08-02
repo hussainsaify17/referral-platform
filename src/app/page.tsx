@@ -2,7 +2,7 @@ import { getActiveReferrals, getCategories } from "@/lib/cms";
 import { ReferralCard } from "@/components/ReferralCard";
 import { CategoryNav } from "@/components/CategoryNav";
 import { OfferExplorer } from "@/components/OfferExplorer";
-import { Sparkles, TrendingUp, ShieldCheck, Zap } from "lucide-react";
+import { Sparkles, TrendingUp, ShieldCheck, Zap, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -81,14 +81,22 @@ export default async function Home() {
                   Featured Offer
                 </div>
                 <Link href={`/${featured.slug}/`} className={styles.featuredCard}>
+                  <div className={styles.glowDecor} />
                   <div className={styles.featuredLeft}>
-                    <span className={styles.featuredCategory}>{featured.category}</span>
+                    <div className={styles.metaRow}>
+                      <span className={styles.featuredCategory}>{featured.category}</span>
+                      {featured.bonus_amount && (
+                        <span className={styles.featuredBonusBadge}>
+                          🔥 {featured.bonus_amount} Bonus
+                        </span>
+                      )}
+                    </div>
                     <h2 className={styles.featuredName}>{featured.name}</h2>
                     <p className={styles.featuredBenefit}>{featured.benefit_user}</p>
                   </div>
                   <div className={styles.featuredRight}>
                     <span className={styles.featuredCta}>
-                      Claim Bonus →
+                      Claim Bonus <ArrowRight size={16} className={styles.ctaIcon} />
                     </span>
                   </div>
                 </Link>

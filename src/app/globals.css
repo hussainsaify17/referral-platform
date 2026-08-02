@@ -74,6 +74,12 @@ a {
   padding: 0 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 /* Base button reset */
 button {
   border: none;

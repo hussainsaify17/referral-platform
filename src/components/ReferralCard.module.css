@@ -68,19 +68,18 @@
 
 .header {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
-@media (min-width: 480px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-  }
+.header > div:first-child {
+  flex: 1;
+  min-width: 0;
+  flex-shrink: 1;
 }
 
 .category {
@@ -109,8 +108,19 @@
   padding: 0.375rem 0.875rem;
   border-radius: 9999px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+  .bonusPill {
+    max-width: 180px;
+  }
 }
 
 .content {
@@ -143,6 +153,12 @@
   font-weight: 500;
   line-height: 1.5;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .benefit {
+    min-height: 2.8rem;
+  }
 }
 
 .footer {

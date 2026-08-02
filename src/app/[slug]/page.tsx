@@ -270,6 +270,27 @@ export default async function ReferralPage({ params }: { params: Promise<{ slug:
     });
   }
 
+  if (referral.steps && referral.steps.length > 0) {
+    const cleanSteps = referral.steps.map(s => cleanStepText(s)).filter(Boolean);
+    if (cleanSteps.length > 0) {
+      graphEntities.push({
+        "@type": "HowTo",
+        "@id": `https://referbenefits.co.in/${referral.slug}/#howto`,
+        "name": `How to Claim ${referral.name} Referral Bonus`,
+        "description": `Step-by-step instructions to claim your ${referral.name} sign-up cashback and referral bonus.`,
+        "isPartOf": {
+          "@id": `https://referbenefits.co.in/${referral.slug}/#webpage`
+        },
+        "step": cleanSteps.map((stepText, idx) => ({
+          "@type": "HowToStep",
+          "position": idx + 1,
+          "name": `Step ${idx + 1}`,
+          "text": stepText
+        }))
+      });
+    }
+  }
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": graphEntities

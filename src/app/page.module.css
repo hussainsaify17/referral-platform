@@ -3,7 +3,7 @@
 }
 
 .hero {
-  padding: 8rem 1.5rem 6rem;
+  padding: clamp(5rem, 10vw, 8rem) 1.5rem clamp(4rem, 8vw, 6rem);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -41,25 +41,29 @@
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 7.5vw, 3.5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--foreground);
   margin-bottom: 1.5rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .brandText {
   background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 3vw, 1.25rem);
   color: var(--secondary-foreground);
   max-width: 650px;
   margin: 0 auto;
@@ -150,56 +154,78 @@
 .featuredSection {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.75rem;
 }
 
 .featuredLabel {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #f59e0b;
+  animation: pulseGold 2s infinite ease-in-out;
+}
+
+@keyframes pulseGold {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
 }
 
 .featuredCard {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding: 1.75rem 2rem;
-  background: linear-gradient(135deg, var(--accent-light) 0%, rgba(124, 58, 237, 0.08) 100%);
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--card-bg) 100%);
   border: 1px solid var(--accent);
   border-radius: var(--radius-lg);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02), 0 0 20px -5px var(--accent-light);
 }
 
-.featuredCard::before {
-  content: '⭐ FEATURED';
+.glowDecor {
   position: absolute;
-  top: 0.6rem;
-  right: 1rem;
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  opacity: 0.6;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.featuredCard:hover .glowDecor {
+  transform: scale(1.3) translate(-20px, 20px);
 }
 
 .featuredCard:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 0 30px -5px var(--accent-light);
 }
 
 .featuredLeft {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  flex: 1;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .featuredCategory {
@@ -210,49 +236,95 @@
   color: var(--accent);
 }
 
+.featuredBonusBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--success), #059669);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+  display: inline-flex;
+  align-items: center;
+}
+
 .featuredName {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
   font-weight: 800;
   color: var(--foreground);
   letter-spacing: -0.02em;
 }
 
 .featuredBenefit {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--secondary-foreground);
-  max-width: 500px;
+  max-width: 550px;
+  line-height: 1.55;
 }
 
 .featuredRight {
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .featuredCta {
-  display: inline-block;
-  padding: 0.85rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
   background: var(--accent-btn-bg);
   color: var(--accent-btn-fg);
   font-weight: 700;
   font-size: 0.95rem;
-  border-radius: var(--radius);
+  border-radius: 99px;
   white-space: nowrap;
-  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ctaIcon {
+  transition: transform 0.3s ease;
 }
 
 .featuredCard:hover .featuredCta {
   background: var(--foreground);
   color: var(--background);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.featuredCard:hover .ctaIcon {
+  transform: translateX(4px);
 }
 
 @media (max-width: 640px) {
   .featuredCard {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1.25rem;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    text-align: center;
   }
+  
+  .featuredLeft {
+    align-items: center;
+  }
+  
+  .metaRow {
+    justify-content: center;
+  }
+
+  .featuredBenefit {
+    margin: 0 auto;
+  }
+  
+  .featuredRight {
+    width: 100%;
+  }
+  
   .featuredCta {
     width: 100%;
-    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -283,7 +355,7 @@
 /* ── SEO Trust Section ───────────────────────────────────────── */
 .seoTrustBox {
   margin-top: 4rem;
-  padding: 2.5rem;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);

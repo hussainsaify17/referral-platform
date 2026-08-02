@@ -41,7 +41,7 @@ export function OfferExplorer({ allReferrals, initialReferrals, categories, feat
           <CategoryNav categories={categories} />
         </div>
         <div className={styles.searchWrapper}>
-          <Search size={18} className={styles.searchIcon} />
+          <Search size={20} className={styles.searchIcon} />
           <input 
             type="text" 
             placeholder="Search offers (e.g. Swiggy, Cred)..." 

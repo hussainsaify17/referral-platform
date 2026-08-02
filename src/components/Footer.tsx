@@ -88,42 +88,48 @@ export async function Footer() {
           {/* Column 2 – Categories */}
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Browse by Category</h3>
-            {categories.map((cat) => (
-              <Link key={cat} href={`/category/${cat.toLowerCase().replace(/\s+/g, '-')}/`} className={styles.link}>
-                {cat}
+            <div className={styles.categoryLinks}>
+              {categories.map((cat) => (
+                <Link key={cat} href={`/category/${cat.toLowerCase().replace(/\s+/g, '-')}/`} className={styles.link}>
+                  {cat}
+                </Link>
+              ))}
+              <Link href="/" className={styles.link}>
+                All Offers
               </Link>
-            ))}
-            <Link href="/" className={styles.link}>
-              All Offers
-            </Link>
+            </div>
           </div>
 
           {/* Column 3 – Top Offers */}
           <div className={styles.linkGroup}>
             <h3 className={styles.linkTitle}>Top Offers</h3>
-            {topOffers.map((offer) => (
-              <Link key={offer.id} href={`/${offer.slug}/`} className={styles.link}>
-                {offer.name}
-              </Link>
-            ))}
+            <div className={styles.topOfferLinks}>
+              {topOffers.map((offer) => (
+                <Link key={offer.id} href={`/${offer.slug}/`} className={styles.link}>
+                  {offer.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Column 4 – Company */}
-          <div className={styles.linkGroup}>
+          <div className={`${styles.linkGroup} ${styles.companyGroup}`}>
             <h3 className={styles.linkTitle}>Company</h3>
-            <Link href="/about/" className={styles.link}>About Us</Link>
-            <Link href="/blog/" className={styles.link}>
-              Blog
-              <span className={styles.linkNew}>New</span>
-            </Link>
-            <Link href="/privacy/" className={styles.link}>Privacy Policy</Link>
-            <Link href="/terms/" className={styles.link}>Terms of Service</Link>
-            <Link href="/disclaimer/" className={styles.link}>Affiliate Disclosure</Link>
-            <Link href="/contact/" className={styles.link}>Contact Us</Link>
-            <FeedbackForm className={styles.link} />
-            <Link href="/contact/" className={styles.link}>
-              📢 Partner / Advertise
-            </Link>
+            <div className={styles.companyLinks}>
+              <Link href="/about/" className={styles.link}>About Us</Link>
+              <Link href="/blog/" className={styles.link}>
+                Blog
+                <span className={styles.linkNew}>New</span>
+              </Link>
+              <Link href="/privacy/" className={styles.link}>Privacy Policy</Link>
+              <Link href="/terms/" className={styles.link}>Terms of Service</Link>
+              <Link href="/disclaimer/" className={styles.link}>Affiliate Disclosure</Link>
+              <Link href="/contact/" className={styles.link}>Contact Us</Link>
+              <FeedbackForm className={styles.link} />
+              <Link href="/contact/" className={styles.link}>
+                📢 Partner / Advertise
+              </Link>
+            </div>
           </div>
         </div>
 

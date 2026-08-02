@@ -12,6 +12,17 @@ interface Props {
   position?: number;
 }
 
+const truncateText = (text: string, limit: number = 80) => {
+  if (!text) return "";
+  if (text.length <= limit) return text;
+  const truncated = text.slice(0, limit);
+  const lastSpace = truncated.lastIndexOf(" ");
+  if (lastSpace > limit - 15) {
+    return truncated.slice(0, lastSpace).trim() + "...";
+  }
+  return truncated.trim() + "...";
+};
+
 export function ReferralCard({ referral, position = 0 }: Props) {
   // Prioritize explicit bonus_amount column, fallback to regex extraction
   const match = !referral.bonus_amount ? referral.benefit_user.match(/(₹\d+|\d+%)/) : null;
@@ -49,7 +60,7 @@ export function ReferralCard({ referral, position = 0 }: Props) {
       <div className={styles.content}>
         <div className={styles.benefitBox}>
           <Gift size={16} className={styles.benefitIcon} />
-          <p className={styles.benefit}>{referral.benefit_user}</p>
+          <p className={styles.benefit}>{truncateText(referral.benefit_user, 80)}</p>
         </div>
       </div>
 
