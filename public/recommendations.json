@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-02T02:02:40.147Z",
-  "totalOffers": 21,
+  "lastUpdated": "2026-08-02T07:26:10.883Z",
+  "totalOffers": 23,
   "offers": [
     {
       "name": "CRED",
@@ -40,6 +40,19 @@
       "last_verified": "July 2026",
       "verified_by": "ReferBenefits Team",
       "expiry": "6/29/2027"
+    },
+    {
+      "name": "Jupiter Money",
+      "slug": "jupiter-money-invite",
+      "category": "Fintech",
+      "benefit_user": "Get ₹300 when you open an account and complete KYC.",
+      "bonus_amount": "₹300",
+      "benefit_owner": "I get 300 Jewels (Jupiter rewards).",
+      "referral_code": "a44gPl",
+      "referral_link": "http://jptr.onelink.me/TOMp/1c2e8b6ee1",
+      "last_verified": "July 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": "8/3/2026"
     },
     {
       "name": "Google Pay",
@@ -274,6 +287,19 @@
       "last_verified": "July 2026",
       "verified_by": "ReferBenefits Team",
       "expiry": "7/18/2027"
+    },
+    {
+      "name": "Country Delight",
+      "slug": "country-delight-referral-code",
+      "category": "Shopping",
+      "benefit_user": "Claim signup bonus",
+      "bonus_amount": "₹150",
+      "benefit_owner": "Receive ₹150 wallet credit when your referred friend completes their first purchase.",
+      "referral_code": "HUSSANB89H",
+      "referral_link": "https://cdrefer.onelink.me/IHN4/ok4s369j ",
+      "last_verified": "August 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": ""
     }
   ]
 }
