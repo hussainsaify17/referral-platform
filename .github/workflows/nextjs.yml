@@ -70,10 +70,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/content/referrals/
+          git add src/content/referrals/ public/og/
           if [ -f src/data/analytics_ranking.json ]; then git add src/data/analytics_ranking.json; fi
           if [ -f public/recommendations.json ]; then git add public/recommendations.json; fi
-          git diff --staged --quiet || (git commit --no-verify -m "chore: auto-generate new referral and analytics content" && git push)
+          git diff --staged --quiet || (git commit --no-verify -m "chore: auto-generate new referral, OG cards, and analytics content" && git push)
         
       - name: Build with Next.js
         env:

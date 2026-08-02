@@ -160,6 +160,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = `Verified ${referral.name} referral code & invite link for ${currentMonth}. ${cleanBenefit}. 100% working code updated daily!`;
   const url = `https://referbenefits.co.in/${slug}/`;
 
+  const ogImageUrl = `https://referbenefits.co.in/og/${slug}.png`;
+  const ogImageAlt = `${referral.name} Referral Code & Sign Up Bonus (${currentYear})`;
+
   return {
     title,
     description,
@@ -176,13 +179,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url,
       type: "article",
       siteName: "ReferBenefits",
-      images: [{ url: "https://referbenefits.co.in/logo.png", width: 512, height: 512, alt: `${referral.name} Referral Code` }],
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          type: "image/png",
+          alt: ogImageAlt,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["https://referbenefits.co.in/logo.png"],
+      images: [
+        {
+          url: ogImageUrl,
+          alt: ogImageAlt,
+        },
+      ],
     }
   };
 }

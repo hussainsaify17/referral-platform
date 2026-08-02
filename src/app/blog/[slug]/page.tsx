@@ -20,6 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = await getBlogPostBySlug(slug);
   if (!post) return { title: "Not Found" };
 
+  const ogImageUrl = `https://referbenefits.co.in/og/blog-${slug}.png`;
+  const ogImageAlt = `${post.title} | ReferBenefits Blog`;
+
   return {
     title: `${post.title} | Blog`,
     description: post.description,
@@ -32,13 +35,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://referbenefits.co.in/blog/${slug}/`,
       type: "article",
       siteName: "ReferBenefits",
-      images: [{ url: "https://referbenefits.co.in/logo.png", width: 512, height: 512, alt: "ReferBenefits Logo" }],
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          type: "image/png",
+          alt: ogImageAlt,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: ["https://referbenefits.co.in/logo.png"],
+      images: [
+        {
+          url: ogImageUrl,
+          alt: ogImageAlt,
+        },
+      ],
     }
   };
 }

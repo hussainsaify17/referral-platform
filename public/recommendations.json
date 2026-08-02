@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-02T02:02:40.147Z",
-  "totalOffers": 21,
+  "lastUpdated": "2026-08-02T07:50:41.681Z",
+  "totalOffers": 24,
   "offers": [
     {
       "name": "CRED",
@@ -40,6 +40,19 @@
       "last_verified": "July 2026",
       "verified_by": "ReferBenefits Team",
       "expiry": "6/29/2027"
+    },
+    {
+      "name": "Jupiter Money",
+      "slug": "jupiter-money-invite",
+      "category": "Fintech",
+      "benefit_user": "Get ₹300 when you open an account and complete KYC.",
+      "bonus_amount": "₹300",
+      "benefit_owner": "I get 300 Jewels (Jupiter rewards).",
+      "referral_code": "a44gPl",
+      "referral_link": "http://jptr.onelink.me/TOMp/1c2e8b6ee1",
+      "last_verified": "July 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": "8/3/2026"
     },
     {
       "name": "Google Pay",
@@ -274,6 +287,32 @@
       "last_verified": "July 2026",
       "verified_by": "ReferBenefits Team",
       "expiry": "7/18/2027"
+    },
+    {
+      "name": "Country Delight",
+      "slug": "country-delight-referral-code",
+      "category": "Shopping",
+      "benefit_user": "Get ₹150 wallet credit on your first order with Country Delight.",
+      "bonus_amount": "₹150",
+      "benefit_owner": "Receive ₹150 wallet credit when your referred friend completes their first purchase.",
+      "referral_code": "HUSSANB89H",
+      "referral_link": "https://cdrefer.onelink.me/IHN4/ok4s369j ",
+      "last_verified": "August 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": "8/2/2027"
+    },
+    {
+      "name": "Akshayakalpa Organic",
+      "slug": "Akshayakalpa-referral-code",
+      "category": "Shopping",
+      "benefit_user": "Download the app and get Rs. 250 after your first recharge of Rs. 500 Or above",
+      "bonus_amount": "₹250",
+      "benefit_owner": "Get ₹250 when your referred friend completes their first qualifying recharge.",
+      "referral_code": "AK1485318R",
+      "referral_link": "https://akorganic.app.link/HBiuCFwLg5b",
+      "last_verified": "August 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": ""
     }
   ]
 }
