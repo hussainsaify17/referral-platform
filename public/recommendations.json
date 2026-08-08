@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-07T02:14:36.844Z",
-  "totalOffers": 23,
+  "lastUpdated": "2026-08-08T01:03:49.723Z",
+  "totalOffers": 25,
   "offers": [
     {
       "name": "CRED",
@@ -300,6 +300,32 @@
       "last_verified": "August 2026",
       "verified_by": "ReferBenefits Team",
       "expiry": "8/2/2027"
+    },
+    {
+      "name": "Mobikwik",
+      "slug": "mobikwik-referral-code",
+      "category": "Fintech",
+      "benefit_user": "Claim signup bonus",
+      "bonus_amount": "₹25",
+      "benefit_owner": "Earn ₹25 cashback when your friend completes their first qualifying transaction.",
+      "referral_code": "-",
+      "referral_link": "https://w6em.app.link/z9OEjcbFp5b",
+      "last_verified": "August 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": ""
+    },
+    {
+      "name": "Vested",
+      "slug": "vested-referral-code",
+      "category": "Trading",
+      "benefit_user": "Claim signup bonus",
+      "bonus_amount": "$10",
+      "benefit_owner": "Earn $10 when your friend successfully funds their first investment.",
+      "referral_code": "HUSA35048",
+      "referral_link": "https://refer.vestedfinance.com/HUSA35048",
+      "last_verified": "August 2026",
+      "verified_by": "ReferBenefits Team",
+      "expiry": ""
     }
   ]
 }
